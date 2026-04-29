@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: #0a0420;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: #0a0420;
+  color: #f8f3ff;
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+body::before {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  content: "";
+  background-image:
+    radial-gradient(circle at 15% 10%, rgba(255, 61, 203, 0.11), transparent 26rem),
+    radial-gradient(circle at 85% 0%, rgba(0, 255, 220, 0.09), transparent 22rem),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.045) 0px, rgba(255, 255, 255, 0.045) 1px, transparent 1px, transparent 5px);
+  mix-blend-mode: screen;
+  opacity: 0.7;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: rgba(255, 61, 203, 0.5);
+}
+
+.noise-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.noise-card::after {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  content: "";
+  background-image: radial-gradient(rgba(255, 255, 255, 0.14) 0.7px, transparent 0.7px);
+  background-size: 7px 7px;
+  opacity: 0.1;
+}
+
+.waveform {
+  display: grid;
+  grid-template-columns: repeat(22, minmax(2px, 1fr));
+  align-items: center;
+  gap: 3px;
+}
+
+.waveform span {
+  display: block;
+  height: var(--h);
+  min-height: 7px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #ff3dcb, #00ffdc);
+  box-shadow: 0 0 13px rgba(255, 61, 203, 0.28);
+  opacity: 0.78;
+  transform-origin: center;
+}
+
+.waveform[data-playing="true"] span {
+  animation: pulse-wave 0.72s ease-in-out infinite alternate;
+  animation-delay: calc(var(--i) * -50ms);
+}
+
+@keyframes pulse-wave {
+  from {
+    transform: scaleY(0.45);
+    opacity: 0.5;
+  }
+  to {
+    transform: scaleY(1.15);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
