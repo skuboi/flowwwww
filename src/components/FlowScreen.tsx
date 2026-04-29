@@ -1,7 +1,8 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Crown } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
-import { crew, lineup, nightLabels, nights, shortNightLabels } from "@/lib/data";
+import { useCrew } from "@/lib/crew-context";
+import { lineup, nightLabels, nights, shortNightLabels } from "@/lib/data";
 import {
   formatSetTime,
   formatTime,
@@ -144,6 +145,7 @@ function TimelineView({
   appState: AppState;
   headlinerId?: string;
 }) {
+  const crew = useCrew();
   const interstitials = useMemo(() => getTimelineInterstitials(items, lineup.stages), [items]);
   const interstitialsBySet = useMemo(() => {
     const map = new Map<string, typeof interstitials>();
@@ -225,6 +227,7 @@ function SwipeView({
   swipeIndex: number;
   setSwipeIndex: React.Dispatch<React.SetStateAction<number>>;
 }) {
+  const crew = useCrew();
   const item = items[swipeIndex] ?? items[0];
   const stage = stageFor(item.set, lineup.stages);
   const voters = getVoters(item.set.id, appState.votes, crew);
@@ -318,6 +321,7 @@ function WallpaperView({
   headlinerId?: string;
   night: Night;
 }) {
+  const crew = useCrew();
   const heartedCount = items.filter(
     (item) => getSetVotes(item.set.id, appState.votes).length > 0
   ).length;
@@ -449,6 +453,7 @@ function AllNightsWallpaperView({
   allNightsItems: { night: Night; items: FlowItem[]; headlinerId?: string }[];
   appState: AppState;
 }) {
+  const crew = useCrew();
   return (
     <section
       className="mx-auto w-full max-w-4xl overflow-hidden rounded-[2rem] border border-white/15 p-5"

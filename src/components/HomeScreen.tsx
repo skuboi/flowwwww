@@ -1,5 +1,6 @@
 import { Heart, Share2, Zap } from "lucide-react";
-import { crew, nights, shortNightLabels } from "@/lib/data";
+import { useCrew } from "@/lib/crew-context";
+import { nights, shortNightLabels } from "@/lib/data";
 import type { Night } from "@/lib/types";
 import { Pill } from "./ui";
 
@@ -38,6 +39,7 @@ export function HomeScreen({
   votes: number;
   flowCount: number;
 }) {
+  const crew = useCrew();
   const daysToEdc = Math.max(
     0,
     Math.ceil((new Date("2026-05-15T19:00:00-07:00").getTime() - Date.now()) / (1000 * 60 * 60 * 24))

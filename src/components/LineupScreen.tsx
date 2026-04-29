@@ -1,7 +1,8 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Heart, MessageCircle, Pause, Play } from "lucide-react";
 import { FormEvent, useState } from "react";
-import { crew, lineup } from "@/lib/data";
+import { useCrew } from "@/lib/crew-context";
+import { lineup } from "@/lib/data";
 import {
   formatSetTime,
   getSetVotes,
@@ -33,6 +34,8 @@ export function LineupScreen({
   const [expandedSetId, setExpandedSetId] = useState<string | null>(null);
   const [playingSetId, setPlayingSetId] = useState<string | null>(null);
   const [commentDraft, setCommentDraft] = useState("");
+
+  const crew = useCrew();
 
   const stageEntries = Object.entries(lineup.stages);
   const heartedSetIds = new Set(appState.votes.map((v) => v.set_id));
@@ -160,6 +163,7 @@ function LineupRow({
   onToggleHeart: () => void;
   onTogglePlay: () => void;
 }) {
+  const crew = useCrew();
   const stage = stageFor(set, lineup.stages);
   const voters = getVoters(set.id, appState.votes, crew);
   const isHearted = appState.votes.some((vote) => vote.user_id === appState.activeUserId && vote.set_id === set.id);

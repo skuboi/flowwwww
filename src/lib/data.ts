@@ -3,7 +3,8 @@ import type { AppState, CrewMember, Lineup, Night } from "./types";
 
 export const lineup = lineupJson as Lineup;
 
-export const crew: CrewMember[] = [
+// Demo crew used when Supabase is not configured
+export const demoCrew: CrewMember[] = [
   { id: "koto", name: "Koto", emoji: "👽", color: "#FF3DCB" },
   { id: "alex", name: "Alex", emoji: "🍄", color: "#00FFDC" },
   { id: "mika", name: "Mika", emoji: "🪩", color: "#B94FFF" }
@@ -24,6 +25,15 @@ export const shortNightLabels: Record<Night, string> = {
 export const nights: Night[] = ["friday", "saturday", "sunday"];
 
 export const initialState: AppState = {
+  activeUserId: "",
+  votes: [],
+  comments: [],
+  overrides: [],
+  attendOverrides: []
+};
+
+// Full demo state for offline/no-Supabase mode
+export const demoState: AppState = {
   activeUserId: "koto",
   votes: [
     { user_id: "koto", set_id: "fri_odd_mob", created_at: "2026-04-25T18:02:00Z" },

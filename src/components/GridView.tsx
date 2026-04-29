@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
-import { crew, lineup } from "@/lib/data";
+import { useCrew } from "@/lib/crew-context";
+import { lineup } from "@/lib/data";
 import {
   formatSetTime,
   formatTime,
@@ -224,6 +225,7 @@ function SetBlock({
   onTap: () => void;
   onUpdateAttend: (setId: string, arrive: number, depart: number) => void;
 }) {
+  const crew = useCrew();
   const startMs = Date.parse(gridSet.set.start_time);
   const endMs = Date.parse(gridSet.set.end_time);
   const blockTop = ((startMs - nightStart) / (60 * 1000)) * PX_PER_MIN;
@@ -375,6 +377,7 @@ function SetDetailPanel({
   headlinerId: string | undefined;
   onClose: () => void;
 }) {
+  const crew = useCrew();
   const stage = stageFor(gridSet.set, lineup.stages);
   const voters = getVoters(gridSet.set.id, appState.votes, crew);
   const arriveOffset = override?.arrive_offset ?? 0;
