@@ -207,8 +207,8 @@ export function AppShell() {
 
           <div className="flex-1 py-6">
             <AnimatePresence mode="wait">
-              <ScreenFrame key={screen}>
-                {screen === "home" && (
+              {screen === "home" && (
+                <ScreenFrame key="home">
                   <HomeScreen
                     activeUserName={activeUser?.name ?? "you"}
                     setScreen={setScreen}
@@ -216,16 +216,20 @@ export function AppShell() {
                     votes={appState.votes.length}
                     flowCount={flow.length}
                   />
-                )}
-                {screen === "lineup" && (
+                </ScreenFrame>
+              )}
+              {screen === "lineup" && (
+                <ScreenFrame key="lineup">
                   <LineupScreen
                     activeNight={activeNight}
                     setActiveNight={setActiveNight}
                     appState={appState}
                     setAppState={setAppStateWithSync}
                   />
-                )}
-                {screen === "flow" && (
+                </ScreenFrame>
+              )}
+              {screen === "flow" && (
+                <ScreenFrame key="flow">
                   <FlowScreen
                     activeNight={activeNight}
                     setActiveNight={setActiveNight}
@@ -233,8 +237,8 @@ export function AppShell() {
                     setAppState={setAppStateWithSync}
                     setScreen={setScreen}
                   />
-                )}
-              </ScreenFrame>
+                </ScreenFrame>
+              )}
             </AnimatePresence>
           </div>
         </div>

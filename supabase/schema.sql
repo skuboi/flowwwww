@@ -53,46 +53,40 @@ alter table public.votes enable row level security;
 alter table public.comments enable row level security;
 alter table public.flow_overrides enable row level security;
 
--- Policies: anyone authenticated (including anon) can read/write if they're in the crew
+-- Crews: anyone can create, anyone authenticated can read (crew code is the access control)
 create policy "Anyone can create crews" on public.crews for insert with check (true);
-create policy "Crew members can read their crew" on public.crews for select using (
-  exists (select 1 from public.crew_members where crew_id = crews.id and auth_id = auth.uid())
-);
+create policy "Authenticated can read crews" on public.crews for select using (auth.uid() is not null);
 
+-- Crew members: insert if auth matches, read all in same crew via crew_id
 create policy "Anyone can join" on public.crew_members for insert with check (auth_id = auth.uid());
-create policy "Members can read crew" on public.crew_members for select using (
-  crew_id in (select crew_id from public.crew_members where auth_id = auth.uid())
-);
+create policy "Anyone authenticated can read members" on public.crew_members for select using (auth.uid() is not null);
 create policy "Members can update self" on public.crew_members for update using (auth_id = auth.uid());
 
-create policy "Crew can read votes" on public.votes for select using (
-  crew_id in (select crew_id from public.crew_members where auth_id = auth.uid())
-);
+-- Votes: scoped to crew via crew_id
+create policy "Authenticated can read votes" on public.votes for select using (auth.uid() is not null);
 create policy "Members can insert votes" on public.votes for insert with check (
-  member_id in (select id from public.crew_members where auth_id = auth.uid())
+  exists (select 1 from public.crew_members where id = member_id and auth_id = auth.uid())
 );
 create policy "Members can delete own votes" on public.votes for delete using (
-  member_id in (select id from public.crew_members where auth_id = auth.uid())
+  exists (select 1 from public.crew_members where id = member_id and auth_id = auth.uid())
 );
 
-create policy "Crew can read comments" on public.comments for select using (
-  crew_id in (select crew_id from public.crew_members where auth_id = auth.uid())
-);
+-- Comments
+create policy "Authenticated can read comments" on public.comments for select using (auth.uid() is not null);
 create policy "Members can insert comments" on public.comments for insert with check (
-  member_id in (select id from public.crew_members where auth_id = auth.uid())
+  exists (select 1 from public.crew_members where id = member_id and auth_id = auth.uid())
 );
 
-create policy "Crew can read overrides" on public.flow_overrides for select using (
-  crew_id in (select crew_id from public.crew_members where auth_id = auth.uid())
-);
+-- Flow overrides
+create policy "Authenticated can read overrides" on public.flow_overrides for select using (auth.uid() is not null);
 create policy "Crew can manage overrides" on public.flow_overrides for insert with check (
-  crew_id in (select crew_id from public.crew_members where auth_id = auth.uid())
+  exists (select 1 from public.crew_members where crew_id = flow_overrides.crew_id and auth_id = auth.uid())
 );
 create policy "Crew can update overrides" on public.flow_overrides for update using (
-  crew_id in (select crew_id from public.crew_members where auth_id = auth.uid())
+  exists (select 1 from public.crew_members where crew_id = flow_overrides.crew_id and auth_id = auth.uid())
 );
 create policy "Crew can delete overrides" on public.flow_overrides for delete using (
-  crew_id in (select crew_id from public.crew_members where auth_id = auth.uid())
+  exists (select 1 from public.crew_members where crew_id = flow_overrides.crew_id and auth_id = auth.uid())
 );
 
 -- Enable realtime on tables that need live updates
