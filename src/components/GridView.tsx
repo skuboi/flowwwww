@@ -11,7 +11,8 @@ import {
 import type { AppState, AttendOverride, FestivalSet, FlowItem } from "@/lib/types";
 import { Pill } from "./ui";
 
-const PX_PER_MIN = 3;
+const PX_PER_MIN_COMPACT = 1.2;
+const PX_PER_MIN_DETAIL = 3;
 
 type GridSet = {
   set: FestivalSet;
@@ -34,6 +35,8 @@ export function GridView({
   overrideFlow: (group: FestivalSet[], selectedSetId: string) => void;
 }) {
   const [selectedSetId, setSelectedSetId] = useState<string | null>(null);
+  const [zoomed, setZoomed] = useState(false);
+  const pxPerMin = zoomed ? PX_PER_MIN_DETAIL : PX_PER_MIN_COMPACT;
 
   const allSets: GridSet[] = useMemo(() => {
     const result: GridSet[] = [];
@@ -68,7 +71,7 @@ export function GridView({
     return { nightStart: start30, nightEnd: end30, totalMinutes: (end30 - start30) / (60 * 1000) };
   }, [allSets]);
 
-  const totalHeight = totalMinutes * PX_PER_MIN;
+  const totalHeight = totalMinutes * pxPerMin;
 
   const timeLabels = useMemo(() => {
     const labels: { ms: number; label: string; top: number }[] = [];
@@ -77,7 +80,7 @@ export function GridView({
       labels.push({
         ms: t,
         label: formatTime(new Date(t).toISOString()),
-        top: ((t - nightStart) / (60 * 1000)) * PX_PER_MIN
+        top: ((t - nightStart) / (60 * 1000)) * pxPerMin
       });
     }
     return labels;
@@ -110,17 +113,24 @@ export function GridView({
 
   return (
     <div className="relative">
-      {/* Legend */}
-      <div className="mb-3 flex flex-wrap items-center gap-3 text-[0.65rem] text-white/50">
-        <span className="flex items-center gap-1">
-          <span className="inline-block size-2.5 rounded-sm bg-cyan/40" /> locked
-        </span>
-        <span className="flex items-center gap-1">
-          <span className="inline-block size-2.5 rounded-sm border border-dashed border-acid/50 bg-acid/10" /> ghost · tap to swap
-        </span>
-        <span className="flex items-center gap-1">
-          <span className="inline-block size-2.5 rounded-sm ring-1 ring-acid" /> clash
-        </span>
+      {/* Legend + zoom toggle */}
+      <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
+        <div className="flex flex-wrap items-center gap-3 text-[0.65rem] text-white/50">
+          <span className="flex items-center gap-1">
+            <span className="inline-block size-2.5 rounded-sm bg-cyan/40" /> locked
+          </span>
+          <span className="flex items-center gap-1">
+            <span className="inline-block size-2.5 rounded-sm border border-dashed border-acid/50 bg-acid/10" /> ghost
+          </span>
+        </div>
+        <button
+          className={`rounded-lg px-3 py-1 text-[0.65rem] font-bold transition ${
+            zoomed ? "bg-cyan text-night" : "bg-white/10 text-white/60"
+          }`}
+          onClick={() => setZoomed(!zoomed)}
+        >
+          {zoomed ? "− compact" : "+ zoom in"}
+        </button>
       </div>
 
       {/* Scrollable grid */}
@@ -128,8 +138,8 @@ export function GridView({
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: `3rem repeat(${activeStages.length}, minmax(5.5rem, 1fr))`,
-            minWidth: `${3 + activeStages.length * 5.5}rem`
+            gridTemplateColumns: `2.5rem repeat(${activeStages.length}, minmax(${zoomed ? "5.5rem" : "4rem"}, 1fr))`,
+            minWidth: `${2.5 + activeStages.length * (zoomed ? 5.5 : 4)}rem`
           }}
         >
           {/* Stage headers */}
@@ -178,6 +188,7 @@ export function GridView({
                     appState={appState}
                     onTap={() => handleBlockTap(gridSet)}
                     onUpdateAttend={updateAttend}
+                    pxPerMin={pxPerMin}
                   />
                 ))}
               </div>
@@ -213,7 +224,8 @@ function SetBlock({
   isHeadliner,
   appState,
   onTap,
-  onUpdateAttend
+  onUpdateAttend,
+  pxPerMin
 }: {
   gridSet: GridSet;
   nightStart: number;
@@ -224,22 +236,22 @@ function SetBlock({
   appState: AppState;
   onTap: () => void;
   onUpdateAttend: (setId: string, arrive: number, depart: number) => void;
+  pxPerMin: number;
 }) {
   const crew = useCrew();
   const startMs = Date.parse(gridSet.set.start_time);
   const endMs = Date.parse(gridSet.set.end_time);
-  const blockTop = ((startMs - nightStart) / (60 * 1000)) * PX_PER_MIN;
-  const height = ((endMs - startMs) / (60 * 1000)) * PX_PER_MIN;
+  const blockTop = ((startMs - nightStart) / (60 * 1000)) * pxPerMin;
+  const height = ((endMs - startMs) / (60 * 1000)) * pxPerMin;
   const arriveOffset = override?.arrive_offset ?? 0;
   const departOffset = override?.depart_offset ?? 0;
   const durationMin = (endMs - startMs) / (60 * 1000);
   const voters = getVoters(gridSet.set.id, appState.votes, crew);
   const isClash = gridSet.flowItem.state === "Open" || gridSet.flowItem.state === "Auto-picked";
 
-  // Snap to 15-minute increments, capped at half the set duration
   const maxOffset = Math.floor(durationMin / 2);
   function snapToGrid(pxDelta: number): number {
-    const minDelta = pxDelta / PX_PER_MIN;
+    const minDelta = pxDelta / pxPerMin;
     const snapped = Math.round(minDelta / 15) * 15;
     return Math.max(0, Math.min(snapped, maxOffset));
   }
@@ -253,10 +265,8 @@ function SetBlock({
     function onMove(ev: TouchEvent | MouseEvent) {
       const currentY = "touches" in ev ? ev.touches[0].clientY : ev.clientY;
       const delta = currentY - startY;
-      // Top handle: dragging down = arriving later (positive delta = more offset)
-      // Bottom handle: dragging up = leaving earlier (negative delta = more offset)
       const pxDelta = edge === "top" ? delta : -delta;
-      const newOffset = snapToGrid(startOffset * PX_PER_MIN + pxDelta);
+      const newOffset = snapToGrid(startOffset * pxPerMin + pxDelta);
       if (edge === "top") {
         onUpdateAttend(gridSet.set.id, newOffset, departOffset);
       } else {
