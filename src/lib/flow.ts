@@ -176,17 +176,123 @@ export function hasClash(set: FestivalSet, allSets: FestivalSet[], votes: Vote[]
   });
 }
 
+export type GapSuggestion = {
+  set: FestivalSet;
+  score: number;
+  reason: string;
+};
+
+export function suggestForGap(
+  gapStart: number,
+  gapEnd: number,
+  night: Night,
+  allSets: FestivalSet[],
+  votes: Vote[],
+  flowItems: FlowItem[],
+  limit: number = 2
+): GapSuggestion[] {
+  const cap = Math.min(limit, 3);
+  const heartedIdSet = new Set(flowItems.map((fi) => fi.set.id));
+
+  // Collect genre set and artist names from hearted sets
+  const heartedGenres: string[] = [];
+  const heartedArtists: string[] = [];
+  for (const fi of flowItems) {
+    fi.set.genres.forEach((g) => { if (!heartedGenres.includes(g)) heartedGenres.push(g); });
+    if (!heartedArtists.includes(fi.set.artist_name)) heartedArtists.push(fi.set.artist_name);
+  }
+
+  // Adjacent stage ids (set immediately before and after the gap)
+  const adjacentStageIds: string[] = [];
+  for (const fi of flowItems) {
+    const end = Date.parse(fi.set.end_time);
+    const start = Date.parse(fi.set.start_time);
+    if (Math.abs(end - gapStart) < 60 * 1000 && !adjacentStageIds.includes(fi.set.stage_id))
+      adjacentStageIds.push(fi.set.stage_id);
+    if (Math.abs(start - gapEnd) < 60 * 1000 && !adjacentStageIds.includes(fi.set.stage_id))
+      adjacentStageIds.push(fi.set.stage_id);
+  }
+
+  // Find candidates: unhearted sets on this night that overlap the gap
+  const candidates = allSets.filter((s) => {
+    if (s.night !== night) return false;
+    if (heartedIdSet.has(s.id)) return false;
+    if (getSetVotes(s.id, votes).length > 0) return false;
+    const sStart = Date.parse(s.start_time);
+    const sEnd = Date.parse(s.end_time);
+    return sStart < gapEnd && sEnd > gapStart;
+  });
+
+  const scored: GapSuggestion[] = candidates.map((s) => {
+    let score = 0;
+    let topReason = "";
+    let topReasonScore = 0;
+
+    // Genre overlap
+    const sharedGenres = s.genres.filter((g) => heartedGenres.includes(g));
+    const genreScore = sharedGenres.length;
+    score += genreScore;
+    if (genreScore > topReasonScore) {
+      const refArtist = flowItems.find((fi) => fi.set.genres.some((g) => sharedGenres.includes(g)));
+      topReason = refArtist
+        ? `Same genres as your ${refArtist.set.artist_name} pick`
+        : `Matches your favorite genres`;
+      topReasonScore = genreScore;
+    }
+
+    // Sounds-like reference
+    const soundsLower = s.sounds_like.toLowerCase();
+    for (const name of heartedArtists) {
+      if (soundsLower.includes(name.toLowerCase())) {
+        score += 2;
+        if (2 > topReasonScore) {
+          topReason = `Described as similar to ${name}`;
+          topReasonScore = 2;
+        }
+        break;
+      }
+    }
+
+    // Stage proximity
+    if (adjacentStageIds.includes(s.stage_id)) {
+      score += 1.5;
+      if (1.5 > topReasonScore) {
+        topReason = "Same stage as your next set";
+        topReasonScore = 1.5;
+      }
+    }
+
+    // Partial fit bonus
+    const sStart = Date.parse(s.start_time);
+    const sEnd = Date.parse(s.end_time);
+    if (sStart >= gapStart && sEnd <= gapEnd) {
+      score += 1;
+    }
+
+    return { set: s, score, reason: topReason || "Happening during your gap" };
+  });
+
+  return scored
+    .filter((s) => s.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, cap);
+}
+
 export type TimelineInterstitial = {
   kind: "gap" | "stage-hop";
   message: string;
   afterSetId: string;
+  suggestions?: GapSuggestion[];
 };
 
 const GAP_THRESHOLD_MS = 90 * 60 * 1000; // 90 minutes
 
 export function getTimelineInterstitials(
   items: FlowItem[],
-  stages: Record<string, Stage>
+  stages: Record<string, Stage>,
+  allSets: FestivalSet[],
+  votes: Vote[],
+  night: Night
 ): TimelineInterstitial[] {
   const result: TimelineInterstitial[] = [];
   for (let i = 0; i < items.length - 1; i++) {
@@ -200,10 +306,12 @@ export function getTimelineInterstitials(
       const gapHours = Math.floor(gapMs / (60 * 60 * 1000));
       const gapMins = Math.round((gapMs % (60 * 60 * 1000)) / (60 * 1000));
       const timeStr = gapHours > 0 ? `${gapHours}h ${gapMins}m` : `${gapMins}m`;
+      const suggestions = suggestForGap(currentEnd, nextStart, night, allSets, votes, items);
       result.push({
         kind: "gap",
         message: `${timeStr} gap — explore more sets?`,
-        afterSetId: current.set.id
+        afterSetId: current.set.id,
+        suggestions: suggestions.length > 0 ? suggestions : undefined
       });
     }
 

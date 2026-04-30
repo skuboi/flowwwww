@@ -43,6 +43,8 @@ export const demoState: AppState = {
     { user_id: "alex", set_id: "fri_rezz", created_at: "2026-04-25T18:10:00Z" },
     { user_id: "mika", set_id: "fri_kaskade", created_at: "2026-04-25T18:11:00Z" },
     { user_id: "koto", set_id: "fri_nora", created_at: "2026-04-25T18:20:00Z" },
+    { user_id: "koto", set_id: "fri_marshmello", created_at: "2026-04-25T18:22:00Z" },
+    { user_id: "alex", set_id: "fri_marshmello", created_at: "2026-04-25T18:23:00Z" },
     { user_id: "alex", set_id: "sat_chris_lake", created_at: "2026-04-25T19:00:00Z" },
     { user_id: "koto", set_id: "sat_chris_lake", created_at: "2026-04-25T19:02:00Z" },
     { user_id: "mika", set_id: "sat_griz", created_at: "2026-04-25T19:05:00Z" },
@@ -55,6 +57,8 @@ export const demoState: AppState = {
     { user_id: "alex", set_id: "sat_dom_dolla", created_at: "2026-04-25T19:21:00Z" },
     { user_id: "koto", set_id: "sat_above_beyond", created_at: "2026-04-25T19:25:00Z" },
     { user_id: "mika", set_id: "sat_above_beyond", created_at: "2026-04-25T19:26:00Z" },
+    { user_id: "mika", set_id: "sat_swedish_house_mafia", created_at: "2026-04-25T19:28:00Z" },
+    { user_id: "koto", set_id: "sat_swedish_house_mafia", created_at: "2026-04-25T19:29:00Z" },
     { user_id: "koto", set_id: "sun_sara_landry", created_at: "2026-04-25T20:01:00Z" },
     { user_id: "mika", set_id: "sun_subtronics", created_at: "2026-04-25T20:02:00Z" },
     { user_id: "alex", set_id: "sun_john_summit", created_at: "2026-04-25T20:07:00Z" },
@@ -63,6 +67,7 @@ export const demoState: AppState = {
     { user_id: "alex", set_id: "sun_boris", created_at: "2026-04-25T20:10:00Z" },
     { user_id: "koto", set_id: "sun_tiesto", created_at: "2026-04-25T20:14:00Z" },
     { user_id: "alex", set_id: "sun_tiesto", created_at: "2026-04-25T20:15:00Z" },
+    { user_id: "koto", set_id: "sun_david_guetta", created_at: "2026-04-25T20:17:00Z" },
     { user_id: "koto", set_id: "fri_fisher", created_at: "2026-04-25T21:30:00Z" },
     { user_id: "alex", set_id: "fri_fisher", created_at: "2026-04-25T21:31:00Z" },
     { user_id: "mika", set_id: "fri_deadmau5", created_at: "2026-04-25T21:33:00Z" },
@@ -76,7 +81,8 @@ export const demoState: AppState = {
     { user_id: "koto", set_id: "sun_odesza", created_at: "2026-04-25T21:46:00Z" },
     { user_id: "alex", set_id: "sun_odesza", created_at: "2026-04-25T21:47:00Z" },
     { user_id: "alex", set_id: "sun_porter_robinson", created_at: "2026-04-25T21:49:00Z" },
-    { user_id: "mika", set_id: "sun_seven_lions", created_at: "2026-04-25T21:51:00Z" }
+    { user_id: "mika", set_id: "sun_seven_lions", created_at: "2026-04-25T21:51:00Z" },
+    { user_id: "alex", set_id: "sun_amelie_lens", created_at: "2026-04-25T21:53:00Z" }
   ],
   comments: [
     {

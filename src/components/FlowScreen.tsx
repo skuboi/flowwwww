@@ -14,6 +14,7 @@ import {
   stageFor
 } from "@/lib/flow";
 import type { AppState, FestivalSet, FlowItem, Night } from "@/lib/types";
+import type { GapSuggestion } from "@/lib/flow";
 import { GridView } from "./GridView";
 import { DayTabs, Pill, ScreenTitle, spring } from "./ui";
 
@@ -89,6 +90,17 @@ export function FlowScreen({
     if (vn !== "all") setActiveNight(vn);
   }
 
+  function handleHeartSuggestion(setId: string) {
+    if (!appState.activeUserId) return;
+    setAppState((state) => ({
+      ...state,
+      votes: [
+        ...state.votes,
+        { user_id: state.activeUserId, set_id: setId, created_at: new Date().toISOString() }
+      ]
+    }));
+  }
+
   return (
     <div className="grid gap-4">
       <ScreenTitle eyebrow="Shared schedule" title="the flowwwww" copy="Auto-picked clashes, ghost losers, and a hype mode for revisiting the night." />
@@ -120,7 +132,7 @@ export function FlowScreen({
       </div>
 
       {viewNight === "all" && (mode === "timeline" || mode === "grid") && allNightsItems ? (
-        <AllNightsTimelineView allNightsItems={allNightsItems} appState={appState} />
+        <AllNightsTimelineView allNightsItems={allNightsItems} appState={appState} onHeart={handleHeartSuggestion} />
       ) : viewNight === "all" && mode === "wallpaper" && allNightsItems ? (
         <AllNightsWallpaperView allNightsItems={allNightsItems} appState={appState} />
       ) : items.length === 0 ? (
@@ -128,7 +140,7 @@ export function FlowScreen({
       ) : mode === "grid" ? (
         <GridView items={items} appState={appState} setAppState={setAppState} headlinerId={headlinerId} overrideFlow={overrideFlow} />
       ) : mode === "timeline" ? (
-        <TimelineView items={items} appState={appState} headlinerId={headlinerId} />
+        <TimelineView items={items} appState={appState} headlinerId={headlinerId} night={effectiveNight} onHeart={handleHeartSuggestion} />
       ) : (
         <WallpaperView items={items} appState={appState} headlinerId={headlinerId} night={effectiveNight} />
       )}
@@ -139,14 +151,21 @@ export function FlowScreen({
 function TimelineView({
   items,
   appState,
-  headlinerId
+  headlinerId,
+  night,
+  onHeart
 }: {
   items: FlowItem[];
   appState: AppState;
   headlinerId?: string;
+  night: Night;
+  onHeart?: (setId: string) => void;
 }) {
   const crew = useCrew();
-  const interstitials = useMemo(() => getTimelineInterstitials(items, lineup.stages), [items]);
+  const interstitials = useMemo(
+    () => getTimelineInterstitials(items, lineup.stages, lineup.sets, appState.votes, night),
+    [items, appState.votes, night]
+  );
   const interstitialsBySet = useMemo(() => {
     const map = new Map<string, typeof interstitials>();
     for (const item of interstitials) {
@@ -195,21 +214,61 @@ function TimelineView({
             </motion.article>
 
             {alerts && alerts.map((alert, idx) => (
-              <div
-                key={`${alert.kind}-${idx}`}
-                className={`relative ml-2 flex items-center gap-2 rounded-2xl border px-4 py-2.5 text-xs font-bold ${
-                  alert.kind === "gap"
-                    ? "border-acid/30 bg-acid/8 text-acid"
-                    : "border-cyan/30 bg-cyan/8 text-cyan"
-                }`}
-              >
-                <span className="absolute -left-[1.95rem] top-1/2 grid size-2.5 -translate-y-1/2 place-items-center rounded-full" style={{ background: alert.kind === "gap" ? "#FFE600" : "#00FFDC" }} />
-                {alert.kind === "gap" ? "🕳️" : "🚶"} {alert.message}
+              <div key={`${alert.kind}-${idx}`} className="grid gap-2">
+                <div
+                  className={`relative ml-2 flex items-center gap-2 rounded-2xl border px-4 py-2.5 text-xs font-bold ${
+                    alert.kind === "gap"
+                      ? "border-acid/30 bg-acid/8 text-acid"
+                      : "border-cyan/30 bg-cyan/8 text-cyan"
+                  }`}
+                >
+                  <span className="absolute -left-[1.95rem] top-1/2 grid size-2.5 -translate-y-1/2 place-items-center rounded-full" style={{ background: alert.kind === "gap" ? "#FFE600" : "#00FFDC" }} />
+                  {alert.kind === "gap" ? "🕳️" : "🚶"} {alert.message}
+                </div>
+                {alert.kind === "gap" && alert.suggestions && alert.suggestions.length > 0 && (
+                  <div className="ml-4 grid gap-1.5">
+                    {alert.suggestions.map((sug: GapSuggestion) => (
+                      <SuggestionCard key={sug.set.id} suggestion={sug} onHeart={onHeart} />
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
           </div>
         );
       })}
+    </div>
+  );
+}
+
+function SuggestionCard({
+  suggestion,
+  onHeart
+}: {
+  suggestion: GapSuggestion;
+  onHeart?: (setId: string) => void;
+}) {
+  const stage = stageFor(suggestion.set, lineup.stages);
+  return (
+    <div className="flex items-center gap-3 rounded-xl border border-dashed border-white/15 bg-white/[0.03] px-3 py-2">
+      <span className="text-sm">✨</span>
+      <div className="min-w-0 flex-1">
+        <p className="truncate text-xs font-bold text-white/80">
+          {suggestion.set.artist_name}
+          <span className="ml-1.5 font-normal text-white/40">
+            {formatSetTime(suggestion.set)} · <span style={{ color: stage?.color }}>{stage?.short}</span>
+          </span>
+        </p>
+        <p className="truncate text-[0.6rem] italic text-white/35">{suggestion.reason}</p>
+      </div>
+      {onHeart && (
+        <button
+          className="shrink-0 rounded-lg border border-pink/30 bg-pink/10 px-2.5 py-1 text-[0.6rem] font-bold text-pink transition hover:bg-pink/20"
+          onClick={() => onHeart(suggestion.set.id)}
+        >
+          ♡ heart
+        </button>
+      )}
     </div>
   );
 }
@@ -416,10 +475,12 @@ function WallpaperView({
 
 function AllNightsTimelineView({
   allNightsItems,
-  appState
+  appState,
+  onHeart
 }: {
   allNightsItems: { night: Night; items: FlowItem[]; headlinerId?: string }[];
   appState: AppState;
+  onHeart?: (setId: string) => void;
 }) {
   return (
     <div className="grid gap-6">
@@ -438,7 +499,7 @@ function AllNightsTimelineView({
               No hearted sets yet
             </p>
           ) : (
-            <TimelineView items={nightItems} appState={appState} headlinerId={nightHeadliner} />
+            <TimelineView items={nightItems} appState={appState} headlinerId={nightHeadliner} night={night} onHeart={onHeart} />
           )}
         </div>
       ))}
