@@ -79,9 +79,9 @@ export function LineupScreen({
   return (
     <div className="grid gap-4">
       <ScreenTitle eyebrow="Voting surface" title="Lineup" copy="Tap rows for previews, comments, and sounds-like context. Hearts commit instantly." />
-      <div className="sticky top-0 z-20 -mx-4 border-b border-white/10 bg-night/90 px-4 py-3 backdrop-blur-xl sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+      <div className="sticky top-0 z-20 -mx-4 overflow-hidden border-b border-white/10 bg-night/90 px-4 py-3 backdrop-blur-xl sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
         <DayTabs activeNight={activeNight} setActiveNight={setActiveNight} />
-        <div className="mt-3 flex gap-2 overflow-x-auto">
+        <div className="-mx-4 mt-3 flex gap-2 overflow-x-auto px-4 pb-1 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
           <FilterPill active={stageFilter === "all" && !heartedOnly} color="#FFFFFF" label="All stages" onClick={() => { setStageFilter("all"); setHeartedOnly(false); }} />
           <FilterPill active={heartedOnly} color="#FF3DCB" label="❤️ Hearted" onClick={() => { setHeartedOnly(!heartedOnly); if (!heartedOnly) setStageFilter("all"); }} />
           {stageEntries.map(([id, stage]) => (
