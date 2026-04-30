@@ -30,7 +30,7 @@ const isSupabaseConfigured = () => createSupabaseBrowserClient() !== null;
 
 export function AppShell() {
   const [screen, setScreen] = useState<Screen>("home");
-  const [activeNight, setActiveNight] = useState<Night>("saturday");
+  const [activeNight, setActiveNight] = useState<Night>("friday");
   const [appState, setAppState] = useState<AppState>(initialState);
   const [hydrated, setHydrated] = useState(false);
 
