@@ -1,5 +1,6 @@
 "use client";
 
+import { AnimatePresence, motion } from "framer-motion";
 import { Copy, LogIn, Plus } from "lucide-react";
 import { useCallback, useRef, useState } from "react";
 import type { CrewMember } from "@/lib/types";
@@ -11,6 +12,7 @@ import {
   pickCrewColor,
   registerMember,
 } from "@/lib/supabase-sync";
+import { spring, tap } from "./ui";
 
 const EMOJI_OPTIONS = ["👽", "🤠", "🍄", "🧚‍♀️", "😈", "🫠", "🪩", "🦉", "🔮", "🎭", "🌈", "🎪"];
 
@@ -96,14 +98,19 @@ export function OnboardingScreen({
   return (
     <main className="grid min-h-screen place-items-center bg-rave-radial p-4 text-white">
       <div className="w-full max-w-md space-y-6">
-        {/* Branding */}
-        <div className="text-center">
-          <span className="mx-auto mb-3 grid size-16 place-items-center rounded-3xl bg-pink/15 text-4xl shadow-glowPink">
+        {/* Branding — owl breathes via the kick-pulse keyframe (see globals.css). */}
+        <motion.div
+          initial={{ opacity: 0, y: -8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={spring}
+          className="text-center"
+        >
+          <span className="kick-pulse mx-auto mb-3 grid size-16 place-items-center rounded-3xl bg-pink/15 text-4xl shadow-glowPink">
             🦉
           </span>
           <h1 className="font-display text-4xl font-black tracking-tight">flowwwww</h1>
           <p className="text-xs uppercase tracking-[0.3em] text-cyan/80">EDC LV 2026</p>
-        </div>
+        </motion.div>
 
         {/* Identity phase */}
         {(phase === "identity" || phase === "choose") && (
@@ -113,7 +120,7 @@ export function OnboardingScreen({
                 Your name
               </label>
               <input
-                className="w-full rounded-xl border border-white/10 bg-night/70 px-4 py-3 text-lg font-bold text-white outline-none placeholder:text-white/25 focus:border-cyan"
+                className="w-full rounded-xl border border-white/10 bg-night/70 px-4 py-3 text-lg font-bold text-white outline-none transition-colors duration-200 placeholder:text-white/45 focus:border-cyan focus:shadow-glowCyan"
                 placeholder="e.g. Koto"
                 maxLength={40}
                 value={name}
@@ -127,9 +134,12 @@ export function OnboardingScreen({
               </label>
               <div className="grid grid-cols-6 gap-2">
                 {EMOJI_OPTIONS.map((e) => (
-                  <button
+                  <motion.button
                     key={e}
-                    className={`grid size-12 place-items-center rounded-xl border text-2xl transition ${
+                    whileTap={tap}
+                    whileHover={emoji === e ? undefined : { y: -2 }}
+                    transition={spring}
+                    className={`grid size-12 place-items-center rounded-xl border text-2xl ${
                       emoji === e
                         ? "scale-110 border-cyan bg-cyan/15 shadow-glowCyan"
                         : "border-white/10 bg-white/5 hover:border-white/30"
@@ -137,26 +147,32 @@ export function OnboardingScreen({
                     onClick={() => setEmoji(e)}
                   >
                     {e}
-                  </button>
+                  </motion.button>
                 ))}
               </div>
             </div>
 
             {phase === "identity" && (
               <div className="grid gap-3 pt-2 sm:grid-cols-2">
-                <button
-                  className="flex items-center justify-center gap-2 rounded-2xl bg-pink p-4 font-display text-lg font-black text-night shadow-glowPink transition hover:-translate-y-0.5 disabled:opacity-50"
+                <motion.button
+                  whileTap={tap}
+                  whileHover={{ y: -2 }}
+                  transition={spring}
+                  className="flex items-center justify-center gap-2 rounded-2xl bg-pink p-4 font-display text-lg font-black text-night shadow-glowPink disabled:opacity-50"
                   disabled={loading || !name.trim()}
                   onClick={handleCreate}
                 >
                   <Plus size={20} /> Create a crew
-                </button>
-                <button
-                  className="flex items-center justify-center gap-2 rounded-2xl border border-cyan/40 bg-cyan/10 p-4 font-display text-lg font-bold text-cyan transition hover:-translate-y-0.5 hover:bg-cyan/15"
+                </motion.button>
+                <motion.button
+                  whileTap={tap}
+                  whileHover={{ y: -2 }}
+                  transition={spring}
+                  className="flex items-center justify-center gap-2 rounded-2xl border border-cyan/40 bg-cyan/10 p-4 font-display text-lg font-bold text-cyan hover:bg-cyan/15"
                   onClick={() => { if (!name.trim()) { setError("pick a name first"); return; } setPhase("join"); }}
                 >
                   <LogIn size={20} /> Join crew
-                </button>
+                </motion.button>
               </div>
             )}
           </div>
@@ -195,7 +211,7 @@ export function OnboardingScreen({
                 Crew code
               </label>
               <input
-                className="w-full rounded-xl border border-white/10 bg-night/70 px-4 py-3 text-center font-display text-2xl font-black tracking-[0.15em] text-white outline-none placeholder:text-white/20 focus:border-cyan"
+                className="w-full rounded-xl border border-white/10 bg-night/70 px-4 py-3 text-center font-display text-2xl font-black tracking-[0.15em] text-white outline-none transition-colors duration-200 placeholder:text-white/35 focus:border-cyan focus:shadow-glowCyan"
                 placeholder="abc123"
                 maxLength={6}
                 value={joinCode}
@@ -220,12 +236,20 @@ export function OnboardingScreen({
           </div>
         )}
 
-        {/* Error display */}
-        {error && (
-          <p className="rounded-xl border border-pink/30 bg-pink/10 px-4 py-2 text-center text-sm text-pink">
-            {error}
-          </p>
-        )}
+        {/* Error display — text bumped from pink-on-pink (~3:1) to white for AA. */}
+        <AnimatePresence>
+          {error && (
+            <motion.p
+              initial={{ opacity: 0, y: -6, scale: 0.96 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -6, scale: 0.96 }}
+              transition={spring}
+              className="rounded-xl border border-pink/55 bg-pink/15 px-4 py-2 text-center text-sm font-bold text-white shadow-glowPink"
+            >
+              {error}
+            </motion.p>
+          )}
+        </AnimatePresence>
 
         {loading && phase !== "created" && (
           <p className="text-center text-sm text-white/40">connecting…</p>

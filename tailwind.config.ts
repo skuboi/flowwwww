@@ -17,9 +17,10 @@ const config: Config = {
         body: ["var(--font-inter)", "ui-sans-serif", "system-ui"]
       },
       boxShadow: {
-        glowPink: "0 0 24px rgba(255, 61, 203, 0.55)",
-        glowCyan: "0 0 22px rgba(0, 255, 220, 0.35)",
-        glowAcid: "0 0 22px rgba(255, 230, 0, 0.35)"
+        glowPink:  "0 0 24px rgba(255, 61, 203, 0.55)",
+        glowCyan:  "0 0 22px rgba(0, 255, 220, 0.35)",
+        glowAcid:  "0 0 22px rgba(255, 230, 0, 0.35)",
+        glowGrape: "0 0 22px rgba(185, 79, 255, 0.45)"
       },
       backgroundImage: {
         "rave-radial":

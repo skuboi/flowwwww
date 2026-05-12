@@ -16,6 +16,10 @@ export type FestivalSet = {
   genres: string[];
   sounds_like: string;
   preview_kind: "spotify" | "youtube";
+  /** Optional Spotify artist ID (22 chars). When present, enables a direct
+   *  link to the artist's profile instead of a search-results fallback.
+   *  Curated in data/artist-annotations.json. */
+  spotify_id?: string;
 };
 
 export type Lineup = {

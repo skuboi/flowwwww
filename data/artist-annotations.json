@@ -1,0 +1,1672 @@
+{
+  "1991": {
+    "genres": [
+      "Drum & Bass",
+      "Jungle"
+    ],
+    "sounds_like": "Sounds like Sub Focus chopped through 140 BPM jungle."
+  },
+  "999999999": {
+    "genres": [
+      "Hard Techno",
+      "Industrial"
+    ],
+    "sounds_like": "Sounds like industrial techno that bites back."
+  },
+  "_meta": {
+    "description": "Curated genres + 'sounds like' lines per artist for EDC LV 2026. Hand-built without API calls (PRD §7 Tier 2 fallback content). Keys must exactly match artist_name in data/lineup.json.",
+    "fields": {
+      "genres": "string[] — list of genre tags shown as caps eyebrow in the Lineup expansion",
+      "sounds_like": "string — single-sentence vibe description ('Sounds like X with Y energy.')",
+      "spotify_id": "OPTIONAL string — 22-char Spotify artist ID (from open.spotify.com/artist/{ID}). When present, the Lineup detail view links directly to the artist's Spotify page. Otherwise it falls back to a search URL. Add IDs incrementally as you verify them; do not guess."
+    },
+    "stage_fallback_logic": {
+      "kinetic": "Mainstage EDM",
+      "circuit": "varied bass / house / techno",
+      "cosmic": "indie dance / melodic / eclectic",
+      "neon": "house & techno",
+      "basspod": "dubstep / bass",
+      "wasteland": "hardstyle / hardcore / hard dance",
+      "quantum": "trance / psytrance",
+      "stereo": "indie / leftfield / UK garage / house",
+      "bionic": "drum & bass / jungle / leftfield"
+    }
+  },
+  "A.M.C with MC Phantom": {
+    "genres": [
+      "Drum & Bass",
+      "Jump Up"
+    ],
+    "sounds_like": "Sounds like Dimension and Sub Focus on a jungle warpath."
+  },
+  "AHEE B2B Liquid Stranger": {
+    "genres": [
+      "Bass",
+      "Tribal Bass"
+    ],
+    "sounds_like": "Sounds like Liquid Stranger's wonky bass with tribal twists."
+  },
+  "ANNA": {
+    "genres": [
+      "Techno",
+      "Melodic Techno"
+    ],
+    "sounds_like": "Sounds like Charlotte de Witte at sundown."
+  },
+  "AR/CO": {
+    "genres": [
+      "EDM",
+      "Vocal"
+    ],
+    "sounds_like": "Sounds like the festival vocal hook you'll hum on the walk out."
+  },
+  "ATLiens": {
+    "genres": [
+      "Bass",
+      "Trap"
+    ],
+    "sounds_like": "Sounds like Excision and REZZ in a haunted alley."
+  },
+  "AVELLO B2B Dennett": {
+    "genres": [
+      "Bass",
+      "Riddim"
+    ],
+    "sounds_like": "Sounds like a tag-team Basspod riddim assault."
+  },
+  "Abana B2B Juliet Mendoza": {
+    "genres": [
+      "UK Bass",
+      "Eclectic"
+    ],
+    "sounds_like": "Sounds like a leftfield UK bass set at dawn."
+  },
+  "Above & Beyond (Sunrise Set)": {
+    "genres": [
+      "Trance",
+      "Progressive"
+    ],
+    "sounds_like": "Sounds like the emotional sunrise trance moment you flew here for."
+  },
+  "Adiel": {
+    "genres": [
+      "Techno",
+      "Hypnotic"
+    ],
+    "sounds_like": "Sounds like deep hypnotic techno from a Berlin basement."
+  },
+  "Adriatique": {
+    "genres": [
+      "Melodic Techno",
+      "House"
+    ],
+    "sounds_like": "Sounds like Tale of Us with an alpine afterlight."
+  },
+  "Adrián Mills": {
+    "genres": [
+      "Hard Dance",
+      "Hard Techno"
+    ],
+    "sounds_like": "Sounds like high-octane hard techno for the Wasteland."
+  },
+  "Adventure Club (Throwback Set)": {
+    "genres": [
+      "Melodic Dubstep",
+      "Bass"
+    ],
+    "sounds_like": "Sounds like the 2013 melodic dubstep era you remember."
+  },
+  "Ahmed Spins": {
+    "genres": [
+      "Afro House"
+    ],
+    "sounds_like": "Sounds like Black Coffee's afterhours by the desert."
+  },
+  "Alison Wonderland": {
+    "genres": [
+      "Future Bass",
+      "Electronic"
+    ],
+    "sounds_like": "Sounds like emotional bass anthems with a vocal punch."
+  },
+  "Alves": {
+    "genres": [
+      "Drum & Bass"
+    ],
+    "sounds_like": "Sounds like a fresh DnB cut from the Bionic Jungle."
+  },
+  "Alyssa Jolee": {
+    "genres": [
+      "Hardstyle",
+      "Raw"
+    ],
+    "sounds_like": "Sounds like raw-style hardstyle with vocal edge."
+  },
+  "Anastazja": {
+    "genres": [
+      "Techno",
+      "House"
+    ],
+    "sounds_like": "Sounds like a Neon Garden warmup with weight."
+  },
+  "Andrew Rayel": {
+    "genres": [
+      "Trance",
+      "Uplifting"
+    ],
+    "sounds_like": "Sounds like uplifting Armada trance, big and bright."
+  },
+  "Argy": {
+    "genres": [
+      "Melodic House",
+      "Techno"
+    ],
+    "sounds_like": "Sounds like Adriatique with a stadium melody."
+  },
+  "Armin van Buuren (Sunrise Set)": {
+    "genres": [
+      "Trance"
+    ],
+    "sounds_like": "Sounds like the trance sunrise set you came to Vegas for."
+  },
+  "Astrix": {
+    "genres": [
+      "Psytrance",
+      "Full-On"
+    ],
+    "sounds_like": "Sounds like full-on psytrance for a Quantum Valley liftoff."
+  },
+  "Audiofreq B2B Code Black B2B Toneshifterz": {
+    "genres": [
+      "Hardstyle"
+    ],
+    "sounds_like": "Sounds like a triple-headed hardstyle steamroller."
+  },
+  "Avalon Emerson": {
+    "genres": [
+      "Indie Dance",
+      "Electro"
+    ],
+    "sounds_like": "Sounds like dreamy electro for the Bionic Jungle."
+  },
+  "BAUGRUPPE90": {
+    "genres": [
+      "Drum & Bass",
+      "Leftfield"
+    ],
+    "sounds_like": "Sounds like leftfield jungle with German precision."
+  },
+  "BOLO (Sunrise Set)": {
+    "genres": [
+      "Eclectic",
+      "Indie Dance"
+    ],
+    "sounds_like": "Sounds like a sunrise selector at the Stereo Bloom."
+  },
+  "BUNT. (In The Round)": {
+    "genres": [
+      "Folktronica",
+      "Melodic"
+    ],
+    "sounds_like": "Sounds like RÜFÜS DU SOL mixed with a campfire choir."
+  },
+  "Bad Beat": {
+    "genres": [
+      "House",
+      "Techno"
+    ],
+    "sounds_like": "Sounds like deep grooves from the Neon Garden."
+  },
+  "Bad Boombox B2B Ollie Lishman": {
+    "genres": [
+      "UK Bass",
+      "Bassline"
+    ],
+    "sounds_like": "Sounds like a Bristol basement tag-team."
+  },
+  "Bashkka B2B Sedef Adasi": {
+    "genres": [
+      "Eclectic",
+      "Leftfield"
+    ],
+    "sounds_like": "Sounds like a left-of-center after-hours Bionic Jungle set."
+  },
+  "Beltran": {
+    "genres": [
+      "Tech House"
+    ],
+    "sounds_like": "Sounds like Cloonee's harder, weirder cousin."
+  },
+  "Beltran B2B Simas": {
+    "genres": [
+      "Tech House"
+    ],
+    "sounds_like": "Sounds like a Bionic Jungle tech-house tag set."
+  },
+  "Benwal": {
+    "genres": [
+      "Drum & Bass"
+    ],
+    "sounds_like": "Sounds like high-energy DnB built for jungle floors."
+  },
+  "Billy Gillies": {
+    "genres": [
+      "Trance"
+    ],
+    "sounds_like": "Sounds like big-room trance with a UK pulse."
+  },
+  "Black Tiger Sex Machine": {
+    "genres": [
+      "Electro",
+      "Trap"
+    ],
+    "sounds_like": "Sounds like cinematic electro with monster basslines."
+  },
+  "Boogie T B2B Distinct Motive": {
+    "genres": [
+      "Dubstep",
+      "Bass"
+    ],
+    "sounds_like": "Sounds like wonky bass and dubstep hijinks."
+  },
+  "Bou": {
+    "genres": [
+      "Drum & Bass",
+      "Jump Up"
+    ],
+    "sounds_like": "Sounds like Hedex-school DnB ragers."
+  },
+  "Boys Noize": {
+    "genres": [
+      "Electro",
+      "Techno"
+    ],
+    "sounds_like": "Sounds like raw electro that punches the floor."
+  },
+  "CID": {
+    "genres": [
+      "House",
+      "Tech House"
+    ],
+    "sounds_like": "Sounds like a Vegas pool-day house set."
+  },
+  "CUTDWN": {
+    "genres": [
+      "Hardstyle",
+      "Raw"
+    ],
+    "sounds_like": "Sounds like raw hardstyle breakbeat carnage."
+  },
+  "Cassian": {
+    "genres": [
+      "Melodic House",
+      "Progressive"
+    ],
+    "sounds_like": "Sounds like Anjunadeep at golden hour."
+  },
+  "Charlotte de Witte": {
+    "genres": [
+      "Techno"
+    ],
+    "sounds_like": "Sounds like jet-black peak-time techno."
+  },
+  "Chris Lorenzo": {
+    "genres": [
+      "Bassline",
+      "Tech House"
+    ],
+    "sounds_like": "Sounds like UK bassline meets tech house."
+  },
+  "Chris Lorenzo B2B Bullet Tooth": {
+    "genres": [
+      "Bassline",
+      "UK Bass"
+    ],
+    "sounds_like": "Sounds like a UK bassline tag-team rinse."
+  },
+  "Chris Stussy": {
+    "genres": [
+      "Tech House"
+    ],
+    "sounds_like": "Sounds like punchy tech house with Dutch precision."
+  },
+  "Clawz": {
+    "genres": [
+      "Hardstyle"
+    ],
+    "sounds_like": "Sounds like a Wasteland hardstyle uppercut."
+  },
+  "Cloonee": {
+    "genres": [
+      "Tech House"
+    ],
+    "sounds_like": "Sounds like Fisher's tech house with extra swing."
+  },
+  "Cloudy": {
+    "genres": [
+      "Hardstyle"
+    ],
+    "sounds_like": "Sounds like raw hardstyle for a 5am rave."
+  },
+  "Club Angel": {
+    "genres": [
+      "Eclectic",
+      "Bass"
+    ],
+    "sounds_like": "Sounds like a wonky leftfield Bionic Jungle journey."
+  },
+  "Cold Blue": {
+    "genres": [
+      "Trance",
+      "Uplifting"
+    ],
+    "sounds_like": "Sounds like classic Anjuna uplifting trance."
+  },
+  "Cosmic Gate": {
+    "genres": [
+      "Trance"
+    ],
+    "sounds_like": "Sounds like Above & Beyond's harder cousin."
+  },
+  "Cristoph": {
+    "genres": [
+      "Progressive House"
+    ],
+    "sounds_like": "Sounds like John Digweed-school deep prog."
+  },
+  "Culture Shock": {
+    "genres": [
+      "Drum & Bass"
+    ],
+    "sounds_like": "Sounds like rolling crossover DnB from the Ram camp."
+  },
+  "Cyclops": {
+    "genres": [
+      "Bass",
+      "Riddim"
+    ],
+    "sounds_like": "Sounds like a Basspod riddim onslaught."
+  },
+  "DJ Gigola": {
+    "genres": [
+      "House",
+      "Techno"
+    ],
+    "sounds_like": "Sounds like Berlin breaks meet bouncy techno."
+  },
+  "DJ Gigola B2B MCR-T": {
+    "genres": [
+      "Bass",
+      "Eclectic"
+    ],
+    "sounds_like": "Sounds like a club-edit chaos set at Cosmic Meadow."
+  },
+  "DJ Isaac": {
+    "genres": [
+      "Hardstyle"
+    ],
+    "sounds_like": "Sounds like classic Dutch hardstyle anthems."
+  },
+  "DJ Mandy": {
+    "genres": [
+      "House",
+      "Techno"
+    ],
+    "sounds_like": "Sounds like a Circuit Grounds peak-hour swing."
+  },
+  "DJ Tennis B2B Chloé Caillet": {
+    "genres": [
+      "Indie Dance",
+      "Melodic"
+    ],
+    "sounds_like": "Sounds like Life and Death-label dreaminess."
+  },
+  "DJ Tennis B2B Red Axes": {
+    "genres": [
+      "Indie Dance",
+      "Leftfield"
+    ],
+    "sounds_like": "Sounds like a leftfield disco-not-disco journey."
+  },
+  "DREYA V": {
+    "genres": [
+      "UK Bass"
+    ],
+    "sounds_like": "Sounds like a Stereo Bloom UK bass selector."
+  },
+  "DYEN": {
+    "genres": [
+      "Hardstyle",
+      "Raw"
+    ],
+    "sounds_like": "Sounds like fresh raw-style hardstyle."
+  },
+  "Da Tweekaz": {
+    "genres": [
+      "Hardstyle",
+      "Vocal"
+    ],
+    "sounds_like": "Sounds like vocal melodic hardstyle bangers."
+  },
+  "Dabin": {
+    "genres": [
+      "Melodic Bass",
+      "Future Bass"
+    ],
+    "sounds_like": "Sounds like Seven Lions and Illenium between sunsets."
+  },
+  "Darren Porter": {
+    "genres": [
+      "Trance",
+      "Uplifting"
+    ],
+    "sounds_like": "Sounds like uplifting trance built for cathedrals."
+  },
+  "Darude": {
+    "genres": [
+      "Trance"
+    ],
+    "sounds_like": "Sounds like Sandstorm... and then more Sandstorm."
+  },
+  "Dead X": {
+    "genres": [
+      "Hardstyle",
+      "Raw"
+    ],
+    "sounds_like": "Sounds like dark, raw hardstyle for the pit."
+  },
+  "Deathpact ∞ Deathpact": {
+    "genres": [
+      "Bass",
+      "Riddim"
+    ],
+    "sounds_like": "Sounds like cryptic, riddim-coded Excision-school bass."
+  },
+  "Delta Heavy": {
+    "genres": [
+      "Drum & Bass",
+      "Neuro"
+    ],
+    "sounds_like": "Sounds like big-tune neuro DnB."
+  },
+  "Discip": {
+    "genres": [
+      "Bass",
+      "Eclectic"
+    ],
+    "sounds_like": "Sounds like a Stereo Bloom outsider bass set."
+  },
+  "Doctor P B2B Flux Pavilion B2B FuntCase": {
+    "genres": [
+      "Dubstep"
+    ],
+    "sounds_like": "Sounds like a UK dubstep golden-era reunion."
+  },
+  "DØMINA": {
+    "genres": [
+      "Hardstyle",
+      "Raw"
+    ],
+    "sounds_like": "Sounds like raw hardstyle with heavy attitude."
+  },
+  "EAZYBAKED": {
+    "genres": [
+      "Bass",
+      "Wonky"
+    ],
+    "sounds_like": "Sounds like wonky tribal bass from the Wakaan camp."
+  },
+  "Eli & Fur": {
+    "genres": [
+      "Melodic House",
+      "Trance"
+    ],
+    "sounds_like": "Sounds like a sunset Anjunadeep moment."
+  },
+  "Eli Brown": {
+    "genres": [
+      "Tech House",
+      "Techno"
+    ],
+    "sounds_like": "Sounds like Solardo with extra muscle."
+  },
+  "Eptic B2B Space Laces": {
+    "genres": [
+      "Dubstep"
+    ],
+    "sounds_like": "Sounds like a heavyweight UK / US dubstep tag."
+  },
+  "Fallen with MC Dino": {
+    "genres": [
+      "Drum & Bass",
+      "Jump Up"
+    ],
+    "sounds_like": "Sounds like jump-up DnB with constant MC hype."
+  },
+  "Fisher": {
+    "genres": [
+      "Tech House",
+      "House"
+    ],
+    "sounds_like": "Sounds like Chris Lake at a pool party."
+  },
+  "Frankie Bones": {
+    "genres": [
+      "House",
+      "Techno"
+    ],
+    "sounds_like": "Sounds like NYC raveformic house from the source."
+  },
+  "Frost Children": {
+    "genres": [
+      "Indie",
+      "Hyperpop"
+    ],
+    "sounds_like": "Sounds like leftfield art-pop with electronic teeth."
+  },
+  "Funk Tribu": {
+    "genres": [
+      "Hard Techno"
+    ],
+    "sounds_like": "Sounds like dark, fast techno with a Latin pulse."
+  },
+  "GRAVAGERZ": {
+    "genres": [
+      "Hard Dance",
+      "Frenchcore"
+    ],
+    "sounds_like": "Sounds like cinematic frenchcore-edge hard dance."
+  },
+  "GRAVEDGR": {
+    "genres": [
+      "Trap",
+      "Hard Trap"
+    ],
+    "sounds_like": "Sounds like horror-movie trap drops."
+  },
+  "GRiZ B2B Wooli": {
+    "genres": [
+      "Bass",
+      "Funk"
+    ],
+    "sounds_like": "Sounds like saxophone funk colliding with melodic bass."
+  },
+  "Gareth Emery": {
+    "genres": [
+      "Trance",
+      "Vocal"
+    ],
+    "sounds_like": "Sounds like emotional vocal trance done right."
+  },
+  "Getter": {
+    "genres": [
+      "Dubstep",
+      "Trap"
+    ],
+    "sounds_like": "Sounds like USC-era heavy bass with a sense of humor."
+  },
+  "Ghengar": {
+    "genres": [
+      "Bass",
+      "Riddim"
+    ],
+    "sounds_like": "Sounds like trench-deep Basspod riddim."
+  },
+  "GorillaT": {
+    "genres": [
+      "Bass",
+      "Tearout Dubstep"
+    ],
+    "sounds_like": "Sounds like rugged tearout dubstep."
+  },
+  "HAAi B2B Luke Alessi": {
+    "genres": [
+      "Indie Dance",
+      "Breaks"
+    ],
+    "sounds_like": "Sounds like a leftfield breaks-and-techno b2b."
+  },
+  "HAYLA": {
+    "genres": [
+      "Vocal",
+      "Pop"
+    ],
+    "sounds_like": "Sounds like the festival vocal hook you've been humming."
+  },
+  "HEYZ": {
+    "genres": [
+      "Bass",
+      "Wave"
+    ],
+    "sounds_like": "Sounds like fresh-cut wave dubstep."
+  },
+  "HNTR": {
+    "genres": [
+      "Indie Dance",
+      "Melodic House"
+    ],
+    "sounds_like": "Sounds like dreamy melodic house at twilight."
+  },
+  "HOL!": {
+    "genres": [
+      "Bass",
+      "Riddim"
+    ],
+    "sounds_like": "Sounds like wonky riddim with a smile."
+  },
+  "Hamdi": {
+    "genres": [
+      "UK Bass",
+      "Dubstep"
+    ],
+    "sounds_like": "Sounds like 140 BPM UK weight."
+  },
+  "Hannah Laing": {
+    "genres": [
+      "Trance",
+      "Hard House"
+    ],
+    "sounds_like": "Sounds like Scottish hard trance revival."
+  },
+  "Hardwell": {
+    "genres": [
+      "Big Room",
+      "EDM"
+    ],
+    "sounds_like": "Sounds like throwback mainstage big-room."
+  },
+  "Heidi Lawden B2B Masha Mar": {
+    "genres": [
+      "House",
+      "Afterhours"
+    ],
+    "sounds_like": "Sounds like a deep LA-rooted afterhours."
+  },
+  "Holy Priest": {
+    "genres": [
+      "Hard Techno"
+    ],
+    "sounds_like": "Sounds like industrial-edged hard techno."
+  },
+  "Hybrid Minds": {
+    "genres": [
+      "Liquid DnB",
+      "Drum & Bass"
+    ],
+    "sounds_like": "Sounds like soulful liquid drum & bass."
+  },
+  "I Hate Models": {
+    "genres": [
+      "Hard Techno"
+    ],
+    "sounds_like": "Sounds like new-school hard techno from Paris."
+  },
+  "INFEKT B2B Samplifire": {
+    "genres": [
+      "Bass",
+      "Color Bass"
+    ],
+    "sounds_like": "Sounds like a colour bass tag-team."
+  },
+  "ISAbella": {
+    "genres": [
+      "Drum & Bass"
+    ],
+    "sounds_like": "Sounds like fresh DnB for the Bionic Jungle."
+  },
+  "Ilan Bluestone": {
+    "genres": [
+      "Trance"
+    ],
+    "sounds_like": "Sounds like Anjunabeats peak-time uplifters."
+  },
+  "Indira Paganotto": {
+    "genres": [
+      "Psy-Techno",
+      "Techno"
+    ],
+    "sounds_like": "Sounds like ARTCORE psytrance-driven techno."
+  },
+  "Innellea": {
+    "genres": [
+      "Melodic Techno"
+    ],
+    "sounds_like": "Sounds like Tale of Us-school progressive heat."
+  },
+  "Interplanetary Criminal": {
+    "genres": [
+      "UK Garage",
+      "Bass"
+    ],
+    "sounds_like": "Sounds like UKG with rave nostalgia baked in."
+  },
+  "Jackie Hollander": {
+    "genres": [
+      "Eclectic",
+      "Indie Dance"
+    ],
+    "sounds_like": "Sounds like a Cosmic Meadow opener."
+  },
+  "Johannes Schuster": {
+    "genres": [
+      "Hard Techno"
+    ],
+    "sounds_like": "Sounds like brutalist German hard techno."
+  },
+  "John Summit": {
+    "genres": [
+      "Tech House",
+      "Progressive"
+    ],
+    "sounds_like": "Sounds like Experts Only-label main-stage tech house."
+  },
+  "Joseph Capriati": {
+    "genres": [
+      "Techno"
+    ],
+    "sounds_like": "Sounds like Italian peak-time techno."
+  },
+  "Josh Baker": {
+    "genres": [
+      "House",
+      "Tech House"
+    ],
+    "sounds_like": "Sounds like UK groove-leaning house."
+  },
+  "Josh Baker B2B KETTAMA B2B Prospa": {
+    "genres": [
+      "House",
+      "UK House"
+    ],
+    "sounds_like": "Sounds like a UK house tag-team rinse."
+  },
+  "KETTAMA": {
+    "genres": [
+      "House",
+      "UK House"
+    ],
+    "sounds_like": "Sounds like Irish-bred raw house energy."
+  },
+  "KI/KI": {
+    "genres": [
+      "Trance",
+      "Techno"
+    ],
+    "sounds_like": "Sounds like Dutch hard-trancey energy."
+  },
+  "KLO": {
+    "genres": [
+      "Indie",
+      "Eclectic"
+    ],
+    "sounds_like": "Sounds like a Stereo Bloom dreamscape."
+  },
+  "KREAM": {
+    "genres": [
+      "House",
+      "Bass House"
+    ],
+    "sounds_like": "Sounds like crossover house with bass hooks."
+  },
+  "KUKO": {
+    "genres": [
+      "Hardstyle",
+      "Raw"
+    ],
+    "sounds_like": "Sounds like raw new-school hardstyle."
+  },
+  "Kai Wachi": {
+    "genres": [
+      "Bass",
+      "Dubstep"
+    ],
+    "sounds_like": "Sounds like cinematic dubstep with anime energy."
+  },
+  "Kaskade": {
+    "genres": [
+      "Progressive House",
+      "EDM"
+    ],
+    "sounds_like": "Sounds like your dead-center fireworks moment."
+  },
+  "Kevin de Vries": {
+    "genres": [
+      "Melodic Techno"
+    ],
+    "sounds_like": "Sounds like Adriatique at sunrise."
+  },
+  "KinAhau": {
+    "genres": [
+      "Drum & Bass"
+    ],
+    "sounds_like": "Sounds like a fresh Bionic Jungle DnB cut."
+  },
+  "Klangkuenstler": {
+    "genres": [
+      "Hard Techno",
+      "Melodic Techno"
+    ],
+    "sounds_like": "Sounds like Berlin hard techno with melody."
+  },
+  "Korolova": {
+    "genres": [
+      "Melodic House",
+      "Progressive"
+    ],
+    "sounds_like": "Sounds like Argy's emotional cousin."
+  },
+  "Lady Faith B2B LNY TNZ": {
+    "genres": [
+      "Hardstyle"
+    ],
+    "sounds_like": "Sounds like a hardstyle sister-set wrecking ball."
+  },
+  "Laidback Luke B2B Chuckie": {
+    "genres": [
+      "House",
+      "Electro House"
+    ],
+    "sounds_like": "Sounds like Dirty Dutch electro nostalgia."
+  },
+  "Layton Giordani": {
+    "genres": [
+      "Techno"
+    ],
+    "sounds_like": "Sounds like a Drumcode peak-time hammer."
+  },
+  "Level Up": {
+    "genres": [
+      "Trap",
+      "Bass"
+    ],
+    "sounds_like": "Sounds like classic festival trap reborn."
+  },
+  "Levity": {
+    "genres": [
+      "Drum & Bass",
+      "Cinematic"
+    ],
+    "sounds_like": "Sounds like cinematic, melodic DnB."
+  },
+  "Lil Texas": {
+    "genres": [
+      "Hardcore",
+      "Rawstyle"
+    ],
+    "sounds_like": "Sounds like 200 BPM cowboy hardcore."
+  },
+  "Lilly Palmer": {
+    "genres": [
+      "Techno",
+      "Melodic Techno"
+    ],
+    "sounds_like": "Sounds like rolling melodic techno from Switzerland."
+  },
+  "Linska": {
+    "genres": [
+      "Hard Techno"
+    ],
+    "sounds_like": "Sounds like Funk Tribu-school hard groove."
+  },
+  "Lu.Re": {
+    "genres": [
+      "Indie Dance",
+      "Eclectic"
+    ],
+    "sounds_like": "Sounds like a Stereo Bloom hidden gem."
+  },
+  "Luciano": {
+    "genres": [
+      "House",
+      "Techno"
+    ],
+    "sounds_like": "Sounds like Cadenza-label sunrise grooves."
+  },
+  "Luke Dean": {
+    "genres": [
+      "Indie Dance",
+      "House"
+    ],
+    "sounds_like": "Sounds like a Stereo Bloom warmup."
+  },
+  "Luuk van Dijk": {
+    "genres": [
+      "UK Bass",
+      "Bassline"
+    ],
+    "sounds_like": "Sounds like a Dutch take on UK garage."
+  },
+  "MADGRRL B2B VESSEL": {
+    "genres": [
+      "Hardstyle",
+      "Raw"
+    ],
+    "sounds_like": "Sounds like raw femme-fronted hardstyle."
+  },
+  "MALUGI": {
+    "genres": [
+      "Hard Techno",
+      "Hard Dance"
+    ],
+    "sounds_like": "Sounds like fast melodic hard techno."
+  },
+  "MCR-T": {
+    "genres": [
+      "Eclectic",
+      "Bass"
+    ],
+    "sounds_like": "Sounds like leftfield Berlin club edits."
+  },
+  "MEDUZA³": {
+    "genres": [
+      "House",
+      "Vocal House"
+    ],
+    "sounds_like": "Sounds like a sunset radio hook on the mainstage."
+  },
+  "MPH": {
+    "genres": [
+      "Bass",
+      "Eclectic"
+    ],
+    "sounds_like": "Sounds like leftfield wave bass in widescreen."
+  },
+  "MUZZ": {
+    "genres": [
+      "Drum & Bass",
+      "Neuro"
+    ],
+    "sounds_like": "Sounds like neuro DnB built for the Basspod."
+  },
+  "Maddix": {
+    "genres": [
+      "Techno",
+      "Hard Techno"
+    ],
+    "sounds_like": "Sounds like big-room reimagined as raw techno."
+  },
+  "Maria Healy": {
+    "genres": [
+      "Trance",
+      "Uplifting"
+    ],
+    "sounds_like": "Sounds like Irish uplifting trance fresh out the cathedral."
+  },
+  "Martin Garrix": {
+    "genres": [
+      "Big Room",
+      "EDM"
+    ],
+    "sounds_like": "Sounds like sunrise mainstage anthems on demand."
+  },
+  "Mary Droppinz": {
+    "genres": [
+      "Bass",
+      "Eclectic"
+    ],
+    "sounds_like": "Sounds like LA-rooted bass with attitude."
+  },
+  "Massano": {
+    "genres": [
+      "Melodic Techno"
+    ],
+    "sounds_like": "Sounds like Argy's mate at golden hour."
+  },
+  "Massimiliano Pagliara": {
+    "genres": [
+      "Italo Disco",
+      "House"
+    ],
+    "sounds_like": "Sounds like a slow-burn Bionic Jungle disco set."
+  },
+  "Mathame": {
+    "genres": [
+      "Melodic Techno"
+    ],
+    "sounds_like": "Sounds like Italian after-movie melodic techno."
+  },
+  "Matty Ralph": {
+    "genres": [
+      "Trance",
+      "Uplifting"
+    ],
+    "sounds_like": "Sounds like fresh uplifting trance for Quantum."
+  },
+  "Max Dean": {
+    "genres": [
+      "Indie Dance",
+      "UK"
+    ],
+    "sounds_like": "Sounds like a Stereo Bloom selector."
+  },
+  "Max Dean B2B Luke Dean": {
+    "genres": [
+      "Indie Dance",
+      "UK"
+    ],
+    "sounds_like": "Sounds like a brotherly Cosmic Meadow set."
+  },
+  "Mish": {
+    "genres": [
+      "Hardstyle",
+      "Melodic"
+    ],
+    "sounds_like": "Sounds like new-wave melodic hardstyle."
+  },
+  "Morgan Seatree": {
+    "genres": [
+      "House"
+    ],
+    "sounds_like": "Sounds like UK summer house from the beach."
+  },
+  "Murphy's Law": {
+    "genres": [
+      "House",
+      "Tech House"
+    ],
+    "sounds_like": "Sounds like a Defected-school groove."
+  },
+  "MËSTIZA": {
+    "genres": [
+      "Tribal House",
+      "Latin"
+    ],
+    "sounds_like": "Sounds like Mexican-rooted tribal house heat."
+  },
+  "Nico Moreno": {
+    "genres": [
+      "Hard Techno"
+    ],
+    "sounds_like": "Sounds like French hard techno that doesn't blink."
+  },
+  "Nico Moreno B2B Holy Priest": {
+    "genres": [
+      "Hard Techno"
+    ],
+    "sounds_like": "Sounds like a hard techno tag-team gauntlet."
+  },
+  "Nightstalker with MC Dino": {
+    "genres": [
+      "Drum & Bass",
+      "Jump Up"
+    ],
+    "sounds_like": "Sounds like jump-up DnB chaos with MC hype."
+  },
+  "Noizu": {
+    "genres": [
+      "Tech House",
+      "Bass House"
+    ],
+    "sounds_like": "Sounds like punchy tech house with bassline edge."
+  },
+  "Nostalgix": {
+    "genres": [
+      "Bass House"
+    ],
+    "sounds_like": "Sounds like Wax Motif-school bass house."
+  },
+  "Notion": {
+    "genres": [
+      "Indie Dance",
+      "House"
+    ],
+    "sounds_like": "Sounds like a chilled Cosmic Meadow opener."
+  },
+  "OMNOM": {
+    "genres": [
+      "Bass House"
+    ],
+    "sounds_like": "Sounds like wonky bass house with a sense of humor."
+  },
+  "Obskür": {
+    "genres": [
+      "UK Bass",
+      "Bassline"
+    ],
+    "sounds_like": "Sounds like a brooding Stereo Bloom UK set."
+  },
+  "Omar+": {
+    "genres": [
+      "House",
+      "Deep House"
+    ],
+    "sounds_like": "Sounds like deep-house storytelling."
+  },
+  "PARAMIDA": {
+    "genres": [
+      "Indie Dance",
+      "Disco"
+    ],
+    "sounds_like": "Sounds like a Love On The Rocks weirdo selector."
+  },
+  "Paul Oakenfold": {
+    "genres": [
+      "Trance"
+    ],
+    "sounds_like": "Sounds like the godfather of trance is in the building."
+  },
+  "Paul van Dyk": {
+    "genres": [
+      "Trance"
+    ],
+    "sounds_like": "Sounds like classic trance played with full conviction."
+  },
+  "Peekaboo": {
+    "genres": [
+      "Bass",
+      "Tribal Bass"
+    ],
+    "sounds_like": "Sounds like Wakaan-school dungeon bass."
+  },
+  "Pegassi": {
+    "genres": [
+      "Trance",
+      "Uplifting"
+    ],
+    "sounds_like": "Sounds like new-wave uplifting trance."
+  },
+  "Peggy Gou": {
+    "genres": [
+      "House",
+      "Eclectic"
+    ],
+    "sounds_like": "Sounds like Korean-rooted dance-floor hits."
+  },
+  "Peggy Gou B2B KI/KI": {
+    "genres": [
+      "House",
+      "Trance"
+    ],
+    "sounds_like": "Sounds like a Berlin-leaning house-trance crossover."
+  },
+  "Player Dave": {
+    "genres": [
+      "Drum & Bass",
+      "Jump Up"
+    ],
+    "sounds_like": "Sounds like UK jump-up DnB primetime."
+  },
+  "Pooler": {
+    "genres": [
+      "Hardstyle",
+      "Melodic"
+    ],
+    "sounds_like": "Sounds like clean melodic hardstyle."
+  },
+  "Porter Robinson (DJ Set)": {
+    "genres": [
+      "Electronic",
+      "Pop"
+    ],
+    "sounds_like": "Sounds like Worlds + Nurture mixed for the mainstage."
+  },
+  "Prospa": {
+    "genres": [
+      "House",
+      "Rave"
+    ],
+    "sounds_like": "Sounds like UK rave-leaning house with vocals."
+  },
+  "RIOT": {
+    "genres": [
+      "Bass",
+      "Trap"
+    ],
+    "sounds_like": "Sounds like cinematic festival trap."
+  },
+  "Ray Volpe": {
+    "genres": [
+      "Dubstep",
+      "Riddim"
+    ],
+    "sounds_like": "Sounds like riddim with TikTok-ready hooks."
+  },
+  "Rebekah": {
+    "genres": [
+      "Hard Techno",
+      "Industrial"
+    ],
+    "sounds_like": "Sounds like uncompromising UK industrial techno."
+  },
+  "Rebüke": {
+    "genres": [
+      "Techno"
+    ],
+    "sounds_like": "Sounds like Irish big-room techno with a hook."
+  },
+  "Restricted": {
+    "genres": [
+      "Bass",
+      "Eclectic"
+    ],
+    "sounds_like": "Sounds like a Cosmic Meadow bass curveball."
+  },
+  "Rob Gee B2B Lenny Dee": {
+    "genres": [
+      "Hardcore"
+    ],
+    "sounds_like": "Sounds like NYC hardcore legends still going."
+  },
+  "Robert Hood": {
+    "genres": [
+      "Techno",
+      "Minimal"
+    ],
+    "sounds_like": "Sounds like Detroit minimal techno from the source."
+  },
+  "Roddy Lima": {
+    "genres": [
+      "Hard Techno"
+    ],
+    "sounds_like": "Sounds like a Cosmic Meadow hard techno detour."
+  },
+  "RØZ": {
+    "genres": [
+      "Hard Techno"
+    ],
+    "sounds_like": "Sounds like raw, fast Berghain-leaning techno."
+  },
+  "SLAMM": {
+    "genres": [
+      "UK Bass"
+    ],
+    "sounds_like": "Sounds like a Stereo Bloom UK bass cut."
+  },
+  "SUPERSTRINGS": {
+    "genres": [
+      "Trance",
+      "Uplifting"
+    ],
+    "sounds_like": "Sounds like emotional uplifting trance."
+  },
+  "Sammy Virji": {
+    "genres": [
+      "UK Garage"
+    ],
+    "sounds_like": "Sounds like UKG's mainstage moment."
+  },
+  "San Holo (Wholesome Riddim Set)": {
+    "genres": [
+      "Bass",
+      "Riddim"
+    ],
+    "sounds_like": "Sounds like melodic San Holo with riddim teeth."
+  },
+  "San Pacho": {
+    "genres": [
+      "Tech House",
+      "Latin"
+    ],
+    "sounds_like": "Sounds like Latin-flavored tech house."
+  },
+  "Sarah de Warren": {
+    "genres": [
+      "Trance",
+      "Vocal"
+    ],
+    "sounds_like": "Sounds like a vocal trance anthem on the rise."
+  },
+  "Serafina": {
+    "genres": [
+      "Hardstyle"
+    ],
+    "sounds_like": "Sounds like fresh femme hardstyle."
+  },
+  "Seven Lions": {
+    "genres": [
+      "Melodic Bass",
+      "Trance"
+    ],
+    "sounds_like": "Sounds like dragon-energy melodic bass and trance."
+  },
+  "Shingo Nakamura": {
+    "genres": [
+      "Progressive Trance",
+      "Ambient"
+    ],
+    "sounds_like": "Sounds like Anjuna's ambient progressive side."
+  },
+  "Ship Wrek": {
+    "genres": [
+      "EDM",
+      "Bass"
+    ],
+    "sounds_like": "Sounds like festival-ready bass-EDM crossover."
+  },
+  "Sidney Charles B2B Bushbaby": {
+    "genres": [
+      "House",
+      "Tech House"
+    ],
+    "sounds_like": "Sounds like UK afterhours groove."
+  },
+  "Sihk": {
+    "genres": [
+      "Hardstyle",
+      "Raw"
+    ],
+    "sounds_like": "Sounds like raw new-school hardstyle."
+  },
+  "Silva Bumpa": {
+    "genres": [
+      "UK Garage",
+      "Bass House"
+    ],
+    "sounds_like": "Sounds like UKG with bass-house weight."
+  },
+  "Silvie Loto": {
+    "genres": [
+      "Techno",
+      "Melodic Techno"
+    ],
+    "sounds_like": "Sounds like an Italian melodic techno deep-cut."
+  },
+  "Sippy": {
+    "genres": [
+      "Bass",
+      "Color Bass"
+    ],
+    "sounds_like": "Sounds like wonky color bass with Aussie energy."
+  },
+  "Skream": {
+    "genres": [
+      "Dubstep",
+      "Bass"
+    ],
+    "sounds_like": "Sounds like the originator of dubstep flexing range."
+  },
+  "Slugg": {
+    "genres": [
+      "Bass",
+      "Indie"
+    ],
+    "sounds_like": "Sounds like a Stereo Bloom curveball."
+  },
+  "Snow Strippers": {
+    "genres": [
+      "Indie",
+      "Electronic"
+    ],
+    "sounds_like": "Sounds like dark indie electronic with cult energy."
+  },
+  "Sofi Tukker": {
+    "genres": [
+      "Indie Dance",
+      "Electronic"
+    ],
+    "sounds_like": "Sounds like a Brazilian-disco singalong moment."
+  },
+  "Solomun": {
+    "genres": [
+      "Melodic House"
+    ],
+    "sounds_like": "Sounds like Diynamic-label sunset mood."
+  },
+  "Spray": {
+    "genres": [
+      "Bass",
+      "Eclectic"
+    ],
+    "sounds_like": "Sounds like leftfield Bionic Jungle bass."
+  },
+  "Stacy Christine": {
+    "genres": [
+      "Bass",
+      "Eclectic"
+    ],
+    "sounds_like": "Sounds like a Bionic Jungle warmup with attitude."
+  },
+  "Stan Christ": {
+    "genres": [
+      "Hardstyle"
+    ],
+    "sounds_like": "Sounds like a raw hardstyle pulpit-pounder."
+  },
+  "Steve Aoki": {
+    "genres": [
+      "EDM",
+      "Big Room"
+    ],
+    "sounds_like": "Sounds like cake-throwing big-room nostalgia."
+  },
+  "Sub Focus": {
+    "genres": [
+      "Drum & Bass"
+    ],
+    "sounds_like": "Sounds like festival-ready melodic DnB."
+  },
+  "Sub Zero Project": {
+    "genres": [
+      "Hardstyle"
+    ],
+    "sounds_like": "Sounds like dark Dutch hardstyle."
+  },
+  "Subtronics": {
+    "genres": [
+      "Dubstep",
+      "Riddim"
+    ],
+    "sounds_like": "Sounds like riddim with Cyclops levels of weight."
+  },
+  "T78": {
+    "genres": [
+      "Psy-Techno",
+      "Techno"
+    ],
+    "sounds_like": "Sounds like an ARTCORE psytrance hybrid."
+  },
+  "The Carry Nation": {
+    "genres": [
+      "House",
+      "Disco"
+    ],
+    "sounds_like": "Sounds like NYC queer-club disco-house."
+  },
+  "The Chainsmokers": {
+    "genres": [
+      "Pop",
+      "EDM"
+    ],
+    "sounds_like": "Sounds like the radio hits you can't unhear."
+  },
+  "The Outlaw": {
+    "genres": [
+      "Bass",
+      "Eclectic"
+    ],
+    "sounds_like": "Sounds like a Circuit Grounds curveball."
+  },
+  "The Prodigy": {
+    "genres": [
+      "Big Beat",
+      "Electronic"
+    ],
+    "sounds_like": "Sounds like the original rave riot."
+  },
+  "The Purge": {
+    "genres": [
+      "Hardstyle"
+    ],
+    "sounds_like": "Sounds like raw hardstyle aggression."
+  },
+  "The Saints": {
+    "genres": [
+      "Hardstyle"
+    ],
+    "sounds_like": "Sounds like raw hardstyle anthems."
+  },
+  "Thomas Schumacher": {
+    "genres": [
+      "Techno"
+    ],
+    "sounds_like": "Sounds like Berlin techno veteran heat."
+  },
+  "Tiga": {
+    "genres": [
+      "Electro",
+      "Indie Dance"
+    ],
+    "sounds_like": "Sounds like Turbo-label electro chic."
+  },
+  "Tinlicker (DJ Set)": {
+    "genres": [
+      "Melodic Trance",
+      "Progressive"
+    ],
+    "sounds_like": "Sounds like Anjuna melodic peak."
+  },
+  "Tiësto": {
+    "genres": [
+      "EDM",
+      "Big Room"
+    ],
+    "sounds_like": "Sounds like the godfather of mainstage EDM."
+  },
+  "Toman": {
+    "genres": [
+      "UK Bass",
+      "Bass House"
+    ],
+    "sounds_like": "Sounds like UK bass-house edge."
+  },
+  "Trace": {
+    "genres": [
+      "Pop",
+      "EDM"
+    ],
+    "sounds_like": "Sounds like a vocal-driven EDM crossover."
+  },
+  "Underworld": {
+    "genres": [
+      "Electronic",
+      "Techno"
+    ],
+    "sounds_like": "Sounds like the Born Slippy generation in full."
+  },
+  "VTSS (In The Round)": {
+    "genres": [
+      "Hard Techno"
+    ],
+    "sounds_like": "Sounds like Polish hard techno with melodic dread."
+  },
+  "Vieze Asbak": {
+    "genres": [
+      "Hardcore",
+      "Hardstyle"
+    ],
+    "sounds_like": "Sounds like Dutch raw hardcore-leaning hardstyle."
+  },
+  "Vintage Culture": {
+    "genres": [
+      "Melodic House",
+      "Tech House"
+    ],
+    "sounds_like": "Sounds like Brazilian melodic house at peak."
+  },
+  "Viperactive": {
+    "genres": [
+      "Bass",
+      "Riddim"
+    ],
+    "sounds_like": "Sounds like a Basspod riddim curveball."
+  },
+  "Virtual Riot": {
+    "genres": [
+      "Dubstep"
+    ],
+    "sounds_like": "Sounds like sound-design dubstep wizardry."
+  },
+  "Walker & Royce B2B VNSSA": {
+    "genres": [
+      "Tech House"
+    ],
+    "sounds_like": "Sounds like Dirtybird-label tech house cheek."
+  },
+  "Warface": {
+    "genres": [
+      "Hardstyle",
+      "Uptempo"
+    ],
+    "sounds_like": "Sounds like raw uptempo hardstyle."
+  },
+  "Warung": {
+    "genres": [
+      "Melodic Techno",
+      "Progressive"
+    ],
+    "sounds_like": "Sounds like Brazilian beach-club melodic techno."
+  },
+  "Wax Motif": {
+    "genres": [
+      "Bass House"
+    ],
+    "sounds_like": "Sounds like LA bass-house groove machine."
+  },
+  "Westend": {
+    "genres": [
+      "Tech House"
+    ],
+    "sounds_like": "Sounds like Insomniac-label tech-house heat."
+  },
+  "Whethan": {
+    "genres": [
+      "Bass",
+      "Indie"
+    ],
+    "sounds_like": "Sounds like indie-bass crossover sunset energy."
+  },
+  "William Black": {
+    "genres": [
+      "Melodic Bass"
+    ],
+    "sounds_like": "Sounds like Seven Lions' emotional cousin."
+  },
+  "Wooli": {
+    "genres": [
+      "Melodic Bass",
+      "Dubstep"
+    ],
+    "sounds_like": "Sounds like dragons and bass blended together."
+  },
+  "YDG": {
+    "genres": [
+      "Bass",
+      "Riddim"
+    ],
+    "sounds_like": "Sounds like a Basspod tearout cut."
+  },
+  "Yosuf": {
+    "genres": [
+      "Hardstyle"
+    ],
+    "sounds_like": "Sounds like raw hardstyle with attitude."
+  },
+  "Zedd": {
+    "genres": [
+      "EDM",
+      "Pop"
+    ],
+    "sounds_like": "Sounds like Clarity-era anthemic EDM."
+  },
+  "mink": {
+    "genres": [
+      "House",
+      "Techno"
+    ],
+    "sounds_like": "Sounds like a Neon Garden deep-cut."
+  },
+  "salute B2B Chloé Caillet": {
+    "genres": [
+      "UK Bass",
+      "House"
+    ],
+    "sounds_like": "Sounds like UK bass-house cinema."
+  },
+  "ÆON:MODE (Sunrise Set)": {
+    "genres": [
+      "Bass",
+      "Ambient"
+    ],
+    "sounds_like": "Sounds like cinematic ambient bass at sunrise."
+  }
+}

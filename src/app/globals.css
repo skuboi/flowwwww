@@ -23,6 +23,9 @@ body {
   font-family: var(--font-inter), system-ui, sans-serif;
 }
 
+/* Layered radiance: two slow-drifting blobs (atmosphere) + a faint scanline veil.
+   Scanlines were dropped from 4.5% → 2.8% opacity (PRD §4.4 — "chrome is hype, info
+   is grounded"; the previous level fought small text on the Lineup screen). */
 body::before {
   pointer-events: none;
   position: fixed;
@@ -30,11 +33,18 @@ body::before {
   z-index: 50;
   content: "";
   background-image:
-    radial-gradient(circle at 15% 10%, rgba(255, 61, 203, 0.11), transparent 26rem),
-    radial-gradient(circle at 85% 0%, rgba(0, 255, 220, 0.09), transparent 22rem),
-    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.045) 0px, rgba(255, 255, 255, 0.045) 1px, transparent 1px, transparent 5px);
+    radial-gradient(circle at 15% 10%, rgba(255, 61, 203, 0.13), transparent 26rem),
+    radial-gradient(circle at 85% 0%, rgba(0, 255, 220, 0.10), transparent 22rem),
+    radial-gradient(circle at 60% 92%, rgba(185, 79, 255, 0.08), transparent 24rem),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.028) 0px, rgba(255, 255, 255, 0.028) 1px, transparent 1px, transparent 5px);
   mix-blend-mode: screen;
-  opacity: 0.7;
+  opacity: 0.78;
+  animation: aurora-drift 28s ease-in-out infinite alternate;
+}
+
+@keyframes aurora-drift {
+  from { transform: translate3d(-1.5%, -1%, 0) scale(1); }
+  to   { transform: translate3d( 1.5%,  1%, 0) scale(1.04); }
 }
 
 button,
@@ -81,6 +91,8 @@ button {
   box-shadow: 0 0 13px rgba(255, 61, 203, 0.28);
   opacity: 0.78;
   transform-origin: center;
+  /* GPU-accelerated transforms for 22 simultaneously animated bars on iOS PWA */
+  will-change: transform, opacity;
 }
 
 .waveform[data-playing="true"] span {
@@ -106,4 +118,501 @@ button {
   to {
     transform: translateY(0);
   }
+}
+
+/* Slow, audible "kick-drum" pulse — used on hero glyphs (HomeScreen owl,
+   Onboarding owl). Subtle scale + glow so it reads as breathing, not blinking. */
+@keyframes kick-pulse {
+  0%, 100% { transform: scale(1);    filter: drop-shadow(0 0 12px rgba(255, 61, 203, 0.45)); }
+  50%      { transform: scale(1.06); filter: drop-shadow(0 0 22px rgba(255, 61, 203, 0.75)); }
+}
+.kick-pulse { animation: kick-pulse 2.4s ease-in-out infinite; }
+
+/* Outward "ring" expansion — used to telegraph the active state on pills/nav.
+   Pure CSS so it works without Framer for elements that re-render frequently. */
+@keyframes ring-pulse {
+  0%   { box-shadow: 0 0 0 0   rgba(255, 61, 203, 0.55); }
+  70%  { box-shadow: 0 0 0 14px rgba(255, 61, 203, 0); }
+  100% { box-shadow: 0 0 0 0   rgba(255, 61, 203, 0); }
+}
+.ring-pulse-pink { animation: ring-pulse 2.6s ease-out infinite; }
+@keyframes ring-pulse-cyan {
+  0%   { box-shadow: 0 0 0 0   rgba(0, 255, 220, 0.45); }
+  70%  { box-shadow: 0 0 0 12px rgba(0, 255, 220, 0); }
+  100% { box-shadow: 0 0 0 0   rgba(0, 255, 220, 0); }
+}
+.ring-pulse-cyan { animation: ring-pulse-cyan 2.8s ease-out infinite; }
+
+/* Heart confetti burst — emitted on toggle. The .heart-burst element is a
+   wrapper; its ::before / ::after fire briefly, then the wrapper is unmounted. */
+@keyframes heart-burst-1 {
+  0%   { transform: translate(-50%, -50%) scale(0.2); opacity: 0.95; }
+  100% { transform: translate(-50%, -50%) scale(2.4); opacity: 0; }
+}
+.heart-burst {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  overflow: visible;
+}
+.heart-burst::before,
+.heart-burst::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 61, 203, 0.85);
+  transform: translate(-50%, -50%) scale(0.2);
+  animation: heart-burst-1 0.55s ease-out forwards;
+}
+.heart-burst::after {
+  border-color: rgba(0, 255, 220, 0.7);
+  animation-delay: 80ms;
+  animation-duration: 0.6s;
+}
+
+/* Scrim for the off-screen edges of horizontally-scrolled rows (filter pills). */
+.edge-fade-x {
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 16px, #000 calc(100% - 16px), transparent 100%);
+          mask-image: linear-gradient(to right, transparent 0, #000 16px, #000 calc(100% - 16px), transparent 100%);
+}
+
+/* ============================================================================
+   HOLOGRAPHIC THEME ([data-theme="holo"])
+   ----------------------------------------------------------------------------
+   Parallel visual identity to PLUR. Activated by the theme toggle in the
+   AppShell header (see src/lib/theme.tsx). Component code is unchanged —
+   this layer only re-skins the existing utility classes (.noise-card, the
+   Tailwind tokens like .bg-pink/.text-cyan, the body backdrop, etc).
+
+   Design intent:
+     - Trading-card foil: pearlescent base, slow-rotating conic-gradient sheen,
+       prismatic edge glints. Surfaces feel reflective and "wet."
+     - Color palette shifts cooler / lighter (off-white opal base instead of
+       deep violet-black) — the chrome reads as iridescent rather than rave.
+     - Animation grammar from PLUR (kick-pulse, ring-pulse, heart-burst) is
+       preserved; only the colours/glows are re-tinted.
+
+   Key techniques:
+     1. .holo-foil (gradient sheen overlay applied as ::before on cards)
+     2. .holo-shimmer (slow conic-gradient rotation in the body backdrop)
+     3. Tailwind utility re-skins (e.g. `.bg-pink` → prismatic gradient)
+     4. Glow shadows replaced with multi-stop rainbow drop shadows
+   ============================================================================ */
+
+@keyframes holo-shimmer-rotate {
+  to { transform: rotate(360deg); }
+}
+@keyframes holo-foil-pan {
+  0%   { background-position:   0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+@keyframes holo-edge-glint {
+  0%, 100% { opacity: 0.55; }
+  50%      { opacity: 1; }
+}
+
+/* ---- Body backdrop ------------------------------------------------------- */
+:root[data-theme="holo"] html,
+:root[data-theme="holo"] body {
+  /* Pearlescent base: cool off-white with violet hint, very subtle gradient
+     so the page feels like the matte side of a foil card before a tilt. */
+  background:
+    radial-gradient(circle at 20% 12%, #fbeaff 0%, transparent 38%),
+    radial-gradient(circle at 80% 4%,  #d8f8ff 0%, transparent 36%),
+    radial-gradient(circle at 50% 90%, #ffe8f6 0%, transparent 40%),
+    linear-gradient(165deg, #f6f3ff 0%, #eef9ff 60%, #fff0fa 100%);
+  color: #2a1042;
+}
+
+:root[data-theme="holo"] body::before {
+  /* Replace the PLUR scanline + radiance veil with a *very slow* conic
+     iridescent wash. mix-blend-mode: overlay lifts the colour without
+     bleaching out body text. */
+  background-image:
+    conic-gradient(
+      from 0deg at 50% 50%,
+      rgba(255, 200, 240, 0.28),
+      rgba(200, 240, 255, 0.30),
+      rgba(220, 255, 220, 0.24),
+      rgba(255, 240, 180, 0.26),
+      rgba(255, 200, 240, 0.28)
+    ),
+    radial-gradient(circle at 30% 10%, rgba(255, 255, 255, 0.42), transparent 26rem);
+  mix-blend-mode: overlay;
+  opacity: 0.75;
+  animation: holo-shimmer-rotate 60s linear infinite;
+}
+
+/* ---- Selection / scrollbar --------------------------------------------- */
+:root[data-theme="holo"] ::selection {
+  background: rgba(190, 130, 255, 0.45);
+  color: #1a0638;
+}
+
+/* ---- Foil mixin (applied to every "card" surface) ----------------------
+   Strategy: don't rewrite every component class. Instead, target the same
+   utility patterns the components already use (rounded + bg-white/* + border).
+   The .noise-card class becomes our hook for the foil sheen overlay. */
+:root[data-theme="holo"] .noise-card::after {
+  /* Replace the dotted noise pattern with a panning prismatic gradient.
+     The element keeps its original shape (rounded inheritance) and the foil
+     pulses across its surface. */
+  background-image: linear-gradient(
+    115deg,
+    transparent 12%,
+    rgba(255, 100, 220, 0.28) 28%,
+    rgba(140, 220, 255, 0.32) 38%,
+    rgba(180, 255, 200, 0.28) 48%,
+    rgba(255, 220, 130, 0.30) 58%,
+    rgba(255, 100, 220, 0.28) 68%,
+    transparent 84%
+  );
+  background-size: 220% 220%;
+  background-position: 0% 50%;
+  opacity: 0.65;
+  mix-blend-mode: screen;
+  animation: holo-foil-pan 12s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+/* Generic card-ish surface — anything with rounded + bg-white/* gets a
+   pearlescent panel treatment. We hit them via CSS instead of editing every
+   component, which keeps the PLUR theme unaffected. */
+:root[data-theme="holo"] [class*="bg-white/"],
+:root[data-theme="holo"] [class*="bg-night/"] {
+  /* Pearl panel: white with multi-tinted micro-gradient. Backdrop blur is
+     preserved by the original Tailwind class. */
+  background-color: rgba(255, 255, 255, 0.55) !important;
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 220, 245, 0.55) 0%,
+    rgba(220, 245, 255, 0.55) 35%,
+    rgba(245, 255, 230, 0.55) 65%,
+    rgba(255, 230, 245, 0.55) 100%
+  ) !important;
+}
+
+/* Borders default to a subtle iridescent edge instead of plain white/10. */
+:root[data-theme="holo"] [class*="border-white/"],
+:root[data-theme="holo"] [class*="border-pink/"],
+:root[data-theme="holo"] [class*="border-cyan/"],
+:root[data-theme="holo"] [class*="border-acid/"] {
+  border-color: rgba(190, 130, 255, 0.45) !important;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.55);
+}
+
+/* ---- Text re-tinting ---------------------------------------------------- */
+:root[data-theme="holo"] body,
+:root[data-theme="holo"] [class*="text-white"] {
+  color: #2a1042 !important;
+}
+:root[data-theme="holo"] [class*="text-white/4"],
+:root[data-theme="holo"] [class*="text-white/5"],
+:root[data-theme="holo"] [class*="text-white/6"] {
+  color: rgba(42, 16, 66, 0.62) !important;
+}
+:root[data-theme="holo"] [class*="text-white/7"],
+:root[data-theme="holo"] [class*="text-white/8"],
+:root[data-theme="holo"] [class*="text-white/9"] {
+  color: rgba(42, 16, 66, 0.85) !important;
+}
+
+/* Accent colours pivot to a brighter, slightly violet-shifted palette so
+   they read as foil ink rather than neon. */
+:root[data-theme="holo"] .text-pink  { color: #d63bb4 !important; }
+:root[data-theme="holo"] .text-cyan  { color: #1c9ec9 !important; }
+:root[data-theme="holo"] .text-acid  { color: #b5860a !important; }
+:root[data-theme="holo"] .text-grape { color: #8b3ad0 !important; }
+
+/* ---- Button / accent backgrounds → prismatic gradients ------------------ */
+:root[data-theme="holo"] .bg-pink {
+  background: linear-gradient(135deg, #ff8ad4 0%, #c873ff 50%, #7ed8ff 100%) !important;
+  color: #2a1042 !important;
+}
+:root[data-theme="holo"] .bg-cyan {
+  background: linear-gradient(135deg, #9af6ff 0%, #b2c8ff 50%, #d6acff 100%) !important;
+  color: #2a1042 !important;
+}
+:root[data-theme="holo"] .bg-acid {
+  background: linear-gradient(135deg, #fff39c 0%, #ffd5a8 50%, #ffaad8 100%) !important;
+  color: #2a1042 !important;
+}
+:root[data-theme="holo"] .bg-grape {
+  background: linear-gradient(135deg, #c8a4ff 0%, #ffb4f0 50%, #a8e7ff 100%) !important;
+  color: #2a1042 !important;
+}
+
+/* ---- Glows → rainbow halos --------------------------------------------- */
+:root[data-theme="holo"] .shadow-glowPink {
+  box-shadow:
+    0 0 18px rgba(255, 130, 210, 0.55),
+    0 0 36px rgba(160, 200, 255, 0.35),
+    0 0 54px rgba(220, 180, 255, 0.30) !important;
+}
+:root[data-theme="holo"] .shadow-glowCyan {
+  box-shadow:
+    0 0 18px rgba(140, 230, 255, 0.55),
+    0 0 36px rgba(220, 180, 255, 0.40),
+    0 0 54px rgba(255, 200, 230, 0.30) !important;
+}
+:root[data-theme="holo"] .shadow-glowAcid {
+  box-shadow:
+    0 0 18px rgba(255, 230, 150, 0.55),
+    0 0 36px rgba(255, 180, 200, 0.35),
+    0 0 54px rgba(180, 220, 255, 0.30) !important;
+}
+:root[data-theme="holo"] .shadow-glowGrape {
+  box-shadow:
+    0 0 18px rgba(200, 150, 255, 0.55),
+    0 0 36px rgba(150, 220, 255, 0.40),
+    0 0 54px rgba(255, 200, 230, 0.30) !important;
+}
+
+/* ---- Pills get a foil edge --------------------------------------------- */
+:root[data-theme="holo"] [class*="rounded-full"][class*="border"] {
+  position: relative;
+}
+
+/* ---- Override the rave-radial main background -------------------------- */
+:root[data-theme="holo"] .bg-rave-radial {
+  background:
+    radial-gradient(circle at 18% 8%,  rgba(255, 200, 240, 0.55), transparent 38%),
+    radial-gradient(circle at 82% 16%, rgba(180, 230, 255, 0.55), transparent 36%),
+    radial-gradient(circle at 50% 90%, rgba(220, 255, 210, 0.40), transparent 42%),
+    linear-gradient(165deg, #fbf6ff 0%, #eaf6ff 50%, #fff0fa 100%) !important;
+}
+
+/* ---- Wallpaper / Swipe view dark gradients -----------------------------
+   These are inline-styled, so we hit them via `[style*="..."]` attribute
+   selectors. Replaces the deep-violet linear-gradient with a pearlescent one. */
+:root[data-theme="holo"] [style*="linear-gradient(170deg, #0A0420"] {
+  background: linear-gradient(170deg, #fdf4ff 0%, #e9f6ff 50%, #fff2f8 100%) !important;
+}
+
+/* ---- Heart-burst recolouring ------------------------------------------ */
+:root[data-theme="holo"] .heart-burst::before {
+  border-color: rgba(200, 130, 255, 0.85);
+}
+:root[data-theme="holo"] .heart-burst::after {
+  border-color: rgba(120, 220, 255, 0.85);
+}
+
+/* ---- ring-pulse re-tint to violet -------------------------------------- */
+:root[data-theme="holo"] .ring-pulse-pink {
+  animation: holo-ring-pulse 2.6s ease-out infinite;
+}
+@keyframes holo-ring-pulse {
+  0%   { box-shadow: 0 0 0 0   rgba(200, 130, 255, 0.55); }
+  70%  { box-shadow: 0 0 0 14px rgba(200, 130, 255, 0); }
+  100% { box-shadow: 0 0 0 0   rgba(200, 130, 255, 0); }
+}
+
+/* ---- kick-pulse re-tint ------------------------------------------------ */
+:root[data-theme="holo"] .kick-pulse {
+  animation: holo-kick-pulse 2.4s ease-in-out infinite;
+}
+@keyframes holo-kick-pulse {
+  0%, 100% { transform: scale(1);    filter: drop-shadow(0 0 12px rgba(220, 130, 255, 0.55)); }
+  50%      { transform: scale(1.06); filter: drop-shadow(0 0 22px rgba(140, 220, 255, 0.85)); }
+}
+
+/* ---- Waveform gradient → prismatic ------------------------------------ */
+:root[data-theme="holo"] .waveform span {
+  background: linear-gradient(180deg, #ff8ad4 0%, #c873ff 45%, #7ed8ff 100%) !important;
+  box-shadow: 0 0 13px rgba(220, 130, 255, 0.42);
+}
+
+/* ---- Theme toggle button stays legible across both ------------------- */
+.theme-toggle {
+  position: relative;
+  overflow: hidden;
+}
+.theme-toggle::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: conic-gradient(
+    from 0deg,
+    #ff8ad4, #c873ff, #7ed8ff, #b8ffd1, #fff39c, #ff8ad4
+  );
+  animation: holo-shimmer-rotate 6s linear infinite;
+  z-index: 0;
+}
+.theme-toggle > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================================================
+   MONO THEME ([data-theme="mono"])
+   ----------------------------------------------------------------------------
+   Minimalist near-monochrome. For people who don't want loud designs.
+
+   Design intent:
+     - Paper-white background, near-black ink. WCAG AAA-leaning contrast.
+     - One single accent colour kept for *functional* legibility only:
+         INK_HINT (#0a66c2 — calm blue) used for crew/info chips, day tabs.
+         A muted amber is kept for clash warnings (semantic). Otherwise grayscale.
+     - All glows neutralised to soft 1-pixel shadows. No conic shimmer, no
+       rainbow drop shadows, no panning gradients.
+     - Animation grammar (kick-pulse, ring-pulse, heart-burst, waveform) stays
+       intact but recoloured; pulses become extremely subtle (no hot glows).
+     - Stage colours are *preserved* — they're functional dataset values that
+       identify each stage. They're the only colour you'll see beyond ink.
+   ============================================================================ */
+
+:root[data-theme="mono"] html,
+:root[data-theme="mono"] body {
+  background: #fafaf8;
+  color: #0e0e10;
+}
+
+/* Replace the radiance + scanlines veil with a barely-there paper texture. */
+:root[data-theme="mono"] body::before {
+  background-image:
+    repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.018) 0px, rgba(0, 0, 0, 0.018) 1px, transparent 1px, transparent 4px);
+  mix-blend-mode: multiply;
+  opacity: 1;
+  animation: none;
+}
+
+/* Selection — calm blue tint instead of hot pink. */
+:root[data-theme="mono"] ::selection {
+  background: rgba(10, 102, 194, 0.18);
+  color: #0e0e10;
+}
+
+/* Disable noise-card overlay — the dot pattern is rave decoration. */
+:root[data-theme="mono"] .noise-card::after {
+  display: none;
+}
+
+/* Card surfaces: pure white with hairline ink border, no foil/noise. */
+:root[data-theme="mono"] [class*="bg-white/"],
+:root[data-theme="mono"] [class*="bg-night/"] {
+  background-color: #ffffff !important;
+  background-image: none !important;
+}
+
+:root[data-theme="mono"] [class*="border-white/"],
+:root[data-theme="mono"] [class*="border-pink/"],
+:root[data-theme="mono"] [class*="border-cyan/"],
+:root[data-theme="mono"] [class*="border-acid/"],
+:root[data-theme="mono"] [class*="border-grape/"] {
+  border-color: rgba(14, 14, 16, 0.12) !important;
+  box-shadow: none;
+}
+
+/* Text re-tinting: white-with-opacity scale → ink-with-opacity scale. */
+:root[data-theme="mono"] body,
+:root[data-theme="mono"] [class*="text-white"] {
+  color: #0e0e10 !important;
+}
+:root[data-theme="mono"] [class*="text-white/3"],
+:root[data-theme="mono"] [class*="text-white/4"] {
+  color: rgba(14, 14, 16, 0.55) !important;
+}
+:root[data-theme="mono"] [class*="text-white/5"],
+:root[data-theme="mono"] [class*="text-white/6"] {
+  color: rgba(14, 14, 16, 0.65) !important;
+}
+:root[data-theme="mono"] [class*="text-white/7"],
+:root[data-theme="mono"] [class*="text-white/8"],
+:root[data-theme="mono"] [class*="text-white/9"] {
+  color: rgba(14, 14, 16, 0.85) !important;
+}
+
+/* Accent ink. The only colour kept beyond ink is a calm blue for
+   crew/info functional cues (cyan tokens) and a muted amber for clash warnings. */
+:root[data-theme="mono"] .text-pink  { color: #0e0e10 !important; }
+:root[data-theme="mono"] .text-cyan  { color: #0a66c2 !important; }
+:root[data-theme="mono"] .text-acid  { color: #b16a00 !important; }
+:root[data-theme="mono"] .text-grape { color: #0e0e10 !important; }
+
+/* Solid backgrounds → grayscale (with the one functional hint preserved). */
+:root[data-theme="mono"] .bg-pink {
+  background: #0e0e10 !important;
+  color: #ffffff !important;
+}
+:root[data-theme="mono"] .bg-cyan {
+  /* Cyan tokens drive day-tab + filter-active states. Keep the calm blue
+     as the single accent so users can still see "this is selected." */
+  background: #0a66c2 !important;
+  color: #ffffff !important;
+}
+:root[data-theme="mono"] .bg-acid {
+  /* Reserved for clash/warning. Keep a muted amber so semantic meaning
+     ("this needs attention") survives the desaturation. */
+  background: #b16a00 !important;
+  color: #ffffff !important;
+}
+:root[data-theme="mono"] .bg-grape {
+  background: #0e0e10 !important;
+  color: #ffffff !important;
+}
+
+/* Glows neutralised to a single subtle elevation shadow. */
+:root[data-theme="mono"] .shadow-glowPink,
+:root[data-theme="mono"] .shadow-glowGrape {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.06) !important;
+}
+:root[data-theme="mono"] .shadow-glowCyan {
+  box-shadow: 0 1px 2px rgba(10, 102, 194, 0.18), 0 4px 12px rgba(10, 102, 194, 0.10) !important;
+}
+:root[data-theme="mono"] .shadow-glowAcid {
+  box-shadow: 0 1px 2px rgba(177, 106, 0, 0.18), 0 4px 12px rgba(177, 106, 0, 0.10) !important;
+}
+
+/* Override the rave-radial main background. */
+:root[data-theme="mono"] .bg-rave-radial {
+  background: #fafaf8 !important;
+}
+
+/* Wallpaper / Swipe view dark inline gradient → paper. */
+:root[data-theme="mono"] [style*="linear-gradient(170deg, #0A0420"] {
+  background: #ffffff !important;
+}
+
+/* Heart-burst → soft ink ring. */
+:root[data-theme="mono"] .heart-burst::before {
+  border-color: rgba(14, 14, 16, 0.55);
+}
+:root[data-theme="mono"] .heart-burst::after {
+  border-color: rgba(10, 102, 194, 0.45);
+}
+
+/* ring-pulse → near-invisible ink ripple. */
+:root[data-theme="mono"] .ring-pulse-pink {
+  animation: mono-ring-pulse 2.6s ease-out infinite;
+}
+@keyframes mono-ring-pulse {
+  0%   { box-shadow: 0 0 0 0   rgba(14, 14, 16, 0.25); }
+  70%  { box-shadow: 0 0 0 10px rgba(14, 14, 16, 0); }
+  100% { box-shadow: 0 0 0 0   rgba(14, 14, 16, 0); }
+}
+
+/* kick-pulse → very gentle scale only, no glow. */
+:root[data-theme="mono"] .kick-pulse {
+  animation: mono-kick-pulse 3s ease-in-out infinite;
+}
+@keyframes mono-kick-pulse {
+  0%, 100% { transform: scale(1);    filter: none; }
+  50%      { transform: scale(1.04); filter: none; }
+}
+
+/* Waveform → solid ink bars, no gradient/glow. */
+:root[data-theme="mono"] .waveform span {
+  background: #0e0e10 !important;
+  box-shadow: none;
+}
+
+/* Theme toggle: in mono mode, kill the conic-rainbow ring and use plain ink. */
+:root[data-theme="mono"] .theme-toggle::before {
+  background: #0e0e10;
+  animation: none;
 }

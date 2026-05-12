@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useMemo, useState } from "react";
 import { useCrew } from "@/lib/crew-context";
 import { lineup } from "@/lib/data";
@@ -9,10 +10,14 @@ import {
   stageFor
 } from "@/lib/flow";
 import type { AppState, AttendOverride, FestivalSet, FlowItem } from "@/lib/types";
-import { Pill } from "./ui";
+import { softSpring, spring, tap } from "./ui";
 
-const PX_PER_MIN_COMPACT = 1.2;
-const PX_PER_MIN_DETAIL = 3;
+// Vertical density of the calendar (px per minute). Bumped from 1.2/3 — at
+// the previous compact density an entire 10-hour night fit into ~720px and
+// every set looked cramped. New defaults give each set room to show artist
+// name + time + voters comfortably without scrolling for the headline view.
+const PX_PER_MIN_COMPACT = 2.2;
+const PX_PER_MIN_DETAIL = 4.5;
 
 type GridSet = {
   set: FestivalSet;
@@ -115,22 +120,24 @@ export function GridView({
     <div className="relative">
       {/* Legend + zoom toggle */}
       <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
-        <div className="flex flex-wrap items-center gap-3 text-[0.65rem] text-white/50">
-          <span className="flex items-center gap-1">
-            <span className="inline-block size-2.5 rounded-sm bg-cyan/40" /> locked
+        <div className="flex flex-wrap items-center gap-3 text-xs text-white/65">
+          <span className="flex items-center gap-1.5">
+            <span className="inline-block size-3 rounded-sm bg-cyan/55" /> locked
           </span>
-          <span className="flex items-center gap-1">
-            <span className="inline-block size-2.5 rounded-sm border border-dashed border-acid/50 bg-acid/10" /> ghost
+          <span className="flex items-center gap-1.5">
+            <span className="inline-block size-3 rounded-sm border border-dashed border-acid/60 bg-acid/15" /> ghost
           </span>
         </div>
-        <button
-          className={`rounded-lg px-3 py-1 text-[0.65rem] font-bold transition ${
-            zoomed ? "bg-cyan text-night" : "bg-white/10 text-white/60"
+        <motion.button
+          whileTap={tap}
+          transition={softSpring}
+          className={`rounded-lg px-3 py-1.5 text-xs font-bold ${
+            zoomed ? "bg-cyan text-night shadow-glowCyan" : "bg-white/10 text-white/70 hover:bg-white/15"
           }`}
           onClick={() => setZoomed(!zoomed)}
         >
           {zoomed ? "− compact" : "+ zoom in"}
-        </button>
+        </motion.button>
       </div>
 
       {/* Scrollable grid */}
@@ -149,18 +156,19 @@ export function GridView({
               key={stage.id}
               className="sticky top-0 z-20 border-b border-l border-white/10 bg-night/95 px-1 py-2 text-center"
             >
-              <p className="text-[0.65rem] font-bold uppercase tracking-[0.15em]" style={{ color: stage.color }}>
+              <p className="text-[0.7rem] font-bold uppercase tracking-[0.12em]" style={{ color: stage.color }}>
                 {stage.short}
               </p>
             </div>
           ))}
 
-          {/* Time labels column */}
+          {/* Time labels column — bumped from text-[0.55rem] to text-[0.7rem] and
+              opacity from /35 to /60 so users can actually read the time scale. */}
           <div className="relative" style={{ height: totalHeight }}>
             {timeLabels.map(({ ms, label, top }) => (
               <div
                 key={ms}
-                className="absolute right-1 text-[0.55rem] font-bold leading-none text-white/35"
+                className="absolute right-1 text-[0.7rem] font-bold leading-none text-white/60"
                 style={{ top }}
               >
                 {label}
@@ -199,17 +207,34 @@ export function GridView({
 
       {/* Bottom sheet detail panel */}
       {selectedGridSet && (
-        <div className="fixed inset-x-0 bottom-0 z-50 animate-[slideUp_0.2s_ease-out] border-t border-white/15 bg-night/95 px-4 pb-[max(env(safe-area-inset-bottom),1rem)] pt-4 backdrop-blur-2xl">
-          <SetDetailPanel
-            gridSet={selectedGridSet}
-            override={getOverride(selectedGridSet.set.id)}
-            updateAttend={updateAttend}
-            overrideFlow={overrideFlow}
-            appState={appState}
-            headlinerId={headlinerId}
-            onClose={() => setSelectedSetId(null)}
+        <>
+          {/* Scrim — fades in behind the bottom sheet to anchor focus, dismiss on tap. */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.18 }}
+            className="fixed inset-0 z-40 bg-black/45 backdrop-blur-sm"
+            onClick={() => setSelectedSetId(null)}
           />
-        </div>
+          <motion.div
+            initial={{ y: "100%" }}
+            animate={{ y: 0 }}
+            exit={{ y: "100%" }}
+            transition={spring}
+            className="fixed inset-x-0 bottom-0 z-50 border-t border-white/15 bg-night/95 px-4 pb-[max(env(safe-area-inset-bottom),1rem)] pt-4 backdrop-blur-2xl"
+          >
+            <SetDetailPanel
+              gridSet={selectedGridSet}
+              override={getOverride(selectedGridSet.set.id)}
+              updateAttend={updateAttend}
+              overrideFlow={overrideFlow}
+              appState={appState}
+              headlinerId={headlinerId}
+              onClose={() => setSelectedSetId(null)}
+            />
+          </motion.div>
+        </>
       )}
     </div>
   );
@@ -325,7 +350,7 @@ function SetBlock({
           onMouseDown={(e) => handleDragStart("top", e)}
           onTouchStart={(e) => handleDragStart("top", e)}
         >
-          <div className="h-[2px] w-6 rounded-full bg-white/30" />
+          <div className="h-[2px] w-6 rounded-full bg-white/45" />
         </div>
       )}
 
@@ -336,33 +361,33 @@ function SetBlock({
           onMouseDown={(e) => handleDragStart("bottom", e)}
           onTouchStart={(e) => handleDragStart("bottom", e)}
         >
-          <div className="h-[2px] w-6 rounded-full bg-white/30" />
+          <div className="h-[2px] w-6 rounded-full bg-white/45" />
         </div>
       )}
 
       {/* Tappable content */}
       <button className="relative z-[1] flex h-full w-full flex-col justify-between p-1 text-left" onClick={onTap}>
         <div>
-          <p className={`truncate font-bold leading-tight ${height > 60 ? "text-[0.7rem]" : "text-[0.6rem]"}`}>
+          <p className={`truncate font-bold leading-tight ${height > 60 ? "text-[0.78rem]" : "text-[0.7rem]"}`}>
             {isHeadliner && "👑 "}
             {gridSet.set.artist_name}
           </p>
           {height > 45 && (
-            <p className="mt-0.5 truncate text-[0.5rem] leading-tight text-white/45">
+            <p className="mt-0.5 truncate text-[0.6rem] font-bold leading-tight text-white/65">
               {formatSetTime(gridSet.set)}
             </p>
           )}
         </div>
         <div className="flex items-end justify-between">
           {voters.length > 0 && height > 60 && (
-            <div className="flex -space-x-0.5">
+            <div className="flex gap-0.5">
               {voters.map((m) => (
-                <span key={m.id} className="text-[0.55rem]">{m.emoji}</span>
+                <span key={m.id} className="text-[0.7rem]">{m.emoji}</span>
               ))}
             </div>
           )}
           {!gridSet.isWinner && height > 35 && (
-            <span className="text-[0.45rem] font-bold uppercase text-acid">swap</span>
+            <span className="text-[0.55rem] font-black uppercase tracking-wider text-acid">swap</span>
           )}
         </div>
       </button>
@@ -396,8 +421,11 @@ function SetDetailPanel({
   const endMs = Date.parse(gridSet.set.end_time);
   const attendStartIso = new Date(startMs + arriveOffset * 60 * 1000).toISOString();
   const attendEndIso = new Date(endMs - departOffset * 60 * 1000).toISOString();
-  const arriveOptions = [0, 15, 30] as const;
-  const departOptions = [0, 15, 30] as const;
+  // Trim options widened so users can squeeze sets in by skipping a chunk of
+  // the start or end. Maximum trim is bounded server-side by snapToGrid in
+  // SetBlock, so any value here that exceeds half the duration will clamp.
+  const arriveOptions = [0, 15, 30, 45, 60] as const;
+  const departOptions = [0, 15, 30, 45, 60] as const;
 
   return (
     <div className="mx-auto max-w-lg">
@@ -417,68 +445,85 @@ function SetDetailPanel({
               ))}
             </div>
           </div>
-          <p className="text-xs text-white/45">
+          <p className="text-xs text-white/65">
             {formatSetTime(gridSet.set)} · <span style={{ color: stage.color }}>{stage.name}</span>
             {(arriveOffset > 0 || departOffset > 0) && (
               <span className="text-cyan"> · attending {formatTime(attendStartIso)}–{formatTime(attendEndIso)}</span>
             )}
           </p>
         </div>
-        <button onClick={onClose} className="shrink-0 rounded-xl bg-white/10 px-3 py-1.5 text-xs font-bold text-white/60">
+        <button onClick={onClose} className="shrink-0 rounded-xl bg-white/10 px-3 py-1.5 text-xs font-bold text-white/70">
           Done
         </button>
       </div>
 
+      {/* Helpful hint when this set is currently in a clash. Trimming either
+          side enough to remove the overlap will auto-promote the ghost back
+          into its own Locked slot on the next render. */}
+      {!gridSet.isWinner && (
+        <p className="mt-3 rounded-xl border border-acid/30 bg-acid/10 px-3 py-2 text-xs text-acid/95">
+          ⚡ Clashes with {gridSet.flowItem.set.artist_name}. Trim either set below to fit both, or swap.
+        </p>
+      )}
+
       {/* Swap button for ghost sets */}
       {!gridSet.isWinner && (
-        <button
-          className="mt-3 w-full rounded-xl border border-acid/40 bg-acid/10 px-4 py-2.5 text-xs font-bold text-acid transition hover:bg-acid/20"
+        <motion.button
+          whileTap={tap}
+          whileHover={{ y: -1 }}
+          transition={softSpring}
+          className="mt-2 w-full rounded-xl border border-acid/45 bg-acid/15 px-4 py-3 text-sm font-bold text-acid shadow-glowAcid hover:bg-acid/25"
           onClick={() => {
             overrideFlow(gridSet.clashGroup, gridSet.set.id);
             onClose();
           }}
         >
           ⚡ swap in — pick {gridSet.set.artist_name} instead
-        </button>
+        </motion.button>
       )}
 
-      {/* Partial attendance controls for winner sets */}
-      {gridSet.isWinner && (
-        <div className="mt-3 flex flex-wrap gap-4">
-          <div className="flex items-center gap-1.5">
-            <span className="text-[0.6rem] font-bold uppercase tracking-[0.15em] text-white/40">arrive</span>
-            {arriveOptions.map((mins) => (
-              <button
-                key={mins}
-                className={`rounded-lg px-2 py-1 text-[0.65rem] font-bold transition ${
-                  arriveOffset === mins
-                    ? "bg-cyan text-night"
-                    : "bg-white/8 text-white/50"
-                }`}
-                onClick={() => updateAttend(gridSet.set.id, mins, departOffset)}
-              >
-                {mins === 0 ? "⏰" : `+${mins}m`}
-              </button>
-            ))}
-          </div>
-          <div className="flex items-center gap-1.5">
-            <span className="text-[0.6rem] font-bold uppercase tracking-[0.15em] text-white/40">leave</span>
-            {departOptions.map((mins) => (
-              <button
-                key={mins}
-                className={`rounded-lg px-2 py-1 text-[0.65rem] font-bold transition ${
-                  departOffset === mins
-                    ? "bg-pink text-night"
-                    : "bg-white/8 text-white/50"
-                }`}
-                onClick={() => updateAttend(gridSet.set.id, arriveOffset, mins)}
-              >
-                {mins === 0 ? "⏰" : `-${mins}m`}
-              </button>
-            ))}
-          </div>
+      {/* Partial attendance controls — available for BOTH winners and ghosts.
+          Trimming a ghost can remove the clash entirely (ghost gets promoted
+          automatically on the next resolveFlow pass since attendOverrides
+          now feed into clash detection). */}
+      <div className="mt-3 grid gap-2">
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="w-14 text-[0.7rem] font-bold uppercase tracking-[0.15em] text-white/65">arrive</span>
+          {arriveOptions.map((mins) => (
+            <motion.button
+              key={mins}
+              whileTap={tap}
+              transition={softSpring}
+              className={`rounded-lg px-2.5 py-1.5 text-xs font-bold ${
+                arriveOffset === mins
+                  ? "bg-cyan text-night shadow-glowCyan"
+                  : "bg-white/10 text-white/70 hover:bg-white/15"
+              }`}
+              onClick={() => updateAttend(gridSet.set.id, mins, departOffset)}
+            >
+              {mins === 0 ? "on time" : `+${mins}m`}
+            </motion.button>
+          ))}
         </div>
-      )}
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="w-14 text-[0.7rem] font-bold uppercase tracking-[0.15em] text-white/65">leave</span>
+          {departOptions.map((mins) => (
+            <motion.button
+              key={mins}
+              whileTap={tap}
+              transition={softSpring}
+              className={`rounded-lg px-2.5 py-1.5 text-xs font-bold ${
+                departOffset === mins
+                  ? "bg-pink text-night shadow-glowPink"
+                  : "bg-white/10 text-white/70 hover:bg-white/15"
+              }`}
+              onClick={() => updateAttend(gridSet.set.id, arriveOffset, mins)}
+            >
+              {mins === 0 ? "full set" : `-${mins}m`}
+            </motion.button>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

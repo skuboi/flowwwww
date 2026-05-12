@@ -1,704 +1,3033 @@
 {
   "stages": {
-    "kinetic": { "name": "kineticFIELD", "short": "KIN", "color": "#FF3DCB" },
-    "circuit": { "name": "circuitGROUNDS", "short": "CIR", "color": "#00FFDC" },
-    "cosmic": { "name": "cosmicMEADOW", "short": "COS", "color": "#FFE600" },
-    "neon": { "name": "neonGARDEN", "short": "NEO", "color": "#B94FFF" },
-    "basspod": { "name": "bassPOD", "short": "BAS", "color": "#FF7A3D" },
-    "wasteland": { "name": "wasteland", "short": "WST", "color": "#8CFF6A" }
+    "kinetic": {
+      "name": "kineticFIELD",
+      "short": "KIN",
+      "color": "#B94FFF"
+    },
+    "circuit": {
+      "name": "circuitGROUNDS",
+      "short": "CIR",
+      "color": "#00FFDC"
+    },
+    "cosmic": {
+      "name": "cosmicMEADOW",
+      "short": "COS",
+      "color": "#FFE600"
+    },
+    "neon": {
+      "name": "neonGARDEN",
+      "short": "NEO",
+      "color": "#B94FFF"
+    },
+    "basspod": {
+      "name": "bassPOD",
+      "short": "BAS",
+      "color": "#FF7A3D"
+    },
+    "wasteland": {
+      "name": "wasteland",
+      "short": "WST",
+      "color": "#8CFF6A"
+    },
+    "quantum": {
+      "name": "quantumVALLEY",
+      "short": "QTM",
+      "color": "#5AC8FA"
+    },
+    "stereo": {
+      "name": "stereoBLOOM",
+      "short": "STR",
+      "color": "#FF8AB4"
+    },
+    "bionic": {
+      "name": "bionicJUNGLE",
+      "short": "BIO",
+      "color": "#C9FF4D"
+    }
   },
   "sets": [
+    {
+      "id": "fri_heidi_lawden_b2b_masha_mar",
+      "artist_name": "Heidi Lawden B2B Masha Mar",
+      "stage_id": "bionic",
+      "night": "friday",
+      "start_time": "2026-05-16T00:00:00Z",
+      "end_time": "2026-05-16T02:00:00Z",
+      "genres": [
+        "House",
+        "Afterhours"
+      ],
+      "sounds_like": "Sounds like a deep LA-rooted afterhours.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_max_dean_b2b_luke_dean",
+      "artist_name": "Max Dean B2B Luke Dean",
+      "stage_id": "cosmic",
+      "night": "friday",
+      "start_time": "2026-05-16T00:00:00Z",
+      "end_time": "2026-05-16T02:00:00Z",
+      "genres": [
+        "Indie Dance",
+        "UK"
+      ],
+      "sounds_like": "Sounds like a brotherly Cosmic Meadow set.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_riot",
+      "artist_name": "RIOT",
+      "stage_id": "basspod",
+      "night": "friday",
+      "start_time": "2026-05-16T02:00:00Z",
+      "end_time": "2026-05-16T02:50:00Z",
+      "genres": [
+        "Bass",
+        "Trap"
+      ],
+      "sounds_like": "Sounds like cinematic festival trap.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_stacy_christine",
+      "artist_name": "Stacy Christine",
+      "stage_id": "bionic",
+      "night": "friday",
+      "start_time": "2026-05-16T02:00:00Z",
+      "end_time": "2026-05-16T03:00:00Z",
+      "genres": [
+        "Bass",
+        "Eclectic"
+      ],
+      "sounds_like": "Sounds like a Bionic Jungle warmup with attitude.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_1991",
+      "artist_name": "1991",
+      "stage_id": "circuit",
+      "night": "friday",
+      "start_time": "2026-05-16T02:00:00Z",
+      "end_time": "2026-05-16T03:00:00Z",
+      "genres": [
+        "Drum & Bass",
+        "Jungle"
+      ],
+      "sounds_like": "Sounds like Sub Focus chopped through 140 BPM jungle.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_jackie_hollander",
+      "artist_name": "Jackie Hollander",
+      "stage_id": "cosmic",
+      "night": "friday",
+      "start_time": "2026-05-16T02:00:00Z",
+      "end_time": "2026-05-16T02:55:00Z",
+      "genres": [
+        "Eclectic",
+        "Indie Dance"
+      ],
+      "sounds_like": "Sounds like a Cosmic Meadow opener.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_laidback_luke_b2b_chuckie",
+      "artist_name": "Laidback Luke B2B Chuckie",
+      "stage_id": "kinetic",
+      "night": "friday",
+      "start_time": "2026-05-16T02:00:00Z",
+      "end_time": "2026-05-16T03:00:00Z",
+      "genres": [
+        "House",
+        "Electro House"
+      ],
+      "sounds_like": "Sounds like Dirty Dutch electro nostalgia.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_anastazja",
+      "artist_name": "Anastazja",
+      "stage_id": "neon",
+      "night": "friday",
+      "start_time": "2026-05-16T02:00:00Z",
+      "end_time": "2026-05-16T03:30:00Z",
+      "genres": [
+        "Techno",
+        "House"
+      ],
+      "sounds_like": "Sounds like a Neon Garden warmup with weight.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_sarah_de_warren",
+      "artist_name": "Sarah de Warren",
+      "stage_id": "quantum",
+      "night": "friday",
+      "start_time": "2026-05-16T02:00:00Z",
+      "end_time": "2026-05-16T03:00:00Z",
+      "genres": [
+        "Trance",
+        "Vocal"
+      ],
+      "sounds_like": "Sounds like a vocal trance anthem on the rise.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_abana_b2b_juliet_mendoza",
+      "artist_name": "Abana B2B Juliet Mendoza",
+      "stage_id": "stereo",
+      "night": "friday",
+      "start_time": "2026-05-16T02:00:00Z",
+      "end_time": "2026-05-16T03:00:00Z",
+      "genres": [
+        "UK Bass",
+        "Eclectic"
+      ],
+      "sounds_like": "Sounds like a leftfield UK bass set at dawn.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_d_mina",
+      "artist_name": "DØMINA",
+      "stage_id": "wasteland",
+      "night": "friday",
+      "start_time": "2026-05-16T02:00:00Z",
+      "end_time": "2026-05-16T03:30:00Z",
+      "genres": [
+        "Hardstyle",
+        "Raw"
+      ],
+      "sounds_like": "Sounds like raw hardstyle with heavy attitude.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_heyz",
+      "artist_name": "HEYZ",
+      "stage_id": "basspod",
+      "night": "friday",
+      "start_time": "2026-05-16T02:50:00Z",
+      "end_time": "2026-05-16T03:40:00Z",
+      "genres": [
+        "Bass",
+        "Wave"
+      ],
+      "sounds_like": "Sounds like fresh-cut wave dubstep.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_roddy_lima",
+      "artist_name": "Roddy Lima",
+      "stage_id": "cosmic",
+      "night": "friday",
+      "start_time": "2026-05-16T02:55:00Z",
+      "end_time": "2026-05-16T03:55:00Z",
+      "genres": [
+        "Hard Techno"
+      ],
+      "sounds_like": "Sounds like a Cosmic Meadow hard techno detour.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_the_carry_nation",
+      "artist_name": "The Carry Nation",
+      "stage_id": "bionic",
+      "night": "friday",
+      "start_time": "2026-05-16T03:00:00Z",
+      "end_time": "2026-05-16T04:30:00Z",
+      "genres": [
+        "House",
+        "Disco"
+      ],
+      "sounds_like": "Sounds like NYC queer-club disco-house.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_bou",
+      "artist_name": "Bou",
+      "stage_id": "circuit",
+      "night": "friday",
+      "start_time": "2026-05-16T03:00:00Z",
+      "end_time": "2026-05-16T04:00:00Z",
+      "genres": [
+        "Drum & Bass",
+        "Jump Up"
+      ],
+      "sounds_like": "Sounds like Hedex-school DnB ragers.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_korolova",
+      "artist_name": "Korolova",
+      "stage_id": "kinetic",
+      "night": "friday",
+      "start_time": "2026-05-16T03:00:00Z",
+      "end_time": "2026-05-16T04:00:00Z",
+      "genres": [
+        "Melodic House",
+        "Progressive"
+      ],
+      "sounds_like": "Sounds like Argy's emotional cousin.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_matty_ralph",
+      "artist_name": "Matty Ralph",
+      "stage_id": "quantum",
+      "night": "friday",
+      "start_time": "2026-05-16T03:00:00Z",
+      "end_time": "2026-05-16T04:00:00Z",
+      "genres": [
+        "Trance",
+        "Uplifting"
+      ],
+      "sounds_like": "Sounds like fresh uplifting trance for Quantum.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_slamm",
+      "artist_name": "SLAMM",
+      "stage_id": "stereo",
+      "night": "friday",
+      "start_time": "2026-05-16T03:00:00Z",
+      "end_time": "2026-05-16T04:00:00Z",
+      "genres": [
+        "UK Bass"
+      ],
+      "sounds_like": "Sounds like a Stereo Bloom UK bass cut.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_m_stiza",
+      "artist_name": "MËSTIZA",
+      "stage_id": "neon",
+      "night": "friday",
+      "start_time": "2026-05-16T03:30:00Z",
+      "end_time": "2026-05-16T05:00:00Z",
+      "genres": [
+        "Tribal House",
+        "Latin"
+      ],
+      "sounds_like": "Sounds like Mexican-rooted tribal house heat.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_serafina",
+      "artist_name": "Serafina",
+      "stage_id": "wasteland",
+      "night": "friday",
+      "start_time": "2026-05-16T03:30:00Z",
+      "end_time": "2026-05-16T04:30:00Z",
+      "genres": [
+        "Hardstyle"
+      ],
+      "sounds_like": "Sounds like fresh femme hardstyle.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_muzz",
+      "artist_name": "MUZZ",
+      "stage_id": "basspod",
+      "night": "friday",
+      "start_time": "2026-05-16T03:40:00Z",
+      "end_time": "2026-05-16T04:30:00Z",
+      "genres": [
+        "Drum & Bass",
+        "Neuro"
+      ],
+      "sounds_like": "Sounds like neuro DnB built for the Basspod.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_westend",
+      "artist_name": "Westend",
+      "stage_id": "cosmic",
+      "night": "friday",
+      "start_time": "2026-05-16T03:55:00Z",
+      "end_time": "2026-05-16T04:55:00Z",
+      "genres": [
+        "Tech House"
+      ],
+      "sounds_like": "Sounds like Insomniac-label tech-house heat.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_nico_moreno",
+      "artist_name": "Nico Moreno",
+      "stage_id": "circuit",
+      "night": "friday",
+      "start_time": "2026-05-16T04:00:00Z",
+      "end_time": "2026-05-16T05:00:00Z",
+      "genres": [
+        "Hard Techno"
+      ],
+      "sounds_like": "Sounds like French hard techno that doesn't blink.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_argy",
+      "artist_name": "Argy",
+      "stage_id": "kinetic",
+      "night": "friday",
+      "start_time": "2026-05-16T04:00:00Z",
+      "end_time": "2026-05-16T05:07:00Z",
+      "genres": [
+        "Melodic House",
+        "Techno"
+      ],
+      "sounds_like": "Sounds like Adriatique with a stadium melody.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_cold_blue",
+      "artist_name": "Cold Blue",
+      "stage_id": "quantum",
+      "night": "friday",
+      "start_time": "2026-05-16T04:00:00Z",
+      "end_time": "2026-05-16T05:00:00Z",
+      "genres": [
+        "Trance",
+        "Uplifting"
+      ],
+      "sounds_like": "Sounds like classic Anjuna uplifting trance.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_luuk_van_dijk",
+      "artist_name": "Luuk van Dijk",
+      "stage_id": "stereo",
+      "night": "friday",
+      "start_time": "2026-05-16T04:00:00Z",
+      "end_time": "2026-05-16T05:15:00Z",
+      "genres": [
+        "UK Bass",
+        "Bassline"
+      ],
+      "sounds_like": "Sounds like a Dutch take on UK garage.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_gorillat",
+      "artist_name": "GorillaT",
+      "stage_id": "basspod",
+      "night": "friday",
+      "start_time": "2026-05-16T04:30:00Z",
+      "end_time": "2026-05-16T05:30:00Z",
+      "genres": [
+        "Bass",
+        "Tearout Dubstep"
+      ],
+      "sounds_like": "Sounds like rugged tearout dubstep.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_massimiliano_pagliara",
+      "artist_name": "Massimiliano Pagliara",
+      "stage_id": "bionic",
+      "night": "friday",
+      "start_time": "2026-05-16T04:30:00Z",
+      "end_time": "2026-05-16T06:00:00Z",
+      "genres": [
+        "Italo Disco",
+        "House"
+      ],
+      "sounds_like": "Sounds like a slow-burn Bionic Jungle disco set.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_johannes_schuster",
+      "artist_name": "Johannes Schuster",
+      "stage_id": "wasteland",
+      "night": "friday",
+      "start_time": "2026-05-16T04:30:00Z",
+      "end_time": "2026-05-16T05:30:00Z",
+      "genres": [
+        "Hard Techno"
+      ],
+      "sounds_like": "Sounds like brutalist German hard techno.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_walker_and_royce_b2b_vnssa",
+      "artist_name": "Walker & Royce B2B VNSSA",
+      "stage_id": "cosmic",
+      "night": "friday",
+      "start_time": "2026-05-16T04:55:00Z",
+      "end_time": "2026-05-16T06:10:00Z",
+      "genres": [
+        "Tech House"
+      ],
+      "sounds_like": "Sounds like Dirtybird-label tech house cheek.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_i_hate_models",
+      "artist_name": "I Hate Models",
+      "stage_id": "circuit",
+      "night": "friday",
+      "start_time": "2026-05-16T05:00:00Z",
+      "end_time": "2026-05-16T06:15:00Z",
+      "genres": [
+        "Hard Techno"
+      ],
+      "sounds_like": "Sounds like new-school hard techno from Paris.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_dj_tennis_b2b_chlo_caillet",
+      "artist_name": "DJ Tennis B2B Chloé Caillet",
+      "stage_id": "neon",
+      "night": "friday",
+      "start_time": "2026-05-16T05:00:00Z",
+      "end_time": "2026-05-16T06:30:00Z",
+      "genres": [
+        "Indie Dance",
+        "Melodic"
+      ],
+      "sounds_like": "Sounds like Life and Death-label dreaminess.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_pegassi",
+      "artist_name": "Pegassi",
+      "stage_id": "quantum",
+      "night": "friday",
+      "start_time": "2026-05-16T05:00:00Z",
+      "end_time": "2026-05-16T06:00:00Z",
+      "genres": [
+        "Trance",
+        "Uplifting"
+      ],
+      "sounds_like": "Sounds like new-wave uplifting trance.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_chris_lorenzo",
+      "artist_name": "Chris Lorenzo",
+      "stage_id": "kinetic",
+      "night": "friday",
+      "start_time": "2026-05-16T05:07:00Z",
+      "end_time": "2026-05-16T06:19:00Z",
+      "genres": [
+        "Bassline",
+        "Tech House"
+      ],
+      "sounds_like": "Sounds like UK bassline meets tech house.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_omar",
+      "artist_name": "Omar+",
+      "stage_id": "stereo",
+      "night": "friday",
+      "start_time": "2026-05-16T05:15:00Z",
+      "end_time": "2026-05-16T06:30:00Z",
+      "genres": [
+        "House",
+        "Deep House"
+      ],
+      "sounds_like": "Sounds like deep-house storytelling.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_ghengar",
+      "artist_name": "Ghengar",
+      "stage_id": "basspod",
+      "night": "friday",
+      "start_time": "2026-05-16T05:30:00Z",
+      "end_time": "2026-05-16T06:30:00Z",
+      "genres": [
+        "Bass",
+        "Riddim"
+      ],
+      "sounds_like": "Sounds like trench-deep Basspod riddim.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_adri_n_mills",
+      "artist_name": "Adrián Mills",
+      "stage_id": "wasteland",
+      "night": "friday",
+      "start_time": "2026-05-16T05:30:00Z",
+      "end_time": "2026-05-16T06:30:00Z",
+      "genres": [
+        "Hard Dance",
+        "Hard Techno"
+      ],
+      "sounds_like": "Sounds like high-octane hard techno for the Wasteland.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_paramida",
+      "artist_name": "PARAMIDA",
+      "stage_id": "bionic",
+      "night": "friday",
+      "start_time": "2026-05-16T06:00:00Z",
+      "end_time": "2026-05-16T07:30:00Z",
+      "genres": [
+        "Indie Dance",
+        "Disco"
+      ],
+      "sounds_like": "Sounds like a Love On The Rocks weirdo selector.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_darude",
+      "artist_name": "Darude",
+      "stage_id": "quantum",
+      "night": "friday",
+      "start_time": "2026-05-16T06:00:00Z",
+      "end_time": "2026-05-16T07:00:00Z",
+      "genres": [
+        "Trance"
+      ],
+      "sounds_like": "Sounds like Sandstorm... and then more Sandstorm.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_underworld",
+      "artist_name": "Underworld",
+      "stage_id": "cosmic",
+      "night": "friday",
+      "start_time": "2026-05-16T06:10:00Z",
+      "end_time": "2026-05-16T07:25:00Z",
+      "genres": [
+        "Electronic",
+        "Techno"
+      ],
+      "sounds_like": "Sounds like the Born Slippy generation in full.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_levity",
+      "artist_name": "Levity",
+      "stage_id": "circuit",
+      "night": "friday",
+      "start_time": "2026-05-16T06:15:00Z",
+      "end_time": "2026-05-16T07:25:00Z",
+      "genres": [
+        "Drum & Bass",
+        "Cinematic"
+      ],
+      "sounds_like": "Sounds like cinematic, melodic DnB.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_sofi_tukker",
+      "artist_name": "Sofi Tukker",
+      "stage_id": "kinetic",
+      "night": "friday",
+      "start_time": "2026-05-16T06:19:00Z",
+      "end_time": "2026-05-16T07:32:00Z",
+      "genres": [
+        "Indie Dance",
+        "Electronic"
+      ],
+      "sounds_like": "Sounds like a Brazilian-disco singalong moment.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_deathpact_deathpact",
+      "artist_name": "Deathpact ∞ Deathpact",
+      "stage_id": "basspod",
+      "night": "friday",
+      "start_time": "2026-05-16T06:30:00Z",
+      "end_time": "2026-05-16T07:30:00Z",
+      "genres": [
+        "Bass",
+        "Riddim"
+      ],
+      "sounds_like": "Sounds like cryptic, riddim-coded Excision-school bass.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_peggy_gou",
+      "artist_name": "Peggy Gou",
+      "stage_id": "neon",
+      "night": "friday",
+      "start_time": "2026-05-16T06:30:00Z",
+      "end_time": "2026-05-16T08:00:00Z",
+      "genres": [
+        "House",
+        "Eclectic"
+      ],
+      "sounds_like": "Sounds like Korean-rooted dance-floor hits.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_luke_dean",
+      "artist_name": "Luke Dean",
+      "stage_id": "stereo",
+      "night": "friday",
+      "start_time": "2026-05-16T06:30:00Z",
+      "end_time": "2026-05-16T07:45:00Z",
+      "genres": [
+        "Indie Dance",
+        "House"
+      ],
+      "sounds_like": "Sounds like a Stereo Bloom warmup.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_cloudy",
+      "artist_name": "Cloudy",
+      "stage_id": "wasteland",
+      "night": "friday",
+      "start_time": "2026-05-16T06:30:00Z",
+      "end_time": "2026-05-16T07:30:00Z",
+      "genres": [
+        "Hardstyle"
+      ],
+      "sounds_like": "Sounds like raw hardstyle for a 5am rave.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_cosmic_gate",
+      "artist_name": "Cosmic Gate",
+      "stage_id": "quantum",
+      "night": "friday",
+      "start_time": "2026-05-16T07:00:00Z",
+      "end_time": "2026-05-16T08:00:00Z",
+      "genres": [
+        "Trance"
+      ],
+      "sounds_like": "Sounds like Above & Beyond's harder cousin.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_wooli",
+      "artist_name": "Wooli",
+      "stage_id": "circuit",
+      "night": "friday",
+      "start_time": "2026-05-16T07:25:00Z",
+      "end_time": "2026-05-16T08:35:00Z",
+      "genres": [
+        "Melodic Bass",
+        "Dubstep"
+      ],
+      "sounds_like": "Sounds like dragons and bass blended together.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_meduza",
+      "artist_name": "MEDUZA³",
+      "stage_id": "cosmic",
+      "night": "friday",
+      "start_time": "2026-05-16T07:25:00Z",
+      "end_time": "2026-05-16T08:47:00Z",
+      "genres": [
+        "House",
+        "Vocal House"
+      ],
+      "sounds_like": "Sounds like a sunset radio hook on the mainstage.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_atliens",
+      "artist_name": "ATLiens",
+      "stage_id": "basspod",
+      "night": "friday",
+      "start_time": "2026-05-16T07:30:00Z",
+      "end_time": "2026-05-16T08:30:00Z",
+      "genres": [
+        "Bass",
+        "Trap"
+      ],
+      "sounds_like": "Sounds like Excision and REZZ in a haunted alley.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_salute_b2b_chlo_caillet",
+      "artist_name": "salute B2B Chloé Caillet",
+      "stage_id": "bionic",
+      "night": "friday",
+      "start_time": "2026-05-16T07:30:00Z",
+      "end_time": "2026-05-16T09:30:00Z",
+      "genres": [
+        "UK Bass",
+        "House"
+      ],
+      "sounds_like": "Sounds like UK bass-house cinema.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_kuko",
+      "artist_name": "KUKO",
+      "stage_id": "wasteland",
+      "night": "friday",
+      "start_time": "2026-05-16T07:30:00Z",
+      "end_time": "2026-05-16T08:30:00Z",
+      "genres": [
+        "Hardstyle",
+        "Raw"
+      ],
+      "sounds_like": "Sounds like raw new-school hardstyle.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_the_chainsmokers",
+      "artist_name": "The Chainsmokers",
+      "stage_id": "kinetic",
+      "night": "friday",
+      "start_time": "2026-05-16T07:32:00Z",
+      "end_time": "2026-05-16T08:47:00Z",
+      "genres": [
+        "Pop",
+        "EDM"
+      ],
+      "sounds_like": "Sounds like the radio hits you can't unhear.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_josh_baker",
+      "artist_name": "Josh Baker",
+      "stage_id": "stereo",
+      "night": "friday",
+      "start_time": "2026-05-16T07:45:00Z",
+      "end_time": "2026-05-16T09:00:00Z",
+      "genres": [
+        "House",
+        "Tech House"
+      ],
+      "sounds_like": "Sounds like UK groove-leaning house.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_adriatique",
+      "artist_name": "Adriatique",
+      "stage_id": "neon",
+      "night": "friday",
+      "start_time": "2026-05-16T08:00:00Z",
+      "end_time": "2026-05-16T09:30:00Z",
+      "genres": [
+        "Melodic Techno",
+        "House"
+      ],
+      "sounds_like": "Sounds like Tale of Us with an alpine afterlight.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_gareth_emery",
+      "artist_name": "Gareth Emery",
+      "stage_id": "quantum",
+      "night": "friday",
+      "start_time": "2026-05-16T08:00:00Z",
+      "end_time": "2026-05-16T09:00:00Z",
+      "genres": [
+        "Trance",
+        "Vocal"
+      ],
+      "sounds_like": "Sounds like emotional vocal trance done right.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_kai_wachi",
+      "artist_name": "Kai Wachi",
+      "stage_id": "basspod",
+      "night": "friday",
+      "start_time": "2026-05-16T08:30:00Z",
+      "end_time": "2026-05-16T09:30:00Z",
+      "genres": [
+        "Bass",
+        "Dubstep"
+      ],
+      "sounds_like": "Sounds like cinematic dubstep with anime energy.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_gravedgr",
+      "artist_name": "GRAVEDGR",
+      "stage_id": "wasteland",
+      "night": "friday",
+      "start_time": "2026-05-16T08:30:00Z",
+      "end_time": "2026-05-16T09:30:00Z",
+      "genres": [
+        "Trap",
+        "Hard Trap"
+      ],
+      "sounds_like": "Sounds like horror-movie trap drops.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_the_outlaw",
+      "artist_name": "The Outlaw",
+      "stage_id": "circuit",
+      "night": "friday",
+      "start_time": "2026-05-16T08:35:00Z",
+      "end_time": "2026-05-16T09:35:00Z",
+      "genres": [
+        "Bass",
+        "Eclectic"
+      ],
+      "sounds_like": "Sounds like a Circuit Grounds curveball.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_notion",
+      "artist_name": "Notion",
+      "stage_id": "cosmic",
+      "night": "friday",
+      "start_time": "2026-05-16T08:47:00Z",
+      "end_time": "2026-05-16T09:47:00Z",
+      "genres": [
+        "Indie Dance",
+        "House"
+      ],
+      "sounds_like": "Sounds like a chilled Cosmic Meadow opener.",
+      "preview_kind": "spotify"
+    },
     {
       "id": "fri_fisher",
       "artist_name": "Fisher",
       "stage_id": "kinetic",
       "night": "friday",
-      "start_time": "2026-05-16T02:00:00Z",
-      "end_time": "2026-05-16T03:15:00Z",
-      "genres": ["Tech House", "House"],
+      "start_time": "2026-05-16T08:47:00Z",
+      "end_time": "2026-05-16T10:01:00Z",
+      "genres": [
+        "Tech House",
+        "House"
+      ],
       "sounds_like": "Sounds like Chris Lake at a pool party.",
       "preview_kind": "spotify"
     },
     {
-      "id": "fri_marshmello",
-      "artist_name": "Marshmello",
-      "stage_id": "kinetic",
+      "id": "fri_ilan_bluestone",
+      "artist_name": "Ilan Bluestone",
+      "stage_id": "quantum",
       "night": "friday",
-      "start_time": "2026-05-16T03:45:00Z",
-      "end_time": "2026-05-16T05:00:00Z",
-      "genres": ["EDM", "Future Bass"],
-      "sounds_like": "Sounds like your festival singalong moment.",
+      "start_time": "2026-05-16T09:00:00Z",
+      "end_time": "2026-05-16T10:00:00Z",
+      "genres": [
+        "Trance"
+      ],
+      "sounds_like": "Sounds like Anjunabeats peak-time uplifters.",
       "preview_kind": "spotify"
     },
     {
-      "id": "fri_kaskade",
-      "artist_name": "Kaskade",
-      "stage_id": "kinetic",
+      "id": "fri_max_dean",
+      "artist_name": "Max Dean",
+      "stage_id": "stereo",
       "night": "friday",
-      "start_time": "2026-05-16T06:00:00Z",
-      "end_time": "2026-05-16T07:15:00Z",
-      "genres": ["Progressive House", "EDM"],
-      "sounds_like": "Sounds like your dead-center fireworks moment.",
+      "start_time": "2026-05-16T09:00:00Z",
+      "end_time": "2026-05-16T10:15:00Z",
+      "genres": [
+        "Indie Dance",
+        "UK"
+      ],
+      "sounds_like": "Sounds like a Stereo Bloom selector.",
       "preview_kind": "spotify"
     },
     {
-      "id": "fri_dj_snake",
-      "artist_name": "DJ Snake",
-      "stage_id": "kinetic",
+      "id": "fri_adventure_club_throwback_set",
+      "artist_name": "Adventure Club (Throwback Set)",
+      "stage_id": "basspod",
       "night": "friday",
-      "start_time": "2026-05-16T08:00:00Z",
-      "end_time": "2026-05-16T09:15:00Z",
-      "genres": ["EDM", "Trap"],
-      "sounds_like": "Sounds like a mainstage anthem factory.",
-      "preview_kind": "youtube"
-    },
-    {
-      "id": "fri_martin_garrix",
-      "artist_name": "Martin Garrix",
-      "stage_id": "kinetic",
-      "night": "friday",
-      "start_time": "2026-05-16T10:30:00Z",
-      "end_time": "2026-05-16T11:45:00Z",
-      "genres": ["EDM", "Progressive House"],
-      "sounds_like": "Sounds like the sunrise anthem you didn't know you needed.",
+      "start_time": "2026-05-16T09:30:00Z",
+      "end_time": "2026-05-16T10:30:00Z",
+      "genres": [
+        "Melodic Dubstep",
+        "Bass"
+      ],
+      "sounds_like": "Sounds like the 2013 melodic dubstep era you remember.",
       "preview_kind": "spotify"
     },
     {
-      "id": "fri_testpilot",
-      "artist_name": "Testpilot",
+      "id": "fri_robert_hood",
+      "artist_name": "Robert Hood",
+      "stage_id": "bionic",
+      "night": "friday",
+      "start_time": "2026-05-16T09:30:00Z",
+      "end_time": "2026-05-16T11:00:00Z",
+      "genres": [
+        "Techno",
+        "Minimal"
+      ],
+      "sounds_like": "Sounds like Detroit minimal techno from the source.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_joseph_capriati",
+      "artist_name": "Joseph Capriati",
+      "stage_id": "neon",
+      "night": "friday",
+      "start_time": "2026-05-16T09:30:00Z",
+      "end_time": "2026-05-16T11:00:00Z",
+      "genres": [
+        "Techno"
+      ],
+      "sounds_like": "Sounds like Italian peak-time techno.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_rebekah",
+      "artist_name": "Rebekah",
+      "stage_id": "wasteland",
+      "night": "friday",
+      "start_time": "2026-05-16T09:30:00Z",
+      "end_time": "2026-05-16T10:30:00Z",
+      "genres": [
+        "Hard Techno",
+        "Industrial"
+      ],
+      "sounds_like": "Sounds like uncompromising UK industrial techno.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_holy_priest",
+      "artist_name": "Holy Priest",
       "stage_id": "circuit",
       "night": "friday",
-      "start_time": "2026-05-16T02:30:00Z",
-      "end_time": "2026-05-16T03:45:00Z",
-      "genres": ["Techno", "Minimal"],
-      "sounds_like": "Sounds like Deadmau5 in a dark warehouse.",
+      "start_time": "2026-05-16T09:35:00Z",
+      "end_time": "2026-05-16T10:30:00Z",
+      "genres": [
+        "Hard Techno"
+      ],
+      "sounds_like": "Sounds like industrial-edged hard techno.",
       "preview_kind": "spotify"
     },
     {
-      "id": "fri_rezz",
-      "artist_name": "REZZ",
-      "stage_id": "circuit",
+      "id": "fri_mph",
+      "artist_name": "MPH",
+      "stage_id": "cosmic",
       "night": "friday",
-      "start_time": "2026-05-16T05:15:00Z",
-      "end_time": "2026-05-16T06:30:00Z",
-      "genres": ["Midtempo", "Bass"],
-      "sounds_like": "Sounds like Zeds Dead in a haunted arcade.",
+      "start_time": "2026-05-16T09:47:00Z",
+      "end_time": "2026-05-16T11:02:00Z",
+      "genres": [
+        "Bass",
+        "Eclectic"
+      ],
+      "sounds_like": "Sounds like leftfield wave bass in widescreen.",
       "preview_kind": "spotify"
     },
     {
-      "id": "fri_deadmau5",
-      "artist_name": "Deadmau5",
-      "stage_id": "circuit",
+      "id": "fri_paul_van_dyk",
+      "artist_name": "Paul van Dyk",
+      "stage_id": "quantum",
       "night": "friday",
-      "start_time": "2026-05-16T07:45:00Z",
-      "end_time": "2026-05-16T09:00:00Z",
-      "genres": ["Progressive House", "Electro"],
-      "sounds_like": "Sounds like Eric Prydz with a mau5head.",
+      "start_time": "2026-05-16T10:00:00Z",
+      "end_time": "2026-05-16T11:00:00Z",
+      "genres": [
+        "Trance"
+      ],
+      "sounds_like": "Sounds like classic trance played with full conviction.",
       "preview_kind": "spotify"
     },
     {
-      "id": "fri_anna",
-      "artist_name": "ANNA",
-      "stage_id": "circuit",
+      "id": "fri_porter_robinson_dj_set",
+      "artist_name": "Porter Robinson (DJ Set)",
+      "stage_id": "kinetic",
+      "night": "friday",
+      "start_time": "2026-05-16T10:01:00Z",
+      "end_time": "2026-05-16T11:14:00Z",
+      "genres": [
+        "Electronic",
+        "Pop"
+      ],
+      "sounds_like": "Sounds like Worlds + Nurture mixed for the mainstage.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_obsk_r",
+      "artist_name": "Obskür",
+      "stage_id": "stereo",
       "night": "friday",
       "start_time": "2026-05-16T10:15:00Z",
       "end_time": "2026-05-16T11:30:00Z",
-      "genres": ["Melodic Techno", "Techno"],
-      "sounds_like": "Sounds like Charlotte de Witte with more melody.",
+      "genres": [
+        "UK Bass",
+        "Bassline"
+      ],
+      "sounds_like": "Sounds like a brooding Stereo Bloom UK set.",
       "preview_kind": "spotify"
     },
     {
-      "id": "fri_odd_mob",
-      "artist_name": "Odd Mob",
-      "stage_id": "cosmic",
-      "night": "friday",
-      "start_time": "2026-05-16T02:15:00Z",
-      "end_time": "2026-05-16T03:30:00Z",
-      "genres": ["Tech House", "Bass House"],
-      "sounds_like": "Sounds like your Dom Dolla and Chris Lake picks.",
-      "preview_kind": "spotify"
-    },
-    {
-      "id": "fri_lp_giobbi",
-      "artist_name": "LP Giobbi",
-      "stage_id": "cosmic",
-      "night": "friday",
-      "start_time": "2026-05-16T05:00:00Z",
-      "end_time": "2026-05-16T06:15:00Z",
-      "genres": ["House", "Piano House"],
-      "sounds_like": "Sounds like a piano-fueled dance floor sermon.",
-      "preview_kind": "spotify"
-    },
-    {
-      "id": "fri_nora",
-      "artist_name": "Nora En Pure",
-      "stage_id": "cosmic",
-      "night": "friday",
-      "start_time": "2026-05-16T07:30:00Z",
-      "end_time": "2026-05-16T08:45:00Z",
-      "genres": ["Deep House", "Melodic House"],
-      "sounds_like": "Sounds like Lane 8.",
-      "preview_kind": "spotify"
-    },
-    {
-      "id": "fri_james_hype",
-      "artist_name": "James Hype",
-      "stage_id": "cosmic",
-      "night": "friday",
-      "start_time": "2026-05-16T10:00:00Z",
-      "end_time": "2026-05-16T11:15:00Z",
-      "genres": ["House", "Tech House"],
-      "sounds_like": "Sounds like a turntablist party starter.",
-      "preview_kind": "youtube"
-    },
-    {
-      "id": "fri_cloonee",
-      "artist_name": "Cloonee",
-      "stage_id": "neon",
-      "night": "friday",
-      "start_time": "2026-05-16T02:45:00Z",
-      "end_time": "2026-05-16T04:00:00Z",
-      "genres": ["House", "Tech House"],
-      "sounds_like": "Sounds like your John Summit and Fisher picks.",
-      "preview_kind": "spotify"
-    },
-    {
-      "id": "fri_tchami",
-      "artist_name": "Tchami",
-      "stage_id": "neon",
-      "night": "friday",
-      "start_time": "2026-05-16T04:30:00Z",
-      "end_time": "2026-05-16T05:45:00Z",
-      "genres": ["Future House", "House"],
-      "sounds_like": "Sounds like holy bass in a cathedral.",
-      "preview_kind": "spotify"
-    },
-    {
-      "id": "fri_malaa",
-      "artist_name": "Malaa",
-      "stage_id": "neon",
-      "night": "friday",
-      "start_time": "2026-05-16T06:30:00Z",
-      "end_time": "2026-05-16T07:45:00Z",
-      "genres": ["House", "G-House"],
-      "sounds_like": "Sounds like Tchami's masked alter ego.",
-      "preview_kind": "youtube"
-    },
-    {
-      "id": "fri_zedd",
-      "artist_name": "Zedd",
-      "stage_id": "neon",
-      "night": "friday",
-      "start_time": "2026-05-16T08:30:00Z",
-      "end_time": "2026-05-16T09:45:00Z",
-      "genres": ["EDM", "Electro House"],
-      "sounds_like": "Sounds like Clarity never left the festival.",
-      "preview_kind": "spotify"
-    },
-    {
-      "id": "fri_alesso",
-      "artist_name": "Alesso",
-      "stage_id": "neon",
-      "night": "friday",
-      "start_time": "2026-05-16T11:00:00Z",
-      "end_time": "2026-05-16T12:15:00Z",
-      "genres": ["Progressive House", "EDM"],
-      "sounds_like": "Sounds like Swedish House Mafia with more vocals.",
-      "preview_kind": "spotify"
-    },
-    {
-      "id": "fri_dimension",
-      "artist_name": "Dimension",
+      "id": "fri_culture_shock",
+      "artist_name": "Culture Shock",
       "stage_id": "basspod",
       "night": "friday",
-      "start_time": "2026-05-16T02:00:00Z",
-      "end_time": "2026-05-16T03:15:00Z",
-      "genres": ["Drum & Bass", "Dancefloor"],
-      "sounds_like": "Sounds like Sub Focus.",
-      "preview_kind": "youtube"
-    },
-    {
-      "id": "fri_knock2",
-      "artist_name": "Knock2",
-      "stage_id": "basspod",
-      "night": "friday",
-      "start_time": "2026-05-16T04:45:00Z",
-      "end_time": "2026-05-16T06:00:00Z",
-      "genres": ["House", "Bass House"],
-      "sounds_like": "Sounds like a SoCal house party on ten.",
-      "preview_kind": "youtube"
-    },
-    {
-      "id": "fri_virtual_riot",
-      "artist_name": "Virtual Riot",
-      "stage_id": "basspod",
-      "night": "friday",
-      "start_time": "2026-05-16T07:15:00Z",
-      "end_time": "2026-05-16T08:30:00Z",
-      "genres": ["Dubstep", "Bass"],
-      "sounds_like": "Sounds like Excision but glitchier.",
-      "preview_kind": "youtube"
-    },
-    {
-      "id": "fri_moore_kismet",
-      "artist_name": "Moore Kismet",
-      "stage_id": "basspod",
-      "night": "friday",
-      "start_time": "2026-05-16T09:45:00Z",
-      "end_time": "2026-05-16T11:00:00Z",
-      "genres": ["Bass", "Future Bass"],
-      "sounds_like": "Sounds like the future of bass music, literally.",
+      "start_time": "2026-05-16T10:30:00Z",
+      "end_time": "2026-05-16T11:30:00Z",
+      "genres": [
+        "Drum & Bass"
+      ],
+      "sounds_like": "Sounds like rolling crossover DnB from the Ram camp.",
       "preview_kind": "spotify"
     },
     {
-      "id": "fri_ac_slater",
-      "artist_name": "AC Slater",
-      "stage_id": "wasteland",
+      "id": "fri_ray_volpe",
+      "artist_name": "Ray Volpe",
+      "stage_id": "circuit",
       "night": "friday",
-      "start_time": "2026-05-16T03:00:00Z",
-      "end_time": "2026-05-16T04:15:00Z",
-      "genres": ["Bass House", "Night Bass"],
-      "sounds_like": "Sounds like Wax Motif at a Night Bass takeover.",
-      "preview_kind": "youtube"
-    },
-    {
-      "id": "fri_tokimonsta",
-      "artist_name": "TOKiMONSTA",
-      "stage_id": "wasteland",
-      "night": "friday",
-      "start_time": "2026-05-16T05:30:00Z",
-      "end_time": "2026-05-16T06:45:00Z",
-      "genres": ["Future Bass", "Electronic"],
-      "sounds_like": "Sounds like Flume with soul samples.",
+      "start_time": "2026-05-16T10:30:00Z",
+      "end_time": "2026-05-16T11:30:00Z",
+      "genres": [
+        "Dubstep",
+        "Riddim"
+      ],
+      "sounds_like": "Sounds like riddim with TikTok-ready hooks.",
       "preview_kind": "spotify"
     },
     {
-      "id": "fri_green_velvet",
-      "artist_name": "Green Velvet",
-      "stage_id": "wasteland",
-      "night": "friday",
-      "start_time": "2026-05-16T08:00:00Z",
-      "end_time": "2026-05-16T09:15:00Z",
-      "genres": ["Techno", "Acid House"],
-      "sounds_like": "Sounds like Claude VonStroke in a darker timeline.",
-      "preview_kind": "youtube"
-    },
-    {
-      "id": "fri_wax_motif",
-      "artist_name": "Wax Motif",
+      "id": "fri_dyen",
+      "artist_name": "DYEN",
       "stage_id": "wasteland",
       "night": "friday",
       "start_time": "2026-05-16T10:30:00Z",
-      "end_time": "2026-05-16T11:45:00Z",
-      "genres": ["Bass House", "House"],
-      "sounds_like": "Sounds like AC Slater with extra grime.",
-      "preview_kind": "youtube"
-    },
-    {
-      "id": "sat_hi_lo",
-      "artist_name": "HI-LO",
-      "stage_id": "kinetic",
-      "night": "saturday",
-      "start_time": "2026-05-17T02:15:00Z",
-      "end_time": "2026-05-17T03:30:00Z",
-      "genres": ["Techno", "Tech House"],
-      "sounds_like": "Sounds like Oliver Heldens' dark alter ego.",
+      "end_time": "2026-05-16T11:30:00Z",
+      "genres": [
+        "Hardstyle",
+        "Raw"
+      ],
+      "sounds_like": "Sounds like fresh raw-style hardstyle.",
       "preview_kind": "spotify"
     },
     {
-      "id": "sat_illenium",
-      "artist_name": "ILLENIUM",
-      "stage_id": "kinetic",
-      "night": "saturday",
-      "start_time": "2026-05-17T04:00:00Z",
-      "end_time": "2026-05-17T05:15:00Z",
-      "genres": ["Melodic Bass", "Future Bass"],
-      "sounds_like": "Sounds like Seven Lions.",
+      "id": "fri_avalon_emerson",
+      "artist_name": "Avalon Emerson",
+      "stage_id": "bionic",
+      "night": "friday",
+      "start_time": "2026-05-16T11:00:00Z",
+      "end_time": "2026-05-16T12:30:00Z",
+      "genres": [
+        "Indie Dance",
+        "Electro"
+      ],
+      "sounds_like": "Sounds like dreamy electro for the Bionic Jungle.",
       "preview_kind": "spotify"
     },
     {
-      "id": "sat_swedish_house_mafia",
-      "artist_name": "Swedish House Mafia",
-      "stage_id": "kinetic",
-      "night": "saturday",
-      "start_time": "2026-05-17T06:00:00Z",
-      "end_time": "2026-05-17T07:15:00Z",
-      "genres": ["Progressive House", "EDM"],
-      "sounds_like": "Sounds like the holy trinity of mainstage.",
+      "id": "fri_eli_brown",
+      "artist_name": "Eli Brown",
+      "stage_id": "neon",
+      "night": "friday",
+      "start_time": "2026-05-16T11:00:00Z",
+      "end_time": "2026-05-16T12:30:00Z",
+      "genres": [
+        "Tech House",
+        "Techno"
+      ],
+      "sounds_like": "Sounds like Solardo with extra muscle.",
       "preview_kind": "spotify"
     },
     {
-      "id": "sat_above_beyond",
-      "artist_name": "Above & Beyond",
-      "stage_id": "kinetic",
-      "night": "saturday",
-      "start_time": "2026-05-17T08:15:00Z",
-      "end_time": "2026-05-17T09:30:00Z",
-      "genres": ["Trance", "Progressive"],
-      "sounds_like": "Sounds like Group Therapy under fireworks.",
+      "id": "fri_darren_porter",
+      "artist_name": "Darren Porter",
+      "stage_id": "quantum",
+      "night": "friday",
+      "start_time": "2026-05-16T11:00:00Z",
+      "end_time": "2026-05-16T12:30:00Z",
+      "genres": [
+        "Trance",
+        "Uplifting"
+      ],
+      "sounds_like": "Sounds like uplifting trance built for cathedrals.",
       "preview_kind": "spotify"
     },
     {
-      "id": "sat_armin_van_buuren",
-      "artist_name": "Armin van Buuren",
-      "stage_id": "kinetic",
-      "night": "saturday",
-      "start_time": "2026-05-17T10:45:00Z",
-      "end_time": "2026-05-17T12:00:00Z",
-      "genres": ["Trance", "Progressive Trance"],
-      "sounds_like": "Sounds like A State of Trance at sunrise.",
+      "id": "fri_san_pacho",
+      "artist_name": "San Pacho",
+      "stage_id": "cosmic",
+      "night": "friday",
+      "start_time": "2026-05-16T11:02:00Z",
+      "end_time": "2026-05-16T12:30:00Z",
+      "genres": [
+        "Tech House",
+        "Latin"
+      ],
+      "sounds_like": "Sounds like Latin-flavored tech house.",
       "preview_kind": "spotify"
     },
     {
-      "id": "sat_lee_foss",
-      "artist_name": "Lee Foss",
+      "id": "fri_charlotte_de_witte",
+      "artist_name": "Charlotte de Witte",
+      "stage_id": "kinetic",
+      "night": "friday",
+      "start_time": "2026-05-16T11:14:00Z",
+      "end_time": "2026-05-16T12:30:00Z",
+      "genres": [
+        "Techno"
+      ],
+      "sounds_like": "Sounds like jet-black peak-time techno.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_cyclops",
+      "artist_name": "Cyclops",
+      "stage_id": "basspod",
+      "night": "friday",
+      "start_time": "2026-05-16T11:30:00Z",
+      "end_time": "2026-05-16T12:30:00Z",
+      "genres": [
+        "Bass",
+        "Riddim"
+      ],
+      "sounds_like": "Sounds like a Basspod riddim onslaught.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_level_up",
+      "artist_name": "Level Up",
+      "stage_id": "circuit",
+      "night": "friday",
+      "start_time": "2026-05-16T11:30:00Z",
+      "end_time": "2026-05-16T12:30:00Z",
+      "genres": [
+        "Trap",
+        "Bass"
+      ],
+      "sounds_like": "Sounds like classic festival trap reborn.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_toman",
+      "artist_name": "Toman",
+      "stage_id": "stereo",
+      "night": "friday",
+      "start_time": "2026-05-16T11:30:00Z",
+      "end_time": "2026-05-16T12:30:00Z",
+      "genres": [
+        "UK Bass",
+        "Bass House"
+      ],
+      "sounds_like": "Sounds like UK bass-house edge.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "fri_stan_christ",
+      "artist_name": "Stan Christ",
+      "stage_id": "wasteland",
+      "night": "friday",
+      "start_time": "2026-05-16T11:30:00Z",
+      "end_time": "2026-05-16T12:30:00Z",
+      "genres": [
+        "Hardstyle"
+      ],
+      "sounds_like": "Sounds like a raw hardstyle pulpit-pounder.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_fallen_with_mc_dino",
+      "artist_name": "Fallen with MC Dino",
+      "stage_id": "basspod",
+      "night": "saturday",
+      "start_time": "2026-05-17T02:00:00Z",
+      "end_time": "2026-05-17T02:50:00Z",
+      "genres": [
+        "Drum & Bass",
+        "Jump Up"
+      ],
+      "sounds_like": "Sounds like jump-up DnB with constant MC hype.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_player_dave",
+      "artist_name": "Player Dave",
+      "stage_id": "bionic",
+      "night": "saturday",
+      "start_time": "2026-05-17T02:00:00Z",
+      "end_time": "2026-05-17T03:00:00Z",
+      "genres": [
+        "Drum & Bass",
+        "Jump Up"
+      ],
+      "sounds_like": "Sounds like UK jump-up DnB primetime.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_dj_mandy",
+      "artist_name": "DJ Mandy",
       "stage_id": "circuit",
       "night": "saturday",
       "start_time": "2026-05-17T02:00:00Z",
-      "end_time": "2026-05-17T03:15:00Z",
-      "genres": ["House", "Tech House"],
-      "sounds_like": "Sounds like a Hot Creations sunset warmup.",
+      "end_time": "2026-05-17T03:00:00Z",
+      "genres": [
+        "House",
+        "Techno"
+      ],
+      "sounds_like": "Sounds like a Circuit Grounds peak-hour swing.",
       "preview_kind": "spotify"
     },
     {
-      "id": "sat_camelphat",
-      "artist_name": "Camelphat",
+      "id": "sat_frost_children",
+      "artist_name": "Frost Children",
+      "stage_id": "cosmic",
+      "night": "saturday",
+      "start_time": "2026-05-17T02:00:00Z",
+      "end_time": "2026-05-17T03:15:00Z",
+      "genres": [
+        "Indie",
+        "Hyperpop"
+      ],
+      "sounds_like": "Sounds like leftfield art-pop with electronic teeth.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_ar_co",
+      "artist_name": "AR/CO",
+      "stage_id": "kinetic",
+      "night": "saturday",
+      "start_time": "2026-05-17T02:00:00Z",
+      "end_time": "2026-05-17T03:00:00Z",
+      "genres": [
+        "EDM",
+        "Vocal"
+      ],
+      "sounds_like": "Sounds like the festival vocal hook you'll hum on the walk out.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_mink",
+      "artist_name": "mink",
+      "stage_id": "neon",
+      "night": "saturday",
+      "start_time": "2026-05-17T02:00:00Z",
+      "end_time": "2026-05-17T03:30:00Z",
+      "genres": [
+        "House",
+        "Techno"
+      ],
+      "sounds_like": "Sounds like a Neon Garden deep-cut.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_maria_healy",
+      "artist_name": "Maria Healy",
+      "stage_id": "quantum",
+      "night": "saturday",
+      "start_time": "2026-05-17T02:00:00Z",
+      "end_time": "2026-05-17T03:30:00Z",
+      "genres": [
+        "Trance",
+        "Uplifting"
+      ],
+      "sounds_like": "Sounds like Irish uplifting trance fresh out the cathedral.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_slugg",
+      "artist_name": "Slugg",
+      "stage_id": "stereo",
+      "night": "saturday",
+      "start_time": "2026-05-17T02:00:00Z",
+      "end_time": "2026-05-17T03:00:00Z",
+      "genres": [
+        "Bass",
+        "Indie"
+      ],
+      "sounds_like": "Sounds like a Stereo Bloom curveball.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_cutdwn",
+      "artist_name": "CUTDWN",
+      "stage_id": "wasteland",
+      "night": "saturday",
+      "start_time": "2026-05-17T02:00:00Z",
+      "end_time": "2026-05-17T03:30:00Z",
+      "genres": [
+        "Hardstyle",
+        "Raw"
+      ],
+      "sounds_like": "Sounds like raw hardstyle breakbeat carnage.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_avello_b2b_dennett",
+      "artist_name": "AVELLO B2B Dennett",
+      "stage_id": "basspod",
+      "night": "saturday",
+      "start_time": "2026-05-17T02:50:00Z",
+      "end_time": "2026-05-17T03:40:00Z",
+      "genres": [
+        "Bass",
+        "Riddim"
+      ],
+      "sounds_like": "Sounds like a tag-team Basspod riddim assault.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_spray",
+      "artist_name": "Spray",
+      "stage_id": "bionic",
+      "night": "saturday",
+      "start_time": "2026-05-17T03:00:00Z",
+      "end_time": "2026-05-17T04:00:00Z",
+      "genres": [
+        "Bass",
+        "Eclectic"
+      ],
+      "sounds_like": "Sounds like leftfield Bionic Jungle bass.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_r_z",
+      "artist_name": "RØZ",
       "stage_id": "circuit",
       "night": "saturday",
-      "start_time": "2026-05-17T03:45:00Z",
-      "end_time": "2026-05-17T05:00:00Z",
-      "genres": ["Melodic Techno", "House"],
-      "sounds_like": "Sounds like your Lane 8 and Nora En Pure picks.",
+      "start_time": "2026-05-17T03:00:00Z",
+      "end_time": "2026-05-17T04:15:00Z",
+      "genres": [
+        "Hard Techno"
+      ],
+      "sounds_like": "Sounds like raw, fast Berghain-leaning techno.",
       "preview_kind": "spotify"
     },
     {
-      "id": "sat_fred",
-      "artist_name": "Fred again..",
+      "id": "sat_hayla",
+      "artist_name": "HAYLA",
+      "stage_id": "kinetic",
+      "night": "saturday",
+      "start_time": "2026-05-17T03:00:00Z",
+      "end_time": "2026-05-17T04:00:00Z",
+      "genres": [
+        "Vocal",
+        "Pop"
+      ],
+      "sounds_like": "Sounds like the festival vocal hook you've been humming.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_dreya_v",
+      "artist_name": "DREYA V",
+      "stage_id": "stereo",
+      "night": "saturday",
+      "start_time": "2026-05-17T03:00:00Z",
+      "end_time": "2026-05-17T04:00:00Z",
+      "genres": [
+        "UK Bass"
+      ],
+      "sounds_like": "Sounds like a Stereo Bloom UK bass selector.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_hannah_laing",
+      "artist_name": "Hannah Laing",
+      "stage_id": "cosmic",
+      "night": "saturday",
+      "start_time": "2026-05-17T03:15:00Z",
+      "end_time": "2026-05-17T04:25:00Z",
+      "genres": [
+        "Trance",
+        "Hard House"
+      ],
+      "sounds_like": "Sounds like Scottish hard trance revival.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_silvie_loto",
+      "artist_name": "Silvie Loto",
+      "stage_id": "neon",
+      "night": "saturday",
+      "start_time": "2026-05-17T03:30:00Z",
+      "end_time": "2026-05-17T05:00:00Z",
+      "genres": [
+        "Techno",
+        "Melodic Techno"
+      ],
+      "sounds_like": "Sounds like an Italian melodic techno deep-cut.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_superstrings",
+      "artist_name": "SUPERSTRINGS",
+      "stage_id": "quantum",
+      "night": "saturday",
+      "start_time": "2026-05-17T03:30:00Z",
+      "end_time": "2026-05-17T04:30:00Z",
+      "genres": [
+        "Trance",
+        "Uplifting"
+      ],
+      "sounds_like": "Sounds like emotional uplifting trance.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_dead_x",
+      "artist_name": "Dead X",
+      "stage_id": "wasteland",
+      "night": "saturday",
+      "start_time": "2026-05-17T03:30:00Z",
+      "end_time": "2026-05-17T04:30:00Z",
+      "genres": [
+        "Hardstyle",
+        "Raw"
+      ],
+      "sounds_like": "Sounds like dark, raw hardstyle for the pit.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_viperactive",
+      "artist_name": "Viperactive",
+      "stage_id": "basspod",
+      "night": "saturday",
+      "start_time": "2026-05-17T03:40:00Z",
+      "end_time": "2026-05-17T04:30:00Z",
+      "genres": [
+        "Bass",
+        "Riddim"
+      ],
+      "sounds_like": "Sounds like a Basspod riddim curveball.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_bashkka_b2b_sedef_adasi",
+      "artist_name": "Bashkka B2B Sedef Adasi",
+      "stage_id": "bionic",
+      "night": "saturday",
+      "start_time": "2026-05-17T04:00:00Z",
+      "end_time": "2026-05-17T05:30:00Z",
+      "genres": [
+        "Eclectic",
+        "Leftfield"
+      ],
+      "sounds_like": "Sounds like a left-of-center after-hours Bionic Jungle set.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_sub_focus",
+      "artist_name": "Sub Focus",
+      "stage_id": "kinetic",
+      "night": "saturday",
+      "start_time": "2026-05-17T04:00:00Z",
+      "end_time": "2026-05-17T05:07:00Z",
+      "genres": [
+        "Drum & Bass"
+      ],
+      "sounds_like": "Sounds like festival-ready melodic DnB.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_discip",
+      "artist_name": "Discip",
+      "stage_id": "stereo",
+      "night": "saturday",
+      "start_time": "2026-05-17T04:00:00Z",
+      "end_time": "2026-05-17T05:00:00Z",
+      "genres": [
+        "Bass",
+        "Eclectic"
+      ],
+      "sounds_like": "Sounds like a Stereo Bloom outsider bass set.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_kettama",
+      "artist_name": "KETTAMA",
+      "stage_id": "circuit",
+      "night": "saturday",
+      "start_time": "2026-05-17T04:15:00Z",
+      "end_time": "2026-05-17T05:45:00Z",
+      "genres": [
+        "House",
+        "UK House"
+      ],
+      "sounds_like": "Sounds like Irish-bred raw house energy.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_snow_strippers",
+      "artist_name": "Snow Strippers",
+      "stage_id": "cosmic",
+      "night": "saturday",
+      "start_time": "2026-05-17T04:25:00Z",
+      "end_time": "2026-05-17T05:15:00Z",
+      "genres": [
+        "Indie",
+        "Electronic"
+      ],
+      "sounds_like": "Sounds like dark indie electronic with cult energy.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_hybrid_minds",
+      "artist_name": "Hybrid Minds",
+      "stage_id": "basspod",
+      "night": "saturday",
+      "start_time": "2026-05-17T04:30:00Z",
+      "end_time": "2026-05-17T05:30:00Z",
+      "genres": [
+        "Liquid DnB",
+        "Drum & Bass"
+      ],
+      "sounds_like": "Sounds like soulful liquid drum & bass.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_billy_gillies",
+      "artist_name": "Billy Gillies",
+      "stage_id": "quantum",
+      "night": "saturday",
+      "start_time": "2026-05-17T04:30:00Z",
+      "end_time": "2026-05-17T05:30:00Z",
+      "genres": [
+        "Trance"
+      ],
+      "sounds_like": "Sounds like big-room trance with a UK pulse.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_the_saints",
+      "artist_name": "The Saints",
+      "stage_id": "wasteland",
+      "night": "saturday",
+      "start_time": "2026-05-17T04:30:00Z",
+      "end_time": "2026-05-17T05:30:00Z",
+      "genres": [
+        "Hardstyle"
+      ],
+      "sounds_like": "Sounds like raw hardstyle anthems.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_ahmed_spins",
+      "artist_name": "Ahmed Spins",
+      "stage_id": "neon",
+      "night": "saturday",
+      "start_time": "2026-05-17T05:00:00Z",
+      "end_time": "2026-05-17T06:30:00Z",
+      "genres": [
+        "Afro House"
+      ],
+      "sounds_like": "Sounds like Black Coffee's afterhours by the desert.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_omnom",
+      "artist_name": "OMNOM",
+      "stage_id": "stereo",
+      "night": "saturday",
+      "start_time": "2026-05-17T05:00:00Z",
+      "end_time": "2026-05-17T06:15:00Z",
+      "genres": [
+        "Bass House"
+      ],
+      "sounds_like": "Sounds like wonky bass house with a sense of humor.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_steve_aoki",
+      "artist_name": "Steve Aoki",
+      "stage_id": "kinetic",
+      "night": "saturday",
+      "start_time": "2026-05-17T05:07:00Z",
+      "end_time": "2026-05-17T06:19:00Z",
+      "genres": [
+        "EDM",
+        "Big Room"
+      ],
+      "sounds_like": "Sounds like cake-throwing big-room nostalgia.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_vtss_in_the_round",
+      "artist_name": "VTSS (In The Round)",
+      "stage_id": "cosmic",
+      "night": "saturday",
+      "start_time": "2026-05-17T05:15:00Z",
+      "end_time": "2026-05-17T06:35:00Z",
+      "genres": [
+        "Hard Techno"
+      ],
+      "sounds_like": "Sounds like Polish hard techno with melodic dread.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_ydg",
+      "artist_name": "YDG",
+      "stage_id": "basspod",
+      "night": "saturday",
+      "start_time": "2026-05-17T05:30:00Z",
+      "end_time": "2026-05-17T06:30:00Z",
+      "genres": [
+        "Bass",
+        "Riddim"
+      ],
+      "sounds_like": "Sounds like a Basspod tearout cut.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_haai_b2b_luke_alessi",
+      "artist_name": "HAAi B2B Luke Alessi",
+      "stage_id": "bionic",
+      "night": "saturday",
+      "start_time": "2026-05-17T05:30:00Z",
+      "end_time": "2026-05-17T07:00:00Z",
+      "genres": [
+        "Indie Dance",
+        "Breaks"
+      ],
+      "sounds_like": "Sounds like a leftfield breaks-and-techno b2b.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_paul_oakenfold",
+      "artist_name": "Paul Oakenfold",
+      "stage_id": "quantum",
+      "night": "saturday",
+      "start_time": "2026-05-17T05:30:00Z",
+      "end_time": "2026-05-17T06:30:00Z",
+      "genres": [
+        "Trance"
+      ],
+      "sounds_like": "Sounds like the godfather of trance is in the building.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_rob_gee_b2b_lenny_dee",
+      "artist_name": "Rob Gee B2B Lenny Dee",
+      "stage_id": "wasteland",
+      "night": "saturday",
+      "start_time": "2026-05-17T05:30:00Z",
+      "end_time": "2026-05-17T06:30:00Z",
+      "genres": [
+        "Hardcore"
+      ],
+      "sounds_like": "Sounds like NYC hardcore legends still going.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_sammy_virji",
+      "artist_name": "Sammy Virji",
       "stage_id": "circuit",
       "night": "saturday",
       "start_time": "2026-05-17T05:45:00Z",
-      "end_time": "2026-05-17T07:00:00Z",
-      "genres": ["House", "UK Garage"],
-      "sounds_like": "Sounds like your Disclosure and Bicep picks.",
+      "end_time": "2026-05-17T07:15:00Z",
+      "genres": [
+        "UK Garage"
+      ],
+      "sounds_like": "Sounds like UKG's mainstage moment.",
       "preview_kind": "spotify"
     },
     {
-      "id": "sat_lane_8",
-      "artist_name": "Lane 8",
-      "stage_id": "circuit",
+      "id": "sat_noizu",
+      "artist_name": "Noizu",
+      "stage_id": "stereo",
       "night": "saturday",
-      "start_time": "2026-05-17T08:00:00Z",
-      "end_time": "2026-05-17T09:15:00Z",
-      "genres": ["Deep House", "Melodic House"],
-      "sounds_like": "Sounds like Nora En Pure in a midnight garden.",
+      "start_time": "2026-05-17T06:15:00Z",
+      "end_time": "2026-05-17T07:30:00Z",
+      "genres": [
+        "Tech House",
+        "Bass House"
+      ],
+      "sounds_like": "Sounds like punchy tech house with bassline edge.",
       "preview_kind": "spotify"
     },
     {
       "id": "sat_hardwell",
       "artist_name": "Hardwell",
+      "stage_id": "kinetic",
+      "night": "saturday",
+      "start_time": "2026-05-17T06:19:00Z",
+      "end_time": "2026-05-17T07:32:00Z",
+      "genres": [
+        "Big Room",
+        "EDM"
+      ],
+      "sounds_like": "Sounds like throwback mainstage big-room.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_delta_heavy",
+      "artist_name": "Delta Heavy",
+      "stage_id": "basspod",
+      "night": "saturday",
+      "start_time": "2026-05-17T06:30:00Z",
+      "end_time": "2026-05-17T07:30:00Z",
+      "genres": [
+        "Drum & Bass",
+        "Neuro"
+      ],
+      "sounds_like": "Sounds like big-tune neuro DnB.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_luciano",
+      "artist_name": "Luciano",
+      "stage_id": "neon",
+      "night": "saturday",
+      "start_time": "2026-05-17T06:30:00Z",
+      "end_time": "2026-05-17T08:30:00Z",
+      "genres": [
+        "House",
+        "Techno"
+      ],
+      "sounds_like": "Sounds like Cadenza-label sunrise grooves.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_andrew_rayel",
+      "artist_name": "Andrew Rayel",
+      "stage_id": "quantum",
+      "night": "saturday",
+      "start_time": "2026-05-17T06:30:00Z",
+      "end_time": "2026-05-17T07:30:00Z",
+      "genres": [
+        "Trance",
+        "Uplifting"
+      ],
+      "sounds_like": "Sounds like uplifting Armada trance, big and bright.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_lady_faith_b2b_lny_tnz",
+      "artist_name": "Lady Faith B2B LNY TNZ",
+      "stage_id": "wasteland",
+      "night": "saturday",
+      "start_time": "2026-05-17T06:30:00Z",
+      "end_time": "2026-05-17T07:30:00Z",
+      "genres": [
+        "Hardstyle"
+      ],
+      "sounds_like": "Sounds like a hardstyle sister-set wrecking ball.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_the_prodigy",
+      "artist_name": "The Prodigy",
+      "stage_id": "cosmic",
+      "night": "saturday",
+      "start_time": "2026-05-17T06:35:00Z",
+      "end_time": "2026-05-17T07:40:00Z",
+      "genres": [
+        "Big Beat",
+        "Electronic"
+      ],
+      "sounds_like": "Sounds like the original rave riot.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_mcr_t",
+      "artist_name": "MCR-T",
+      "stage_id": "bionic",
+      "night": "saturday",
+      "start_time": "2026-05-17T07:00:00Z",
+      "end_time": "2026-05-17T08:15:00Z",
+      "genres": [
+        "Eclectic",
+        "Bass"
+      ],
+      "sounds_like": "Sounds like leftfield Berlin club edits.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_ti_sto",
+      "artist_name": "Tiësto",
       "stage_id": "circuit",
       "night": "saturday",
-      "start_time": "2026-05-17T10:30:00Z",
-      "end_time": "2026-05-17T11:45:00Z",
-      "genres": ["EDM", "Big Room"],
-      "sounds_like": "Sounds like Revealed Recordings in full force.",
-      "preview_kind": "youtube"
-    },
-    {
-      "id": "sat_kasablanca",
-      "artist_name": "Kasablanca",
-      "stage_id": "cosmic",
-      "night": "saturday",
-      "start_time": "2026-05-17T02:30:00Z",
-      "end_time": "2026-05-17T03:45:00Z",
-      "genres": ["Melodic Techno", "Progressive House"],
-      "sounds_like": "Sounds like a synthwave road trip at midnight.",
+      "start_time": "2026-05-17T07:15:00Z",
+      "end_time": "2026-05-17T08:45:00Z",
+      "genres": [
+        "EDM",
+        "Big Room"
+      ],
+      "sounds_like": "Sounds like the godfather of mainstage EDM.",
       "preview_kind": "spotify"
     },
     {
-      "id": "sat_chris_lake",
-      "artist_name": "Chris Lake",
-      "stage_id": "cosmic",
-      "night": "saturday",
-      "start_time": "2026-05-17T04:15:00Z",
-      "end_time": "2026-05-17T05:30:00Z",
-      "genres": ["House", "Tech House"],
-      "sounds_like": "Sounds like your Fisher and Cloonee picks.",
-      "preview_kind": "spotify"
-    },
-    {
-      "id": "sat_disclosure",
-      "artist_name": "Disclosure",
-      "stage_id": "cosmic",
-      "night": "saturday",
-      "start_time": "2026-05-17T06:15:00Z",
-      "end_time": "2026-05-17T07:30:00Z",
-      "genres": ["UK Garage", "House"],
-      "sounds_like": "Sounds like Fred again.. with more vocals.",
-      "preview_kind": "spotify"
-    },
-    {
-      "id": "sat_dom_dolla",
-      "artist_name": "Dom Dolla",
-      "stage_id": "cosmic",
-      "night": "saturday",
-      "start_time": "2026-05-17T08:30:00Z",
-      "end_time": "2026-05-17T09:45:00Z",
-      "genres": ["House", "Tech House"],
-      "sounds_like": "Sounds like your Chris Lake pick.",
-      "preview_kind": "spotify"
-    },
-    {
-      "id": "sat_diplo",
-      "artist_name": "Diplo",
-      "stage_id": "cosmic",
-      "night": "saturday",
-      "start_time": "2026-05-17T10:15:00Z",
-      "end_time": "2026-05-17T11:30:00Z",
-      "genres": ["EDM", "Dance"],
-      "sounds_like": "Sounds like a genre-hopping global party.",
-      "preview_kind": "youtube"
-    },
-    {
-      "id": "sat_patrick_topping",
-      "artist_name": "Patrick Topping",
-      "stage_id": "neon",
-      "night": "saturday",
-      "start_time": "2026-05-17T02:45:00Z",
-      "end_time": "2026-05-17T04:00:00Z",
-      "genres": ["Tech House", "House"],
-      "sounds_like": "Sounds like Jamie Jones at a peak-time party.",
-      "preview_kind": "spotify"
-    },
-    {
-      "id": "sat_eric_prydz",
-      "artist_name": "Eric Prydz",
-      "stage_id": "neon",
-      "night": "saturday",
-      "start_time": "2026-05-17T05:15:00Z",
-      "end_time": "2026-05-17T06:30:00Z",
-      "genres": ["Progressive House", "Techno"],
-      "sounds_like": "Sounds like Deadmau5 with EPIC visuals.",
-      "preview_kind": "spotify"
-    },
-    {
-      "id": "sat_charlotte",
-      "artist_name": "Charlotte de Witte",
-      "stage_id": "neon",
-      "night": "saturday",
-      "start_time": "2026-05-17T07:45:00Z",
-      "end_time": "2026-05-17T09:00:00Z",
-      "genres": ["Techno", "Acid"],
-      "sounds_like": "Sounds like Amelie Lens.",
-      "preview_kind": "spotify"
-    },
-    {
-      "id": "sat_solardo",
-      "artist_name": "Solardo",
-      "stage_id": "neon",
-      "night": "saturday",
-      "start_time": "2026-05-17T10:00:00Z",
-      "end_time": "2026-05-17T11:15:00Z",
-      "genres": ["Tech House", "House"],
-      "sounds_like": "Sounds like Patrick Topping's after-party.",
-      "preview_kind": "spotify"
-    },
-    {
-      "id": "sat_griz",
-      "artist_name": "GRiZ",
-      "stage_id": "basspod",
-      "night": "saturday",
-      "start_time": "2026-05-17T02:00:00Z",
-      "end_time": "2026-05-17T03:15:00Z",
-      "genres": ["Funk", "Bass"],
-      "sounds_like": "Sounds like Big Gigantic with laser goggles.",
-      "preview_kind": "youtube"
-    },
-    {
-      "id": "sat_nghtmre",
-      "artist_name": "NGHTMRE",
-      "stage_id": "basspod",
-      "night": "saturday",
-      "start_time": "2026-05-17T04:45:00Z",
-      "end_time": "2026-05-17T06:00:00Z",
-      "genres": ["Trap", "Dubstep"],
-      "sounds_like": "Sounds like Slander at a trap throwback set.",
-      "preview_kind": "youtube"
-    },
-    {
-      "id": "sat_skrillex",
-      "artist_name": "Skrillex",
+      "id": "sat_getter",
+      "artist_name": "Getter",
       "stage_id": "basspod",
       "night": "saturday",
       "start_time": "2026-05-17T07:30:00Z",
-      "end_time": "2026-05-17T08:45:00Z",
-      "genres": ["Dubstep", "House"],
-      "sounds_like": "Sounds like Four Tet and Fred again.. gone filthy.",
-      "preview_kind": "youtube"
+      "end_time": "2026-05-17T08:30:00Z",
+      "genres": [
+        "Dubstep",
+        "Trap"
+      ],
+      "sounds_like": "Sounds like USC-era heavy bass with a sense of humor.",
+      "preview_kind": "spotify"
     },
     {
-      "id": "sat_major_lazer",
-      "artist_name": "Major Lazer",
+      "id": "sat_maddix",
+      "artist_name": "Maddix",
+      "stage_id": "quantum",
+      "night": "saturday",
+      "start_time": "2026-05-17T07:30:00Z",
+      "end_time": "2026-05-17T08:30:00Z",
+      "genres": [
+        "Techno",
+        "Hard Techno"
+      ],
+      "sounds_like": "Sounds like big-room reimagined as raw techno.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_wax_motif",
+      "artist_name": "Wax Motif",
+      "stage_id": "stereo",
+      "night": "saturday",
+      "start_time": "2026-05-17T07:30:00Z",
+      "end_time": "2026-05-17T08:45:00Z",
+      "genres": [
+        "Bass House"
+      ],
+      "sounds_like": "Sounds like LA bass-house groove machine.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_audiofreq_b2b_code_black_b2b_toneshifterz",
+      "artist_name": "Audiofreq B2B Code Black B2B Toneshifterz",
+      "stage_id": "wasteland",
+      "night": "saturday",
+      "start_time": "2026-05-17T07:30:00Z",
+      "end_time": "2026-05-17T08:30:00Z",
+      "genres": [
+        "Hardstyle"
+      ],
+      "sounds_like": "Sounds like a triple-headed hardstyle steamroller.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_john_summit",
+      "artist_name": "John Summit",
+      "stage_id": "kinetic",
+      "night": "saturday",
+      "start_time": "2026-05-17T07:32:00Z",
+      "end_time": "2026-05-17T08:47:00Z",
+      "genres": [
+        "Tech House",
+        "Progressive"
+      ],
+      "sounds_like": "Sounds like Experts Only-label main-stage tech house.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_bunt_in_the_round",
+      "artist_name": "BUNT. (In The Round)",
+      "stage_id": "cosmic",
+      "night": "saturday",
+      "start_time": "2026-05-17T07:40:00Z",
+      "end_time": "2026-05-17T09:10:00Z",
+      "genres": [
+        "Folktronica",
+        "Melodic"
+      ],
+      "sounds_like": "Sounds like RÜFÜS DU SOL mixed with a campfire choir.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_bad_boombox_b2b_ollie_lishman",
+      "artist_name": "Bad Boombox B2B Ollie Lishman",
+      "stage_id": "bionic",
+      "night": "saturday",
+      "start_time": "2026-05-17T08:15:00Z",
+      "end_time": "2026-05-17T09:30:00Z",
+      "genres": [
+        "UK Bass",
+        "Bassline"
+      ],
+      "sounds_like": "Sounds like a Bristol basement tag-team.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_eptic_b2b_space_laces",
+      "artist_name": "Eptic B2B Space Laces",
       "stage_id": "basspod",
+      "night": "saturday",
+      "start_time": "2026-05-17T08:30:00Z",
+      "end_time": "2026-05-17T09:30:00Z",
+      "genres": [
+        "Dubstep"
+      ],
+      "sounds_like": "Sounds like a heavyweight UK / US dubstep tag.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_prospa",
+      "artist_name": "Prospa",
+      "stage_id": "neon",
+      "night": "saturday",
+      "start_time": "2026-05-17T08:30:00Z",
+      "end_time": "2026-05-17T10:30:00Z",
+      "genres": [
+        "House",
+        "Rave"
+      ],
+      "sounds_like": "Sounds like UK rave-leaning house with vocals.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_mathame",
+      "artist_name": "Mathame",
+      "stage_id": "quantum",
+      "night": "saturday",
+      "start_time": "2026-05-17T08:30:00Z",
+      "end_time": "2026-05-17T09:30:00Z",
+      "genres": [
+        "Melodic Techno"
+      ],
+      "sounds_like": "Sounds like Italian after-movie melodic techno.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_da_tweekaz",
+      "artist_name": "Da Tweekaz",
+      "stage_id": "wasteland",
+      "night": "saturday",
+      "start_time": "2026-05-17T08:30:00Z",
+      "end_time": "2026-05-17T09:30:00Z",
+      "genres": [
+        "Hardstyle",
+        "Vocal"
+      ],
+      "sounds_like": "Sounds like vocal melodic hardstyle bangers.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_peggy_gou_b2b_ki_ki",
+      "artist_name": "Peggy Gou B2B KI/KI",
+      "stage_id": "circuit",
+      "night": "saturday",
+      "start_time": "2026-05-17T08:45:00Z",
+      "end_time": "2026-05-17T10:15:00Z",
+      "genres": [
+        "House",
+        "Trance"
+      ],
+      "sounds_like": "Sounds like a Berlin-leaning house-trance crossover.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_cid",
+      "artist_name": "CID",
+      "stage_id": "stereo",
+      "night": "saturday",
+      "start_time": "2026-05-17T08:45:00Z",
+      "end_time": "2026-05-17T10:00:00Z",
+      "genres": [
+        "House",
+        "Tech House"
+      ],
+      "sounds_like": "Sounds like a Vegas pool-day house set.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_subtronics",
+      "artist_name": "Subtronics",
+      "stage_id": "kinetic",
+      "night": "saturday",
+      "start_time": "2026-05-17T08:47:00Z",
+      "end_time": "2026-05-17T10:01:00Z",
+      "genres": [
+        "Dubstep",
+        "Riddim"
+      ],
+      "sounds_like": "Sounds like riddim with Cyclops levels of weight.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_interplanetary_criminal",
+      "artist_name": "Interplanetary Criminal",
+      "stage_id": "cosmic",
+      "night": "saturday",
+      "start_time": "2026-05-17T09:10:00Z",
+      "end_time": "2026-05-17T10:30:00Z",
+      "genres": [
+        "UK Garage",
+        "Bass"
+      ],
+      "sounds_like": "Sounds like UKG with rave nostalgia baked in.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_doctor_p_b2b_flux_pavilion_b2b_funtcase",
+      "artist_name": "Doctor P B2B Flux Pavilion B2B FuntCase",
+      "stage_id": "basspod",
+      "night": "saturday",
+      "start_time": "2026-05-17T09:30:00Z",
+      "end_time": "2026-05-17T10:30:00Z",
+      "genres": [
+        "Dubstep"
+      ],
+      "sounds_like": "Sounds like a UK dubstep golden-era reunion.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_benwal",
+      "artist_name": "Benwal",
+      "stage_id": "bionic",
+      "night": "saturday",
+      "start_time": "2026-05-17T09:30:00Z",
+      "end_time": "2026-05-17T10:30:00Z",
+      "genres": [
+        "Drum & Bass"
+      ],
+      "sounds_like": "Sounds like high-energy DnB built for jungle floors.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_astrix",
+      "artist_name": "Astrix",
+      "stage_id": "quantum",
+      "night": "saturday",
+      "start_time": "2026-05-17T09:30:00Z",
+      "end_time": "2026-05-17T10:30:00Z",
+      "genres": [
+        "Psytrance",
+        "Full-On"
+      ],
+      "sounds_like": "Sounds like full-on psytrance for a Quantum Valley liftoff.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_lil_texas",
+      "artist_name": "Lil Texas",
+      "stage_id": "wasteland",
+      "night": "saturday",
+      "start_time": "2026-05-17T09:30:00Z",
+      "end_time": "2026-05-17T10:30:00Z",
+      "genres": [
+        "Hardcore",
+        "Rawstyle"
+      ],
+      "sounds_like": "Sounds like 200 BPM cowboy hardcore.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_hntr",
+      "artist_name": "HNTR",
+      "stage_id": "stereo",
+      "night": "saturday",
+      "start_time": "2026-05-17T10:00:00Z",
+      "end_time": "2026-05-17T11:15:00Z",
+      "genres": [
+        "Indie Dance",
+        "Melodic House"
+      ],
+      "sounds_like": "Sounds like dreamy melodic house at twilight.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_kaskade",
+      "artist_name": "Kaskade",
+      "stage_id": "kinetic",
+      "night": "saturday",
+      "start_time": "2026-05-17T10:01:00Z",
+      "end_time": "2026-05-17T11:14:00Z",
+      "genres": [
+        "Progressive House",
+        "EDM"
+      ],
+      "sounds_like": "Sounds like your dead-center fireworks moment.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_boys_noize",
+      "artist_name": "Boys Noize",
+      "stage_id": "circuit",
       "night": "saturday",
       "start_time": "2026-05-17T10:15:00Z",
       "end_time": "2026-05-17T11:30:00Z",
-      "genres": ["Dancehall", "EDM"],
-      "sounds_like": "Sounds like a global dance party with Diplo energy.",
-      "preview_kind": "youtube"
-    },
-    {
-      "id": "sat_will_clarke",
-      "artist_name": "Will Clarke",
-      "stage_id": "wasteland",
-      "night": "saturday",
-      "start_time": "2026-05-17T03:00:00Z",
-      "end_time": "2026-05-17T04:15:00Z",
-      "genres": ["Tech House", "House"],
-      "sounds_like": "Sounds like Dirtybird Records at its finest.",
+      "genres": [
+        "Electro",
+        "Techno"
+      ],
+      "sounds_like": "Sounds like raw electro that punches the floor.",
       "preview_kind": "spotify"
     },
     {
-      "id": "sat_zeds_dead",
-      "artist_name": "Zeds Dead",
-      "stage_id": "wasteland",
+      "id": "sat_hol",
+      "artist_name": "HOL!",
+      "stage_id": "basspod",
       "night": "saturday",
-      "start_time": "2026-05-17T05:30:00Z",
-      "end_time": "2026-05-17T06:45:00Z",
-      "genres": ["Dubstep", "Bass"],
-      "sounds_like": "Sounds like REZZ but with more wobble.",
-      "preview_kind": "youtube"
+      "start_time": "2026-05-17T10:30:00Z",
+      "end_time": "2026-05-17T11:30:00Z",
+      "genres": [
+        "Bass",
+        "Riddim"
+      ],
+      "sounds_like": "Sounds like wonky riddim with a smile.",
+      "preview_kind": "spotify"
     },
     {
-      "id": "sat_matroda",
-      "artist_name": "Matroda",
-      "stage_id": "wasteland",
+      "id": "sat_baugruppe90",
+      "artist_name": "BAUGRUPPE90",
+      "stage_id": "bionic",
       "night": "saturday",
-      "start_time": "2026-05-17T08:00:00Z",
-      "end_time": "2026-05-17T09:15:00Z",
-      "genres": ["Bass House", "Tech House"],
-      "sounds_like": "Sounds like Habstrakt with extra grime.",
-      "preview_kind": "youtube"
+      "start_time": "2026-05-17T10:30:00Z",
+      "end_time": "2026-05-17T11:30:00Z",
+      "genres": [
+        "Drum & Bass",
+        "Leftfield"
+      ],
+      "sounds_like": "Sounds like leftfield jungle with German precision.",
+      "preview_kind": "spotify"
     },
     {
-      "id": "sat_eli_brown",
-      "artist_name": "Eli Brown",
+      "id": "sat_malugi",
+      "artist_name": "MALUGI",
+      "stage_id": "cosmic",
+      "night": "saturday",
+      "start_time": "2026-05-17T10:30:00Z",
+      "end_time": "2026-05-17T11:30:00Z",
+      "genres": [
+        "Hard Techno",
+        "Hard Dance"
+      ],
+      "sounds_like": "Sounds like fast melodic hard techno.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_josh_baker_b2b_kettama_b2b_prospa",
+      "artist_name": "Josh Baker B2B KETTAMA B2B Prospa",
+      "stage_id": "neon",
+      "night": "saturday",
+      "start_time": "2026-05-17T10:30:00Z",
+      "end_time": "2026-05-17T12:30:00Z",
+      "genres": [
+        "House",
+        "UK House"
+      ],
+      "sounds_like": "Sounds like a UK house tag-team rinse.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_t78",
+      "artist_name": "T78",
+      "stage_id": "quantum",
+      "night": "saturday",
+      "start_time": "2026-05-17T10:30:00Z",
+      "end_time": "2026-05-17T11:30:00Z",
+      "genres": [
+        "Psy-Techno",
+        "Techno"
+      ],
+      "sounds_like": "Sounds like an ARTCORE psytrance hybrid.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_mish",
+      "artist_name": "Mish",
       "stage_id": "wasteland",
       "night": "saturday",
       "start_time": "2026-05-17T10:30:00Z",
-      "end_time": "2026-05-17T11:45:00Z",
-      "genres": ["Techno", "Tech House"],
-      "sounds_like": "Sounds like Charlotte de Witte meets tech house.",
+      "end_time": "2026-05-17T11:30:00Z",
+      "genres": [
+        "Hardstyle",
+        "Melodic"
+      ],
+      "sounds_like": "Sounds like new-wave melodic hardstyle.",
       "preview_kind": "spotify"
     },
     {
-      "id": "sun_odesza",
-      "artist_name": "ODESZA",
+      "id": "sat_above_and_beyond_sunrise_set",
+      "artist_name": "Above & Beyond (Sunrise Set)",
+      "stage_id": "kinetic",
+      "night": "saturday",
+      "start_time": "2026-05-17T11:14:00Z",
+      "end_time": "2026-05-17T12:30:00Z",
+      "genres": [
+        "Trance",
+        "Progressive"
+      ],
+      "sounds_like": "Sounds like the emotional sunrise trance moment you flew here for.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_bolo_sunrise_set",
+      "artist_name": "BOLO (Sunrise Set)",
+      "stage_id": "stereo",
+      "night": "saturday",
+      "start_time": "2026-05-17T11:15:00Z",
+      "end_time": "2026-05-17T12:30:00Z",
+      "genres": [
+        "Eclectic",
+        "Indie Dance"
+      ],
+      "sounds_like": "Sounds like a sunrise selector at the Stereo Bloom.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_mary_droppinz",
+      "artist_name": "Mary Droppinz",
+      "stage_id": "basspod",
+      "night": "saturday",
+      "start_time": "2026-05-17T11:30:00Z",
+      "end_time": "2026-05-17T12:30:00Z",
+      "genres": [
+        "Bass",
+        "Eclectic"
+      ],
+      "sounds_like": "Sounds like LA-rooted bass with attitude.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_club_angel",
+      "artist_name": "Club Angel",
+      "stage_id": "bionic",
+      "night": "saturday",
+      "start_time": "2026-05-17T11:30:00Z",
+      "end_time": "2026-05-17T12:30:00Z",
+      "genres": [
+        "Eclectic",
+        "Bass"
+      ],
+      "sounds_like": "Sounds like a wonky leftfield Bionic Jungle journey.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_lilly_palmer",
+      "artist_name": "Lilly Palmer",
+      "stage_id": "circuit",
+      "night": "saturday",
+      "start_time": "2026-05-17T11:30:00Z",
+      "end_time": "2026-05-17T12:30:00Z",
+      "genres": [
+        "Techno",
+        "Melodic Techno"
+      ],
+      "sounds_like": "Sounds like rolling melodic techno from Switzerland.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_dj_gigola_b2b_mcr_t",
+      "artist_name": "DJ Gigola B2B MCR-T",
+      "stage_id": "cosmic",
+      "night": "saturday",
+      "start_time": "2026-05-17T11:30:00Z",
+      "end_time": "2026-05-17T12:30:00Z",
+      "genres": [
+        "Bass",
+        "Eclectic"
+      ],
+      "sounds_like": "Sounds like a club-edit chaos set at Cosmic Meadow.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_thomas_schumacher",
+      "artist_name": "Thomas Schumacher",
+      "stage_id": "quantum",
+      "night": "saturday",
+      "start_time": "2026-05-17T11:30:00Z",
+      "end_time": "2026-05-17T12:30:00Z",
+      "genres": [
+        "Techno"
+      ],
+      "sounds_like": "Sounds like Berlin techno veteran heat.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sat_alyssa_jolee",
+      "artist_name": "Alyssa Jolee",
+      "stage_id": "wasteland",
+      "night": "saturday",
+      "start_time": "2026-05-17T11:30:00Z",
+      "end_time": "2026-05-17T12:30:00Z",
+      "genres": [
+        "Hardstyle",
+        "Raw"
+      ],
+      "sounds_like": "Sounds like raw-style hardstyle with vocal edge.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_nightstalker_with_mc_dino",
+      "artist_name": "Nightstalker with MC Dino",
+      "stage_id": "basspod",
+      "night": "sunday",
+      "start_time": "2026-05-18T02:00:00Z",
+      "end_time": "2026-05-18T02:50:00Z",
+      "genres": [
+        "Drum & Bass",
+        "Jump Up"
+      ],
+      "sounds_like": "Sounds like jump-up DnB chaos with MC hype.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_alves",
+      "artist_name": "Alves",
+      "stage_id": "bionic",
+      "night": "sunday",
+      "start_time": "2026-05-18T02:00:00Z",
+      "end_time": "2026-05-18T03:30:00Z",
+      "genres": [
+        "Drum & Bass"
+      ],
+      "sounds_like": "Sounds like a fresh DnB cut from the Bionic Jungle.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_linska",
+      "artist_name": "Linska",
+      "stage_id": "circuit",
+      "night": "sunday",
+      "start_time": "2026-05-18T02:00:00Z",
+      "end_time": "2026-05-18T03:30:00Z",
+      "genres": [
+        "Hard Techno"
+      ],
+      "sounds_like": "Sounds like Funk Tribu-school hard groove.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_gravagerz",
+      "artist_name": "GRAVAGERZ",
+      "stage_id": "cosmic",
+      "night": "sunday",
+      "start_time": "2026-05-18T02:00:00Z",
+      "end_time": "2026-05-18T03:00:00Z",
+      "genres": [
+        "Hard Dance",
+        "Frenchcore"
+      ],
+      "sounds_like": "Sounds like cinematic frenchcore-edge hard dance.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_trace",
+      "artist_name": "Trace",
       "stage_id": "kinetic",
       "night": "sunday",
       "start_time": "2026-05-18T02:00:00Z",
+      "end_time": "2026-05-18T03:00:00Z",
+      "genres": [
+        "Pop",
+        "EDM"
+      ],
+      "sounds_like": "Sounds like a vocal-driven EDM crossover.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_bad_beat",
+      "artist_name": "Bad Beat",
+      "stage_id": "neon",
+      "night": "sunday",
+      "start_time": "2026-05-18T02:00:00Z",
       "end_time": "2026-05-18T03:15:00Z",
-      "genres": ["Indietronica", "Future Bass"],
-      "sounds_like": "Sounds like a drumline in the clouds.",
+      "genres": [
+        "House",
+        "Techno"
+      ],
+      "sounds_like": "Sounds like deep grooves from the Neon Garden.",
       "preview_kind": "spotify"
     },
     {
-      "id": "sun_alison",
-      "artist_name": "Alison Wonderland",
+      "id": "sun_warung",
+      "artist_name": "Warung",
+      "stage_id": "quantum",
+      "night": "sunday",
+      "start_time": "2026-05-18T02:00:00Z",
+      "end_time": "2026-05-18T03:00:00Z",
+      "genres": [
+        "Melodic Techno",
+        "Progressive"
+      ],
+      "sounds_like": "Sounds like Brazilian beach-club melodic techno.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_klo",
+      "artist_name": "KLO",
+      "stage_id": "stereo",
+      "night": "sunday",
+      "start_time": "2026-05-18T02:00:00Z",
+      "end_time": "2026-05-18T03:00:00Z",
+      "genres": [
+        "Indie",
+        "Eclectic"
+      ],
+      "sounds_like": "Sounds like a Stereo Bloom dreamscape.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_sihk",
+      "artist_name": "Sihk",
+      "stage_id": "wasteland",
+      "night": "sunday",
+      "start_time": "2026-05-18T02:00:00Z",
+      "end_time": "2026-05-18T03:30:00Z",
+      "genres": [
+        "Hardstyle",
+        "Raw"
+      ],
+      "sounds_like": "Sounds like raw new-school hardstyle.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_sippy",
+      "artist_name": "Sippy",
+      "stage_id": "basspod",
+      "night": "sunday",
+      "start_time": "2026-05-18T02:50:00Z",
+      "end_time": "2026-05-18T03:40:00Z",
+      "genres": [
+        "Bass",
+        "Color Bass"
+      ],
+      "sounds_like": "Sounds like wonky color bass with Aussie energy.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_nostalgix",
+      "artist_name": "Nostalgix",
+      "stage_id": "cosmic",
+      "night": "sunday",
+      "start_time": "2026-05-18T03:00:00Z",
+      "end_time": "2026-05-18T04:00:00Z",
+      "genres": [
+        "Bass House"
+      ],
+      "sounds_like": "Sounds like Wax Motif-school bass house.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_ship_wrek",
+      "artist_name": "Ship Wrek",
       "stage_id": "kinetic",
       "night": "sunday",
-      "start_time": "2026-05-18T03:45:00Z",
-      "end_time": "2026-05-18T05:00:00Z",
-      "genres": ["Future Bass", "Trap"],
-      "sounds_like": "Sounds like RL Grime with confetti.",
+      "start_time": "2026-05-18T03:00:00Z",
+      "end_time": "2026-05-18T04:00:00Z",
+      "genres": [
+        "EDM",
+        "Bass"
+      ],
+      "sounds_like": "Sounds like festival-ready bass-EDM crossover.",
       "preview_kind": "spotify"
     },
     {
-      "id": "sun_marshmello",
-      "artist_name": "Marshmello",
-      "stage_id": "kinetic",
+      "id": "sun_shingo_nakamura",
+      "artist_name": "Shingo Nakamura",
+      "stage_id": "quantum",
       "night": "sunday",
-      "start_time": "2026-05-18T06:00:00Z",
-      "end_time": "2026-05-18T07:15:00Z",
-      "genres": ["EDM", "Future Bass"],
-      "sounds_like": "Sounds like your happy place with extra bass.",
+      "start_time": "2026-05-18T03:00:00Z",
+      "end_time": "2026-05-18T04:00:00Z",
+      "genres": [
+        "Progressive Trance",
+        "Ambient"
+      ],
+      "sounds_like": "Sounds like Anjuna's ambient progressive side.",
       "preview_kind": "spotify"
     },
     {
-      "id": "sun_david_guetta",
-      "artist_name": "David Guetta",
-      "stage_id": "kinetic",
+      "id": "sun_murphy_s_law",
+      "artist_name": "Murphy's Law",
+      "stage_id": "stereo",
       "night": "sunday",
-      "start_time": "2026-05-18T08:00:00Z",
-      "end_time": "2026-05-18T09:15:00Z",
-      "genres": ["EDM", "Dance"],
-      "sounds_like": "Sounds like the world's biggest dance party.",
+      "start_time": "2026-05-18T03:00:00Z",
+      "end_time": "2026-05-18T04:15:00Z",
+      "genres": [
+        "House",
+        "Tech House"
+      ],
+      "sounds_like": "Sounds like a Defected-school groove.",
       "preview_kind": "spotify"
     },
     {
-      "id": "sun_tiesto",
-      "artist_name": "Tiësto",
-      "stage_id": "kinetic",
+      "id": "sun_frankie_bones",
+      "artist_name": "Frankie Bones",
+      "stage_id": "neon",
       "night": "sunday",
-      "start_time": "2026-05-18T10:30:00Z",
-      "end_time": "2026-05-18T11:45:00Z",
-      "genres": ["EDM", "Progressive"],
-      "sounds_like": "Sounds like mainstage sunrise muscle memory.",
+      "start_time": "2026-05-18T03:15:00Z",
+      "end_time": "2026-05-18T04:30:00Z",
+      "genres": [
+        "House",
+        "Techno"
+      ],
+      "sounds_like": "Sounds like NYC raveformic house from the source.",
       "preview_kind": "spotify"
     },
     {
-      "id": "sun_lost_frequencies",
-      "artist_name": "Lost Frequencies",
+      "id": "sun_isabella",
+      "artist_name": "ISAbella",
+      "stage_id": "bionic",
+      "night": "sunday",
+      "start_time": "2026-05-18T03:30:00Z",
+      "end_time": "2026-05-18T05:30:00Z",
+      "genres": [
+        "Drum & Bass"
+      ],
+      "sounds_like": "Sounds like fresh DnB for the Bionic Jungle.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_anna",
+      "artist_name": "ANNA",
       "stage_id": "circuit",
       "night": "sunday",
-      "start_time": "2026-05-18T02:30:00Z",
-      "end_time": "2026-05-18T03:45:00Z",
-      "genres": ["Deep House", "Dance Pop"],
-      "sounds_like": "Sounds like a feel-good sunset radio set.",
+      "start_time": "2026-05-18T03:30:00Z",
+      "end_time": "2026-05-18T05:00:00Z",
+      "genres": [
+        "Techno",
+        "Melodic Techno"
+      ],
+      "sounds_like": "Sounds like Charlotte de Witte at sundown.",
       "preview_kind": "spotify"
     },
     {
-      "id": "sun_nicky_romero",
-      "artist_name": "Nicky Romero",
+      "id": "sun_clawz",
+      "artist_name": "Clawz",
+      "stage_id": "wasteland",
+      "night": "sunday",
+      "start_time": "2026-05-18T03:30:00Z",
+      "end_time": "2026-05-18T04:30:00Z",
+      "genres": [
+        "Hardstyle"
+      ],
+      "sounds_like": "Sounds like a Wasteland hardstyle uppercut.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_eazybaked",
+      "artist_name": "EAZYBAKED",
+      "stage_id": "basspod",
+      "night": "sunday",
+      "start_time": "2026-05-18T03:40:00Z",
+      "end_time": "2026-05-18T04:30:00Z",
+      "genres": [
+        "Bass",
+        "Wonky"
+      ],
+      "sounds_like": "Sounds like wonky tribal bass from the Wakaan camp.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_william_black",
+      "artist_name": "William Black",
+      "stage_id": "cosmic",
+      "night": "sunday",
+      "start_time": "2026-05-18T04:00:00Z",
+      "end_time": "2026-05-18T05:00:00Z",
+      "genres": [
+        "Melodic Bass"
+      ],
+      "sounds_like": "Sounds like Seven Lions' emotional cousin.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_layton_giordani",
+      "artist_name": "Layton Giordani",
+      "stage_id": "kinetic",
+      "night": "sunday",
+      "start_time": "2026-05-18T04:00:00Z",
+      "end_time": "2026-05-18T05:07:00Z",
+      "genres": [
+        "Techno"
+      ],
+      "sounds_like": "Sounds like a Drumcode peak-time hammer.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_reb_ke",
+      "artist_name": "Rebüke",
+      "stage_id": "quantum",
+      "night": "sunday",
+      "start_time": "2026-05-18T04:00:00Z",
+      "end_time": "2026-05-18T05:00:00Z",
+      "genres": [
+        "Techno"
+      ],
+      "sounds_like": "Sounds like Irish big-room techno with a hook.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_sidney_charles_b2b_bushbaby",
+      "artist_name": "Sidney Charles B2B Bushbaby",
+      "stage_id": "stereo",
+      "night": "sunday",
+      "start_time": "2026-05-18T04:15:00Z",
+      "end_time": "2026-05-18T05:30:00Z",
+      "genres": [
+        "House",
+        "Tech House"
+      ],
+      "sounds_like": "Sounds like UK afterhours groove.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_infekt_b2b_samplifire",
+      "artist_name": "INFEKT B2B Samplifire",
+      "stage_id": "basspod",
+      "night": "sunday",
+      "start_time": "2026-05-18T04:30:00Z",
+      "end_time": "2026-05-18T05:30:00Z",
+      "genres": [
+        "Bass",
+        "Color Bass"
+      ],
+      "sounds_like": "Sounds like a colour bass tag-team.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_adiel",
+      "artist_name": "Adiel",
+      "stage_id": "neon",
+      "night": "sunday",
+      "start_time": "2026-05-18T04:30:00Z",
+      "end_time": "2026-05-18T05:50:00Z",
+      "genres": [
+        "Techno",
+        "Hypnotic"
+      ],
+      "sounds_like": "Sounds like deep hypnotic techno from a Berlin basement.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_the_purge",
+      "artist_name": "The Purge",
+      "stage_id": "wasteland",
+      "night": "sunday",
+      "start_time": "2026-05-18T04:30:00Z",
+      "end_time": "2026-05-18T05:30:00Z",
+      "genres": [
+        "Hardstyle"
+      ],
+      "sounds_like": "Sounds like raw hardstyle aggression.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_beltran",
+      "artist_name": "Beltran",
       "stage_id": "circuit",
       "night": "sunday",
       "start_time": "2026-05-18T05:00:00Z",
-      "end_time": "2026-05-18T06:15:00Z",
-      "genres": ["Progressive House", "EDM"],
-      "sounds_like": "Sounds like Avicii's legacy lives on.",
+      "end_time": "2026-05-18T06:30:00Z",
+      "genres": [
+        "Tech House"
+      ],
+      "sounds_like": "Sounds like Cloonee's harder, weirder cousin.",
       "preview_kind": "spotify"
     },
     {
-      "id": "sun_john_summit",
-      "artist_name": "John Summit",
-      "stage_id": "circuit",
-      "night": "sunday",
-      "start_time": "2026-05-18T07:30:00Z",
-      "end_time": "2026-05-18T08:45:00Z",
-      "genres": ["House", "Tech House"],
-      "sounds_like": "Sounds like your Dom Dolla and Chris Lake picks.",
-      "preview_kind": "spotify"
-    },
-    {
-      "id": "sun_porter_robinson",
-      "artist_name": "Porter Robinson",
-      "stage_id": "circuit",
-      "night": "sunday",
-      "start_time": "2026-05-18T10:00:00Z",
-      "end_time": "2026-05-18T11:15:00Z",
-      "genres": ["Electropop", "Future Bass"],
-      "sounds_like": "Sounds like a Shelter anime come to life.",
-      "preview_kind": "spotify"
-    },
-    {
-      "id": "sun_loud_luxury",
-      "artist_name": "Loud Luxury",
+      "id": "sun_san_holo_wholesome_riddim_set",
+      "artist_name": "San Holo (Wholesome Riddim Set)",
       "stage_id": "cosmic",
       "night": "sunday",
-      "start_time": "2026-05-18T02:15:00Z",
-      "end_time": "2026-05-18T03:30:00Z",
-      "genres": ["Dance Pop", "House"],
-      "sounds_like": "Sounds like a rooftop party anthem.",
+      "start_time": "2026-05-18T05:00:00Z",
+      "end_time": "2026-05-18T06:00:00Z",
+      "genres": [
+        "Bass",
+        "Riddim"
+      ],
+      "sounds_like": "Sounds like melodic San Holo with riddim teeth.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_cristoph",
+      "artist_name": "Cristoph",
+      "stage_id": "quantum",
+      "night": "sunday",
+      "start_time": "2026-05-18T05:00:00Z",
+      "end_time": "2026-05-18T06:00:00Z",
+      "genres": [
+        "Progressive House"
+      ],
+      "sounds_like": "Sounds like John Digweed-school deep prog.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_funk_tribu",
+      "artist_name": "Funk Tribu",
+      "stage_id": "kinetic",
+      "night": "sunday",
+      "start_time": "2026-05-18T05:07:00Z",
+      "end_time": "2026-05-18T06:19:00Z",
+      "genres": [
+        "Hard Techno"
+      ],
+      "sounds_like": "Sounds like dark, fast techno with a Latin pulse.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_a_m_c_with_mc_phantom",
+      "artist_name": "A.M.C with MC Phantom",
+      "stage_id": "basspod",
+      "night": "sunday",
+      "start_time": "2026-05-18T05:30:00Z",
+      "end_time": "2026-05-18T06:30:00Z",
+      "genres": [
+        "Drum & Bass",
+        "Jump Up"
+      ],
+      "sounds_like": "Sounds like Dimension and Sub Focus on a jungle warpath.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_kinahau",
+      "artist_name": "KinAhau",
+      "stage_id": "bionic",
+      "night": "sunday",
+      "start_time": "2026-05-18T05:30:00Z",
+      "end_time": "2026-05-18T07:00:00Z",
+      "genres": [
+        "Drum & Bass"
+      ],
+      "sounds_like": "Sounds like a fresh Bionic Jungle DnB cut.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_skream",
+      "artist_name": "Skream",
+      "stage_id": "stereo",
+      "night": "sunday",
+      "start_time": "2026-05-18T05:30:00Z",
+      "end_time": "2026-05-18T06:45:00Z",
+      "genres": [
+        "Dubstep",
+        "Bass"
+      ],
+      "sounds_like": "Sounds like the originator of dubstep flexing range.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_yosuf",
+      "artist_name": "Yosuf",
+      "stage_id": "wasteland",
+      "night": "sunday",
+      "start_time": "2026-05-18T05:30:00Z",
+      "end_time": "2026-05-18T06:30:00Z",
+      "genres": [
+        "Hardstyle"
+      ],
+      "sounds_like": "Sounds like raw hardstyle with attitude.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_dj_gigola",
+      "artist_name": "DJ Gigola",
+      "stage_id": "neon",
+      "night": "sunday",
+      "start_time": "2026-05-18T05:50:00Z",
+      "end_time": "2026-05-18T07:10:00Z",
+      "genres": [
+        "House",
+        "Techno"
+      ],
+      "sounds_like": "Sounds like Berlin breaks meet bouncy techno.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_dabin",
+      "artist_name": "Dabin",
+      "stage_id": "cosmic",
+      "night": "sunday",
+      "start_time": "2026-05-18T06:00:00Z",
+      "end_time": "2026-05-18T07:05:00Z",
+      "genres": [
+        "Melodic Bass",
+        "Future Bass"
+      ],
+      "sounds_like": "Sounds like Seven Lions and Illenium between sunsets.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_eli_and_fur",
+      "artist_name": "Eli & Fur",
+      "stage_id": "quantum",
+      "night": "sunday",
+      "start_time": "2026-05-18T06:00:00Z",
+      "end_time": "2026-05-18T07:00:00Z",
+      "genres": [
+        "Melodic House",
+        "Trance"
+      ],
+      "sounds_like": "Sounds like a sunset Anjunadeep moment.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_griz_b2b_wooli",
+      "artist_name": "GRiZ B2B Wooli",
+      "stage_id": "kinetic",
+      "night": "sunday",
+      "start_time": "2026-05-18T06:19:00Z",
+      "end_time": "2026-05-18T07:32:00Z",
+      "genres": [
+        "Bass",
+        "Funk"
+      ],
+      "sounds_like": "Sounds like saxophone funk colliding with melodic bass.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_virtual_riot",
+      "artist_name": "Virtual Riot",
+      "stage_id": "basspod",
+      "night": "sunday",
+      "start_time": "2026-05-18T06:30:00Z",
+      "end_time": "2026-05-18T07:30:00Z",
+      "genres": [
+        "Dubstep"
+      ],
+      "sounds_like": "Sounds like sound-design dubstep wizardry.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_chris_stussy",
+      "artist_name": "Chris Stussy",
+      "stage_id": "circuit",
+      "night": "sunday",
+      "start_time": "2026-05-18T06:30:00Z",
+      "end_time": "2026-05-18T08:00:00Z",
+      "genres": [
+        "Tech House"
+      ],
+      "sounds_like": "Sounds like punchy tech house with Dutch precision.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_dj_isaac",
+      "artist_name": "DJ Isaac",
+      "stage_id": "wasteland",
+      "night": "sunday",
+      "start_time": "2026-05-18T06:30:00Z",
+      "end_time": "2026-05-18T07:30:00Z",
+      "genres": [
+        "Hardstyle"
+      ],
+      "sounds_like": "Sounds like classic Dutch hardstyle anthems.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_hamdi",
+      "artist_name": "Hamdi",
+      "stage_id": "stereo",
+      "night": "sunday",
+      "start_time": "2026-05-18T06:45:00Z",
+      "end_time": "2026-05-18T08:00:00Z",
+      "genres": [
+        "UK Bass",
+        "Dubstep"
+      ],
+      "sounds_like": "Sounds like 140 BPM UK weight.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_tiga",
+      "artist_name": "Tiga",
+      "stage_id": "bionic",
+      "night": "sunday",
+      "start_time": "2026-05-18T07:00:00Z",
+      "end_time": "2026-05-18T08:30:00Z",
+      "genres": [
+        "Electro",
+        "Indie Dance"
+      ],
+      "sounds_like": "Sounds like Turbo-label electro chic.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_tinlicker_dj_set",
+      "artist_name": "Tinlicker (DJ Set)",
+      "stage_id": "quantum",
+      "night": "sunday",
+      "start_time": "2026-05-18T07:00:00Z",
+      "end_time": "2026-05-18T08:00:00Z",
+      "genres": [
+        "Melodic Trance",
+        "Progressive"
+      ],
+      "sounds_like": "Sounds like Anjuna melodic peak.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_alison_wonderland",
+      "artist_name": "Alison Wonderland",
+      "stage_id": "cosmic",
+      "night": "sunday",
+      "start_time": "2026-05-18T07:05:00Z",
+      "end_time": "2026-05-18T08:05:00Z",
+      "genres": [
+        "Future Bass",
+        "Electronic"
+      ],
+      "sounds_like": "Sounds like emotional bass anthems with a vocal punch.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_999999999",
+      "artist_name": "999999999",
+      "stage_id": "neon",
+      "night": "sunday",
+      "start_time": "2026-05-18T07:10:00Z",
+      "end_time": "2026-05-18T08:30:00Z",
+      "genres": [
+        "Hard Techno",
+        "Industrial"
+      ],
+      "sounds_like": "Sounds like industrial techno that bites back.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_peekaboo",
+      "artist_name": "Peekaboo",
+      "stage_id": "basspod",
+      "night": "sunday",
+      "start_time": "2026-05-18T07:30:00Z",
+      "end_time": "2026-05-18T08:30:00Z",
+      "genres": [
+        "Bass",
+        "Tribal Bass"
+      ],
+      "sounds_like": "Sounds like Wakaan-school dungeon bass.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_vieze_asbak",
+      "artist_name": "Vieze Asbak",
+      "stage_id": "wasteland",
+      "night": "sunday",
+      "start_time": "2026-05-18T07:30:00Z",
+      "end_time": "2026-05-18T08:30:00Z",
+      "genres": [
+        "Hardcore",
+        "Hardstyle"
+      ],
+      "sounds_like": "Sounds like Dutch raw hardcore-leaning hardstyle.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_zedd",
+      "artist_name": "Zedd",
+      "stage_id": "kinetic",
+      "night": "sunday",
+      "start_time": "2026-05-18T07:32:00Z",
+      "end_time": "2026-05-18T08:47:00Z",
+      "genres": [
+        "EDM",
+        "Pop"
+      ],
+      "sounds_like": "Sounds like Clarity-era anthemic EDM.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_solomun",
+      "artist_name": "Solomun",
+      "stage_id": "circuit",
+      "night": "sunday",
+      "start_time": "2026-05-18T08:00:00Z",
+      "end_time": "2026-05-18T09:30:00Z",
+      "genres": [
+        "Melodic House"
+      ],
+      "sounds_like": "Sounds like Diynamic-label sunset mood.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_cassian",
+      "artist_name": "Cassian",
+      "stage_id": "quantum",
+      "night": "sunday",
+      "start_time": "2026-05-18T08:00:00Z",
+      "end_time": "2026-05-18T09:15:00Z",
+      "genres": [
+        "Melodic House",
+        "Progressive"
+      ],
+      "sounds_like": "Sounds like Anjunadeep at golden hour.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_chris_lorenzo_b2b_bullet_tooth",
+      "artist_name": "Chris Lorenzo B2B Bullet Tooth",
+      "stage_id": "stereo",
+      "night": "sunday",
+      "start_time": "2026-05-18T08:00:00Z",
+      "end_time": "2026-05-18T09:15:00Z",
+      "genres": [
+        "Bassline",
+        "UK Bass"
+      ],
+      "sounds_like": "Sounds like a UK bassline tag-team rinse.",
       "preview_kind": "spotify"
     },
     {
@@ -706,187 +3035,383 @@
       "artist_name": "Seven Lions",
       "stage_id": "cosmic",
       "night": "sunday",
-      "start_time": "2026-05-18T04:15:00Z",
-      "end_time": "2026-05-18T05:30:00Z",
-      "genres": ["Melodic Dubstep", "Trance"],
-      "sounds_like": "Sounds like ILLENIUM with more trance.",
+      "start_time": "2026-05-18T08:05:00Z",
+      "end_time": "2026-05-18T09:20:00Z",
+      "genres": [
+        "Melodic Bass",
+        "Trance"
+      ],
+      "sounds_like": "Sounds like dragon-energy melodic bass and trance.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_ahee_b2b_liquid_stranger",
+      "artist_name": "AHEE B2B Liquid Stranger",
+      "stage_id": "basspod",
+      "night": "sunday",
+      "start_time": "2026-05-18T08:30:00Z",
+      "end_time": "2026-05-18T09:30:00Z",
+      "genres": [
+        "Bass",
+        "Tribal Bass"
+      ],
+      "sounds_like": "Sounds like Liquid Stranger's wonky bass with tribal twists.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_dj_tennis_b2b_red_axes",
+      "artist_name": "DJ Tennis B2B Red Axes",
+      "stage_id": "bionic",
+      "night": "sunday",
+      "start_time": "2026-05-18T08:30:00Z",
+      "end_time": "2026-05-18T10:30:00Z",
+      "genres": [
+        "Indie Dance",
+        "Leftfield"
+      ],
+      "sounds_like": "Sounds like a leftfield disco-not-disco journey.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_indira_paganotto",
+      "artist_name": "Indira Paganotto",
+      "stage_id": "neon",
+      "night": "sunday",
+      "start_time": "2026-05-18T08:30:00Z",
+      "end_time": "2026-05-18T09:50:00Z",
+      "genres": [
+        "Psy-Techno",
+        "Techno"
+      ],
+      "sounds_like": "Sounds like ARTCORE psytrance-driven techno.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_sub_zero_project",
+      "artist_name": "Sub Zero Project",
+      "stage_id": "wasteland",
+      "night": "sunday",
+      "start_time": "2026-05-18T08:30:00Z",
+      "end_time": "2026-05-18T09:30:00Z",
+      "genres": [
+        "Hardstyle"
+      ],
+      "sounds_like": "Sounds like dark Dutch hardstyle.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_martin_garrix",
+      "artist_name": "Martin Garrix",
+      "stage_id": "kinetic",
+      "night": "sunday",
+      "start_time": "2026-05-18T08:47:00Z",
+      "end_time": "2026-05-18T10:01:00Z",
+      "genres": [
+        "Big Room",
+        "EDM"
+      ],
+      "sounds_like": "Sounds like sunrise mainstage anthems on demand.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_massano",
+      "artist_name": "Massano",
+      "stage_id": "quantum",
+      "night": "sunday",
+      "start_time": "2026-05-18T09:15:00Z",
+      "end_time": "2026-05-18T10:30:00Z",
+      "genres": [
+        "Melodic Techno"
+      ],
+      "sounds_like": "Sounds like Argy's mate at golden hour.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_silva_bumpa",
+      "artist_name": "Silva Bumpa",
+      "stage_id": "stereo",
+      "night": "sunday",
+      "start_time": "2026-05-18T09:15:00Z",
+      "end_time": "2026-05-18T10:30:00Z",
+      "genres": [
+        "UK Garage",
+        "Bass House"
+      ],
+      "sounds_like": "Sounds like UKG with bass-house weight.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_restricted",
+      "artist_name": "Restricted",
+      "stage_id": "cosmic",
+      "night": "sunday",
+      "start_time": "2026-05-18T09:20:00Z",
+      "end_time": "2026-05-18T10:20:00Z",
+      "genres": [
+        "Bass",
+        "Eclectic"
+      ],
+      "sounds_like": "Sounds like a Cosmic Meadow bass curveball.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_whethan",
+      "artist_name": "Whethan",
+      "stage_id": "basspod",
+      "night": "sunday",
+      "start_time": "2026-05-18T09:30:00Z",
+      "end_time": "2026-05-18T10:30:00Z",
+      "genres": [
+        "Bass",
+        "Indie"
+      ],
+      "sounds_like": "Sounds like indie-bass crossover sunset energy.",
       "preview_kind": "spotify"
     },
     {
       "id": "sun_vintage_culture",
       "artist_name": "Vintage Culture",
+      "stage_id": "circuit",
+      "night": "sunday",
+      "start_time": "2026-05-18T09:30:00Z",
+      "end_time": "2026-05-18T11:00:00Z",
+      "genres": [
+        "Melodic House",
+        "Tech House"
+      ],
+      "sounds_like": "Sounds like Brazilian melodic house at peak.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_pooler",
+      "artist_name": "Pooler",
+      "stage_id": "wasteland",
+      "night": "sunday",
+      "start_time": "2026-05-18T09:30:00Z",
+      "end_time": "2026-05-18T10:30:00Z",
+      "genres": [
+        "Hardstyle",
+        "Melodic"
+      ],
+      "sounds_like": "Sounds like clean melodic hardstyle.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_ki_ki",
+      "artist_name": "KI/KI",
+      "stage_id": "neon",
+      "night": "sunday",
+      "start_time": "2026-05-18T09:50:00Z",
+      "end_time": "2026-05-18T11:10:00Z",
+      "genres": [
+        "Trance",
+        "Techno"
+      ],
+      "sounds_like": "Sounds like Dutch hard-trancey energy.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_cloonee",
+      "artist_name": "Cloonee",
+      "stage_id": "kinetic",
+      "night": "sunday",
+      "start_time": "2026-05-18T10:01:00Z",
+      "end_time": "2026-05-18T11:14:00Z",
+      "genres": [
+        "Tech House"
+      ],
+      "sounds_like": "Sounds like Fisher's tech house with extra swing.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_black_tiger_sex_machine",
+      "artist_name": "Black Tiger Sex Machine",
       "stage_id": "cosmic",
       "night": "sunday",
-      "start_time": "2026-05-18T06:15:00Z",
-      "end_time": "2026-05-18T07:30:00Z",
-      "genres": ["House", "Deep House"],
-      "sounds_like": "Sounds like Meduza meets Brazilian groove.",
+      "start_time": "2026-05-18T10:20:00Z",
+      "end_time": "2026-05-18T11:30:00Z",
+      "genres": [
+        "Electro",
+        "Trap"
+      ],
+      "sounds_like": "Sounds like cinematic electro with monster basslines.",
       "preview_kind": "spotify"
     },
     {
-      "id": "sun_zhu",
-      "artist_name": "ZHU",
-      "stage_id": "cosmic",
+      "id": "sun_boogie_t_b2b_distinct_motive",
+      "artist_name": "Boogie T B2B Distinct Motive",
+      "stage_id": "basspod",
       "night": "sunday",
-      "start_time": "2026-05-18T08:15:00Z",
-      "end_time": "2026-05-18T09:30:00Z",
-      "genres": ["Deep House", "Electronica"],
-      "sounds_like": "Sounds like noir house with live saxophone.",
+      "start_time": "2026-05-18T10:30:00Z",
+      "end_time": "2026-05-18T11:30:00Z",
+      "genres": [
+        "Dubstep",
+        "Bass"
+      ],
+      "sounds_like": "Sounds like wonky bass and dubstep hijinks.",
       "preview_kind": "spotify"
     },
     {
-      "id": "sun_w_and_w",
-      "artist_name": "W&W",
-      "stage_id": "cosmic",
+      "id": "sun_beltran_b2b_simas",
+      "artist_name": "Beltran B2B Simas",
+      "stage_id": "bionic",
       "night": "sunday",
-      "start_time": "2026-05-18T10:45:00Z",
-      "end_time": "2026-05-18T12:00:00Z",
-      "genres": ["EDM", "Big Room"],
-      "sounds_like": "Sounds like Hardwell's mainstage energy.",
-      "preview_kind": "youtube"
-    },
-    {
-      "id": "sun_sara_landry",
-      "artist_name": "Sara Landry",
-      "stage_id": "neon",
-      "night": "sunday",
-      "start_time": "2026-05-18T02:45:00Z",
-      "end_time": "2026-05-18T04:00:00Z",
-      "genres": ["Hard Techno", "Industrial"],
-      "sounds_like": "Sounds like Klangkuenstler.",
+      "start_time": "2026-05-18T10:30:00Z",
+      "end_time": "2026-05-18T12:30:00Z",
+      "genres": [
+        "Tech House"
+      ],
+      "sounds_like": "Sounds like a Bionic Jungle tech-house tag set.",
       "preview_kind": "spotify"
     },
     {
-      "id": "sun_mau_p",
-      "artist_name": "Mau P",
-      "stage_id": "neon",
+      "id": "sun_innellea",
+      "artist_name": "Innellea",
+      "stage_id": "quantum",
       "night": "sunday",
-      "start_time": "2026-05-18T04:30:00Z",
-      "end_time": "2026-05-18T05:45:00Z",
-      "genres": ["Tech House", "Techno"],
-      "sounds_like": "Sounds like the drugs from Amsterdam.",
+      "start_time": "2026-05-18T10:30:00Z",
+      "end_time": "2026-05-18T11:30:00Z",
+      "genres": [
+        "Melodic Techno"
+      ],
+      "sounds_like": "Sounds like Tale of Us-school progressive heat.",
       "preview_kind": "spotify"
     },
     {
-      "id": "sun_amelie_lens",
-      "artist_name": "Amelie Lens",
-      "stage_id": "neon",
+      "id": "sun_morgan_seatree",
+      "artist_name": "Morgan Seatree",
+      "stage_id": "stereo",
       "night": "sunday",
-      "start_time": "2026-05-18T06:30:00Z",
-      "end_time": "2026-05-18T07:45:00Z",
-      "genres": ["Techno", "Acid Techno"],
-      "sounds_like": "Sounds like Charlotte de Witte's rival.",
+      "start_time": "2026-05-18T10:30:00Z",
+      "end_time": "2026-05-18T11:30:00Z",
+      "genres": [
+        "House"
+      ],
+      "sounds_like": "Sounds like UK summer house from the beach.",
       "preview_kind": "spotify"
     },
     {
-      "id": "sun_boris",
-      "artist_name": "Boris Brejcha",
-      "stage_id": "neon",
+      "id": "sun_warface",
+      "artist_name": "Warface",
+      "stage_id": "wasteland",
       "night": "sunday",
-      "start_time": "2026-05-18T08:30:00Z",
-      "end_time": "2026-05-18T09:45:00Z",
-      "genres": ["High-Tech Minimal", "Techno"],
-      "sounds_like": "Sounds like Stephan Bodzin.",
+      "start_time": "2026-05-18T10:30:00Z",
+      "end_time": "2026-05-18T11:30:00Z",
+      "genres": [
+        "Hardstyle",
+        "Uptempo"
+      ],
+      "sounds_like": "Sounds like raw uptempo hardstyle.",
       "preview_kind": "spotify"
     },
     {
-      "id": "sun_miss_monique",
-      "artist_name": "Miss Monique",
-      "stage_id": "neon",
+      "id": "sun_kevin_de_vries",
+      "artist_name": "Kevin de Vries",
+      "stage_id": "circuit",
       "night": "sunday",
       "start_time": "2026-05-18T11:00:00Z",
-      "end_time": "2026-05-18T12:15:00Z",
-      "genres": ["Progressive House", "Melodic Techno"],
-      "sounds_like": "Sounds like a Progressive Astronaut playlist.",
+      "end_time": "2026-05-18T12:30:00Z",
+      "genres": [
+        "Melodic Techno"
+      ],
+      "sounds_like": "Sounds like Adriatique at sunrise.",
       "preview_kind": "spotify"
     },
     {
-      "id": "sun_subtronics",
-      "artist_name": "Subtronics",
-      "stage_id": "basspod",
+      "id": "sun_klangkuenstler",
+      "artist_name": "Klangkuenstler",
+      "stage_id": "neon",
       "night": "sunday",
-      "start_time": "2026-05-18T02:15:00Z",
-      "end_time": "2026-05-18T03:30:00Z",
-      "genres": ["Dubstep", "Riddim"],
-      "sounds_like": "Sounds like your Excision pick.",
-      "preview_kind": "youtube"
-    },
-    {
-      "id": "sun_kayzo",
-      "artist_name": "Kayzo",
-      "stage_id": "basspod",
-      "night": "sunday",
-      "start_time": "2026-05-18T04:45:00Z",
-      "end_time": "2026-05-18T06:00:00Z",
-      "genres": ["Hardstyle", "Dubstep"],
-      "sounds_like": "Sounds like Excision at a hardcore rave.",
-      "preview_kind": "youtube"
-    },
-    {
-      "id": "sun_i_o",
-      "artist_name": "i_o",
-      "stage_id": "basspod",
-      "night": "sunday",
-      "start_time": "2026-05-18T07:15:00Z",
-      "end_time": "2026-05-18T08:30:00Z",
-      "genres": ["Techno", "Acid Techno"],
-      "sounds_like": "Sounds like dark techno with an edge.",
+      "start_time": "2026-05-18T11:10:00Z",
+      "end_time": "2026-05-18T12:30:00Z",
+      "genres": [
+        "Hard Techno",
+        "Melodic Techno"
+      ],
+      "sounds_like": "Sounds like Berlin hard techno with melody.",
       "preview_kind": "spotify"
     },
     {
-      "id": "sun_wooli",
-      "artist_name": "Wooli",
-      "stage_id": "basspod",
+      "id": "sun_armin_van_buuren_sunrise_set",
+      "artist_name": "Armin van Buuren (Sunrise Set)",
+      "stage_id": "kinetic",
       "night": "sunday",
-      "start_time": "2026-05-18T09:45:00Z",
-      "end_time": "2026-05-18T11:00:00Z",
-      "genres": ["Dubstep", "Melodic Dubstep"],
-      "sounds_like": "Sounds like Excision meets Seven Lions.",
-      "preview_kind": "youtube"
-    },
-    {
-      "id": "sun_jvna",
-      "artist_name": "JVNA",
-      "stage_id": "wasteland",
-      "night": "sunday",
-      "start_time": "2026-05-18T03:00:00Z",
-      "end_time": "2026-05-18T04:15:00Z",
-      "genres": ["Future Bass", "Melodic Bass"],
-      "sounds_like": "Sounds like Illenium with anime energy.",
+      "start_time": "2026-05-18T11:14:00Z",
+      "end_time": "2026-05-18T12:30:00Z",
+      "genres": [
+        "Trance"
+      ],
+      "sounds_like": "Sounds like the trance sunrise set you came to Vegas for.",
       "preview_kind": "spotify"
     },
     {
-      "id": "sun_atliens",
-      "artist_name": "ATLiens",
-      "stage_id": "wasteland",
+      "id": "sun_on_mode_sunrise_set",
+      "artist_name": "ÆON:MODE (Sunrise Set)",
+      "stage_id": "basspod",
       "night": "sunday",
-      "start_time": "2026-05-18T05:30:00Z",
-      "end_time": "2026-05-18T06:45:00Z",
-      "genres": ["Trap", "Bass"],
-      "sounds_like": "Sounds like RL Grime in space.",
-      "preview_kind": "youtube"
+      "start_time": "2026-05-18T11:30:00Z",
+      "end_time": "2026-05-18T12:30:00Z",
+      "genres": [
+        "Bass",
+        "Ambient"
+      ],
+      "sounds_like": "Sounds like cinematic ambient bass at sunrise.",
+      "preview_kind": "spotify"
     },
     {
-      "id": "sun_excision",
-      "artist_name": "Excision",
-      "stage_id": "wasteland",
+      "id": "sun_nico_moreno_b2b_holy_priest",
+      "artist_name": "Nico Moreno B2B Holy Priest",
+      "stage_id": "cosmic",
       "night": "sunday",
-      "start_time": "2026-05-18T08:00:00Z",
-      "end_time": "2026-05-18T09:15:00Z",
-      "genres": ["Dubstep", "Bass"],
-      "sounds_like": "Sounds like a dinosaur rave in a volcano.",
-      "preview_kind": "youtube"
+      "start_time": "2026-05-18T11:30:00Z",
+      "end_time": "2026-05-18T12:30:00Z",
+      "genres": [
+        "Hard Techno"
+      ],
+      "sounds_like": "Sounds like a hard techno tag-team gauntlet.",
+      "preview_kind": "spotify"
     },
     {
-      "id": "sun_afrojack",
-      "artist_name": "Afrojack",
+      "id": "sun_kream",
+      "artist_name": "KREAM",
+      "stage_id": "quantum",
+      "night": "sunday",
+      "start_time": "2026-05-18T11:30:00Z",
+      "end_time": "2026-05-18T12:30:00Z",
+      "genres": [
+        "House",
+        "Bass House"
+      ],
+      "sounds_like": "Sounds like crossover house with bass hooks.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_lu_re",
+      "artist_name": "Lu.Re",
+      "stage_id": "stereo",
+      "night": "sunday",
+      "start_time": "2026-05-18T11:30:00Z",
+      "end_time": "2026-05-18T12:30:00Z",
+      "genres": [
+        "Indie Dance",
+        "Eclectic"
+      ],
+      "sounds_like": "Sounds like a Stereo Bloom hidden gem.",
+      "preview_kind": "spotify"
+    },
+    {
+      "id": "sun_madgrrl_b2b_vessel",
+      "artist_name": "MADGRRL B2B VESSEL",
       "stage_id": "wasteland",
       "night": "sunday",
-      "start_time": "2026-05-18T10:15:00Z",
-      "end_time": "2026-05-18T11:30:00Z",
-      "genres": ["EDM", "Big Room"],
-      "sounds_like": "Sounds like a Dutch mainstage takeover.",
-      "preview_kind": "youtube"
+      "start_time": "2026-05-18T11:30:00Z",
+      "end_time": "2026-05-18T12:30:00Z",
+      "genres": [
+        "Hardstyle",
+        "Raw"
+      ],
+      "sounds_like": "Sounds like raw femme-fronted hardstyle.",
+      "preview_kind": "spotify"
     }
   ]
 }
