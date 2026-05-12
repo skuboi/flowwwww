@@ -119,6 +119,23 @@ Skip `.env.local` entirely. The app boots into demo mode with a fake crew (`Koto
 | `node scripts/build-lineup-from-csv.js` | Rebuild `data/lineup.json` from the CSVs + annotations |
 | `node scripts/import-spotify-ids.js` | Merge filled-in IDs from `SPOTIFY_IDS.md` into annotations |
 
+### Deploy to GitHub Pages
+
+This repo is configured to export a static Next build and deploy it with GitHub Actions.
+
+1. Push to the `main` branch.
+2. In GitHub: **Settings → Pages → Build and deployment**, set **Source** to **GitHub Actions**.
+3. In GitHub: **Settings → Secrets and variables → Actions → Variables**, add:
+  - `NEXT_PUBLIC_SUPABASE_URL`
+  - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+4. Ensure the workflow file exists at `.github/workflows/deploy-pages.yml`.
+5. Trigger deploy by pushing to `main` (or run the workflow manually from the Actions tab).
+
+Notes:
+- If these variables are not set, the app still builds and runs in demo mode.
+- For project pages (`https://<user>.github.io/<repo>/`), base path and asset prefix are auto-configured during GitHub Actions builds.
+- For user/org pages (`https://<user>.github.io/`), no base path is applied.
+
 ---
 
 ## File map
