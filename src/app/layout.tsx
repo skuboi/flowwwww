@@ -13,18 +13,20 @@ const space = Space_Grotesk({
   variable: "--font-space"
 });
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export const metadata: Metadata = {
   title: "flowwwww",
   description: "EDC Las Vegas 2026 crew planner",
-  manifest: "/manifest.webmanifest",
+  manifest: `${basePath}/manifest.webmanifest`,
   appleWebApp: {
     capable: true,
     title: "flowwwww",
     statusBarStyle: "black-translucent"
   },
   icons: {
-    icon: "/icon.svg",
-    apple: "/icon.svg"
+    icon: `${basePath}/icon.svg`,
+    apple: `${basePath}/icon.svg`
   }
 };
 

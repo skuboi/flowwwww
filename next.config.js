@@ -1,5 +1,12 @@
 const runtimeCaching = require("next-pwa/cache");
 
+const isGithubActions = process.env.GITHUB_ACTIONS === "true";
+const repositoryName = process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "";
+const isUserOrOrgSite = repositoryName.endsWith(".github.io");
+const basePath = isGithubActions && repositoryName && !isUserOrOrgSite
+  ? `/${repositoryName}`
+  : "";
+
 const withPWA = require("next-pwa")({
   dest: "public",
   register: true,
@@ -45,7 +52,17 @@ const withPWA = require("next-pwa")({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true
+  reactStrictMode: true,
+  output: "export",
+  trailingSlash: true,
+  images: {
+    unoptimized: true
+  },
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath
+  },
+  basePath,
+  assetPrefix: basePath
 };
 
 module.exports = withPWA(nextConfig);
